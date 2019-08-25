@@ -1,0 +1,69 @@
+// Essential includes for variables, mixins, and functions
+@import "theme";
+
+body {
+  background-color: color(primary);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+  text-align: center;
+  padding: 0.5rem;
+  padding-top: calc(40vh - 150px);
+  overflow: hidden;
+
+  &,
+  a {
+    color: color(light);
+  }
+
+  @media (max-width: 600px) {
+    justify-content: flex-start;
+    padding-top: 20vh;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+a {
+  font-size: 1.75rem;
+}
+
+.statement {
+  width: 60vw;
+  margin: 1rem;
+  color: rgba(color(light), 0.85);
+
+  strong {
+    color: color(light);
+  }
+}
+
+svg {
+  position: absolute;
+  top: 60vh;
+  right: 0;
+  z-index: -1;
+  width: 110vw;
+
+  $svg-colors: map-remove($brand-colors, "primary");
+  $length: length($svg-colors);
+  @each $name, $color in $svg-colors {
+    // index = current item # in the list
+    $i: index(($svg-colors), ($name $color));
+
+    // "apply every $length items, starting at current index"
+    path:nth-child(#{$length}n + #{$i}) {
+      fill: $color;
+    }
+  }
+}
