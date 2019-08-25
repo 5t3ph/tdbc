@@ -30,6 +30,7 @@ a {
 
 .statement {
   width: 60vw;
+  max-width: 600px;
   margin: 1rem;
   color: rgba(249, 249, 249, 0.85); }
   .statement strong {
