@@ -1,0 +1,49 @@
+body {
+  background-color: #7660eb;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+  text-align: center;
+  padding: 0.5rem;
+  padding-top: calc(40vh - 150px);
+  overflow: hidden; }
+  body,
+  body a {
+    color: #f9f9f9; }
+  @media (max-width: 600px) {
+    body {
+      justify-content: flex-start;
+      padding-top: 20vh; } }
+
+* {
+  box-sizing: border-box;
+  margin: 0; }
+
+h1 {
+  font-size: 2.5rem; }
+
+a {
+  font-size: 1.75rem; }
+
+.statement {
+  width: 60vw;
+  margin: 1rem;
+  color: rgba(249, 249, 249, 0.85); }
+  .statement strong {
+    color: #f9f9f9; }
+
+svg {
+  position: absolute;
+  top: 60vh;
+  right: 0;
+  z-index: -1;
+  width: 110vw; }
+  svg path:nth-child(3n + 1) {
+    fill: #21c2b7; }
+  svg path:nth-child(3n + 2) {
+    fill: #fc5d6d; }
+  svg path:nth-child(3n + 3) {
+    fill: #ffbc00; }
