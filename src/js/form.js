@@ -14,15 +14,16 @@ formCloseTrigger.addEventListener("click", function(e) {
 
 function handleSubmit(e) {
   const values = {
-    name: document.getElementById("name").attr("value"),
-    email: document.getElementById("email").attr("value"),
-    message: document.getElementById("message").attr("value")
+    "form-name": "contact",
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
   };
 
-  fetch("/", {
+  return fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode({ "form-name": "contact", values })
+    body: encode(values)
   })
     .then(() => alert("Success!"))
     .catch(error => alert(error));
