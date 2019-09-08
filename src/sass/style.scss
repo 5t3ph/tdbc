@@ -1,6 +1,16 @@
 // Essential includes for variables, mixins, and functions
 @import "theme";
 
+@mixin keyboard-focus($el, $space: ".1em") {
+  #{$el}:focus {
+    outline: none;
+    box-shadow: 0 0 4px 2px currentColor;
+    border-radius: 2px;
+    border: #{$space} solid transparent;
+    margin: -#{$space};
+  }
+}
+
 body {
   background-color: color(primary);
   display: flex;
@@ -19,9 +29,15 @@ body {
     color: color(light);
   }
 
+  @include keyboard-focus("a", 0.2em);
+
   @media (max-width: 600px) {
     justify-content: flex-start;
     padding-top: 20vh;
+  }
+
+  @media (max-width: 320px) {
+    padding-top: 8vh;
   }
 }
 
@@ -49,7 +65,7 @@ a {
   }
 }
 
-svg {
+.splash-graphic {
   position: absolute;
   top: 60vh;
   right: 0;
@@ -68,3 +84,10 @@ svg {
     }
   }
 }
+
+.hidden {
+  display: none;
+}
+
+@import "forms";
+@import "buttons";
