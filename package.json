@@ -17,7 +17,7 @@
     "watch": "npm run watch:html | npm run watch:sass | npm run watch:js",
     "serve": "browser-sync start --server public --files public",
     "develop": "npm run scss ; npm run copy && npm run watch | npm run serve",
-    "build": "npm run copy:html && npm run scss && npm run css && npm run copy:css"
+    "build": "npm run copy:js && npm run copy:html && npm run scss && npm run css && npm run copy:css"
   },
   "dependencies": {
     "autoprefixer": "^9.5.0",
