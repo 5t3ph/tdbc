@@ -12,11 +12,6 @@ formCloseTrigger.addEventListener("click", function(e) {
   formOpenTrigger.focus();
 });
 
-form.addEventListener("submit", function(e) {
-  handleSubmit(e);
-  e.preventDefault();
-});
-
 function handleSubmit(e) {
   const values = {
     name: document.getElementById("name").attr("value"),
@@ -32,3 +27,8 @@ function handleSubmit(e) {
     .then(() => alert("Success!"))
     .catch(error => alert(error));
 }
+
+form.addEventListener("submit", function(e) {
+  handleSubmit(e);
+  e.preventDefault();
+});
