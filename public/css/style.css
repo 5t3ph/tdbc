@@ -234,7 +234,6 @@ legend {
   color: #fff;
   background-color: #7660eb;
   font-size: 18px;
-  align-self: start;
   margin-top: 24px;
   border-radius: 4px;
   cursor: pointer; }
@@ -256,7 +255,8 @@ legend {
       border-radius: 0; }
 
 .button-group {
-  display: flex; }
+  display: flex;
+  align-items: center; }
   .button-group .button:not(:first-child) {
     margin-left: 8px; }
 

@@ -9,7 +9,6 @@
   color: #fff;
   background-color: color(primary);
   font-size: 18px;
-  align-self: start;
   margin-top: 24px;
   border-radius: 4px;
   cursor: pointer;
@@ -41,6 +40,7 @@
 
 .button-group {
   display: flex;
+  align-items: center;
 
   .button:not(:first-child) {
     margin-left: $unit;

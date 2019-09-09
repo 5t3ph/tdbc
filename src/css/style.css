@@ -85,6 +85,13 @@ legend {
   legend:focus {
     outline: none; }
 
+.form-notice {
+  font-size: 1.15rem;
+  margin-top: 5vh; }
+  .form-notice a {
+    color: #7660eb;
+    font-size: inherit; }
+
 .form-control {
   margin: 24px 0 0;
   border: 0;
@@ -227,7 +234,6 @@ legend {
   color: #fff;
   background-color: #7660eb;
   font-size: 18px;
-  align-self: start;
   margin-top: 24px;
   border-radius: 4px;
   cursor: pointer; }
@@ -238,9 +244,15 @@ legend {
     text-transform: uppercase;
     font-size: 0.8rem;
     color: #767676;
-    background-color: transparent; }
+    background-color: transparent;
+    min-height: 24px;
+    min-width: auto; }
+    .button--cancel:only-of-type {
+      align-self: center; }
     .button--cancel:focus {
-      box-shadow: 0 0 0 3px currentColor; }
+      box-shadow: none;
+      border-bottom: 1px solid currentColor;
+      border-radius: 0; }
 
 .button-group {
   display: flex; }
