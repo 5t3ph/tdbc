@@ -9,13 +9,15 @@
     "css": "postcss src/css/style.css -u autoprefixer cssnano -r",
     "copy:css": "copyfiles -u 1 ./src/css/* public",
     "copy:html": "copyfiles -u 1 ./src/*.html public",
-    "copy": "npm run copy:css && npm run copy:html",
+    "copy:js": "copyfiles -u 1 ./src/js/* public",
+    "copy": "npm run copy:css && npm run copy:html && npm run copy:js",
     "watch:html": "onchange 'src/*.html' -- npm run copy:html",
+    "watch:js": "onchange 'src/js/*.js' -- npm run copy:js",
     "watch:sass": "node-sass --watch src/sass src/sass/*/ -o public/css",
-    "watch": "npm run watch:html | npm run watch:sass",
+    "watch": "npm run watch:html | npm run watch:sass | npm run watch:js",
     "serve": "browser-sync start --server public --files public",
-    "develop": "npm run copy && npm run watch | npm run serve",
-    "build": "npm run copy:html && npm run scss && npm run css && npm run copy:css"
+    "develop": "npm run scss ; npm run copy && npm run watch | npm run serve",
+    "build": "npm run copy:js && npm run copy:html && npm run scss && npm run css && npm run copy:css"
   },
   "dependencies": {
     "autoprefixer": "^9.5.0",

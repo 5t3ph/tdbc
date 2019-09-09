@@ -1,0 +1,234 @@
+form {
+  color: color(gray-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(color(light), 0.9);
+  padding: $unit * 3;
+  display: flex;
+  flex-direction: column;
+  transition: all 200ms cubic-bezier(0, 0, 0.2, 1);
+  transform-origin: top left;
+  transform: translateX(-100%);
+  width: 25vw;
+  min-width: 300px;
+
+  &.visible {
+    transform: translateX(0);
+    overflow-y: auto;
+  }
+}
+
+legend {
+  font-size: $unit * 3;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form-notice {
+  font-size: 1.15rem;
+  margin-top: 5vh;
+
+  a {
+    color: color(primary);
+    font-size: inherit;
+  }
+}
+
+$label-position-default: translate($unit/2, -$unit) scale(0.75);
+
+.form-control {
+  margin: $unit * 3 0 0;
+  border: 0;
+  display: inline-flex;
+  padding: 0;
+  position: relative;
+  min-width: 0;
+  flex-direction: column;
+  vertical-align: top;
+  z-index: 1;
+
+  label {
+    top: 0;
+    left: 0;
+    position: absolute;
+    color: color(gray-text);
+    line-height: 1;
+    font-size: 1.25rem;
+    transform-origin: top left;
+    transform: $label-position-default;
+  }
+
+  &:focus-within {
+    .label-notch {
+      label:after,
+      &:before,
+      &:after {
+        border-color: color(primary);
+        border-width: 2px;
+      }
+    }
+
+    label,
+    span label span {
+      color: color(primary);
+    }
+  }
+}
+
+.input {
+  color: $body-color;
+  border-radius: $unit/2 $unit/2 0 0;
+  background-color: transparent;
+  border: none;
+  font-size: 1.25rem;
+  padding: $unit * 2 $unit * 1.75 $unit;
+  outline: none;
+
+  &:-webkit-autofill {
+    z-index: auto !important;
+    padding-top: 0;
+    margin-top: 14px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+  }
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 -1px 0 0 color(primary);
+    border-bottom-color: color(primary);
+
+    & ~ span {
+      label:after,
+      &:before,
+      &:after {
+        border-color: color(primary);
+        border-width: 2px;
+      }
+    }
+
+    & ~ label,
+    & ~ span label span {
+      color: color(primary);
+    }
+  }
+
+  & ~ span {
+    label:after,
+    &:before,
+    &:after {
+      transition: all 200ms cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  &--textarea textarea {
+    position: relative;
+    align-self: auto;
+    box-sizing: content-box;
+    width: 100%;
+    height: auto;
+    min-height: 3.4em;
+    margin: 0;
+    padding: 0;
+    border: 1px solid transparent;
+    outline: none;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+
+    &:focus + .textarea--focus {
+      border-radius: 4px;
+      box-shadow: inset 0 -2px 0 1px color(primary);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
+
+.label-notch {
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  label:before,
+  label:after,
+  &:before,
+  &:after {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $body-color;
+  }
+
+  label:before,
+  label:after,
+  &:before,
+  &:after {
+    content: "";
+  }
+
+  &:before {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+    width: 10px;
+  }
+
+  &:after {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+    flex-grow: 1;
+  }
+
+  label {
+    transform: none;
+    position: relative;
+    padding-right: 10px;
+    max-width: calc(100% - 12px * 2);
+
+    span {
+      display: block;
+      transform-origin: top left;
+      transform: $label-position-default;
+      padding-right: 4px;
+      margin-right: calc(-1.15em + 4px);
+    }
+
+    &:before,
+    &:after {
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      width: 100%;
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+    }
+
+    &:before {
+      border: none;
+      border-top: 1px solid transparent;
+      top: 0;
+      transition: border 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+  }
+}

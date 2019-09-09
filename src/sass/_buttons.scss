@@ -1,0 +1,95 @@
+.button {
+  border: 0;
+  padding: 0 24px;
+  min-height: 48px;
+  min-width: 120px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: #fff;
+  background-color: color(primary);
+  font-size: 18px;
+  align-self: start;
+  margin-top: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px scale-color(color(primary), $lightness: -33%);
+  }
+
+  &--cancel {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: color(gray-text);
+    background-color: transparent;
+    min-height: 24px;
+    min-width: auto;
+
+    &:only-of-type {
+      align-self: center;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-bottom: 1px solid currentColor;
+      border-radius: 0;
+    }
+  }
+}
+
+.button-group {
+  display: flex;
+
+  .button:not(:first-child) {
+    margin-left: $unit;
+  }
+}
+
+.icon-button {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: #fff;
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  padding: 0;
+  font-size: $unit * 4;
+  cursor: pointer;
+
+  svg {
+    display: inline-block;
+    fill: currentColor;
+    opacity: 0.7;
+    width: 1em;
+    height: 1em;
+  }
+
+  p + & {
+    margin-top: $unit * 3;
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    &:after {
+      content: "";
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      position: absolute;
+      top: -0.3em;
+      right: -0.3em;
+      bottom: -0.3em;
+      left: -0.3em;
+    }
+  }
+}
