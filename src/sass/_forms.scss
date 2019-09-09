@@ -28,6 +28,16 @@ legend {
   }
 }
 
+.form-notice {
+  font-size: 1.15rem;
+  margin-top: 5vh;
+
+  a {
+    color: color(primary);
+    font-size: inherit;
+  }
+}
+
 $label-position-default: translate($unit/2, -$unit) scale(0.75);
 
 .form-control {

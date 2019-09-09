@@ -24,9 +24,17 @@
     font-size: 0.8rem;
     color: color(gray-text);
     background-color: transparent;
+    min-height: 24px;
+    min-width: auto;
+
+    &:only-of-type {
+      align-self: center;
+    }
 
     &:focus {
-      box-shadow: 0 0 0 3px currentColor;
+      box-shadow: none;
+      border-bottom: 1px solid currentColor;
+      border-radius: 0;
     }
   }
 }
