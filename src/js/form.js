@@ -12,8 +12,10 @@ formOpenTrigger.addEventListener("click", function(e) {
   document.getElementById("name").focus();
 });
 
-formCloseTrigger.addEventListener("click", function(e) {
-  closeForm();
+document.addEventListener("click", function(e) {
+  if (e.target && e.target.id == "close-form") {
+    closeForm();
+  }
 });
 
 function handleSubmit(e) {
@@ -25,9 +27,6 @@ function handleSubmit(e) {
     .then(function() {
       form.innerHTML =
         '<p class="form-notice">Thanks! I\'ll respond as soon as I am able. Feel free to reach out on <a href="https://twitter.com/5t3ph">Twitter</a>.</p><button id="close-form" class="button button--cancel" type="button">Close Form</button >';
-      formCloseTrigger.addEventListener("click", function(e) {
-        closeForm();
-      });
     })
     .catch(error => alert("Oops! Can you please try again?"));
 }
