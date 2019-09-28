@@ -5,95 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ThinkDoBeCreate | Stephanie Eckles</title>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
   <body>
     <h1>stephanie eckles</h1>
-    <p class="statement">
+    <p class="tdbc-statement">
       Girl Geek, Web Developer (frontend/JS/React)
-      <strong>currently building a design system</strong> for Nelnet fintech,
-      Nebraska farm raised, mom of two girls
+      <strong>currently building a design system</strong> for Nelnet fintech, Nebraska farm raised,
+      mom of two girls
     </p>
     <p><a href="https://twitter.com/5t3ph">@5t3ph</a></p>
-    <button
-      id="open-form"
-      class="icon-button"
-      aria-label="Contact Me"
-      type="button"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 28 28"
-        aria-hidden="true"
-      >
+    <button id="open-form" class="tdbc-icon-button" aria-label="Contact Me" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" aria-hidden="true">
         <path
           d="M26 23.5v-12c-0.328 0.375-0.688 0.719-1.078 1.031-2.234 1.719-4.484 3.469-6.656 5.281-1.172 0.984-2.625 2.188-4.25 2.188h-0.031c-1.625 0-3.078-1.203-4.25-2.188-2.172-1.813-4.422-3.563-6.656-5.281-0.391-0.313-0.75-0.656-1.078-1.031v12c0 0.266 0.234 0.5 0.5 0.5h23c0.266 0 0.5-0.234 0.5-0.5zM26 7.078c0-0.391 0.094-1.078-0.5-1.078h-23c-0.266 0-0.5 0.234-0.5 0.5 0 1.781 0.891 3.328 2.297 4.438 2.094 1.641 4.188 3.297 6.266 4.953 0.828 0.672 2.328 2.109 3.422 2.109h0.031c1.094 0 2.594-1.437 3.422-2.109 2.078-1.656 4.172-3.313 6.266-4.953 1.016-0.797 2.297-2.531 2.297-3.859zM28 6.5v17c0 1.375-1.125 2.5-2.5 2.5h-23c-1.375 0-2.5-1.125-2.5-2.5v-17c0-1.375 1.125-2.5 2.5-2.5h23c1.375 0 2.5 1.125 2.5 2.5z"
         ></path>
       </svg>
     </button>
 
-    <form
-      name="contact"
-      action="/"
-      method="POST"
-      netlify-honeypot="bot-field"
-      data-netlify="true"
-    >
+    <form name="contact" action="/" method="POST" netlify-honeypot="bot-field" data-netlify="true">
       <legend>Open for comments or project requests.</legend>
-      <p class="hidden">
-        <label
-          >Don’t fill this out if you're human: <input name="bot-field"
-        /></label>
+      <p class="tdbc-hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field"/></label>
       </p>
-      <div class="form-control">
-        <input
-          id="name"
-          name="name"
-          placeholder="Name"
-          type="text"
-          class="input"
-          required
-        />
-        <span class="label-notch">
+      <div class="tdbc-form-control">
+        <input id="name" name="name" placeholder="Name" type="text" class="tdbc-input" required />
+        <span class="tdbc-label-notch">
           <label for="name"><span>Name</span></label>
         </span>
       </div>
-      <div class="form-control">
+      <div class="tdbc-form-control">
         <input
           id="email"
           name="email"
           placeholder="Email"
           type="text"
-          class="input"
+          class="tdbc-input"
           required
         />
-        <span class="label-notch">
+        <span class="tdbc-label-notch">
           <label for="email"><span>Email</span></label>
         </span>
       </div>
-      <div class="form-control">
-        <div class="input input--textarea">
+      <div class="tdbc-form-control">
+        <div class="tdbc-input tdbc-input--textarea">
           <textarea id="message" name="message" required></textarea>
-          <span class="textarea--focus"></span>
+          <span class="tdbc-textarea--focus"></span>
         </div>
-        <span class="label-notch">
+        <span class="tdbc-label-notch">
           <label for="message"><span>Message</span></label>
         </span>
       </div>
-      <div class="button-group">
-        <button class="button" type="submit">Send</button>
-        <button id="close-form" class="button button--cancel" type="button">
+      <div class="tdbc-button-group">
+        <button class="tdbc-button" type="submit">Send</button>
+        <button id="close-form" class="tdbc-button tdbc-button--cancel" type="button">
           Close Form
         </button>
       </div>
     </form>
     <svg
-      class="splash-graphic"
+      class="tdbc-splash-graphic"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 569.2 432.1"
       aria-hidden="true"

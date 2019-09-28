@@ -1,34 +1,34 @@
-$unit: 8px;
+$tdbc-unit: 8px;
 
-$brand-colors: (
+$tdbc-brand-colors: (
   "primary": #7660eb,
   "secondary": #21c2b7,
   "tertiary": #fc5d6d,
-  "support": #ffbc00
+  "support": #ffbc00,
 );
 
-$theme-colors: map-merge(
-  $brand-colors,
+$tdbc-theme-colors: map-merge(
+  $tdbc-brand-colors,
   (
     "light": #f9f9f9,
     "dark": #162310,
     "gray": #e9e9ea,
     "gray-dark": #bbb9ba,
-    "gray-text": #767676
+    "gray-text": #767676,
   )
 );
 
-@function color($key) {
-  @return map-get($theme-colors, $key);
+@function tdbc-color($key) {
+  @return map-get($tdbc-theme-colors, $key);
 }
 
-$body-color: #666;
-$link-color: #7660eb;
-$border-radius: 0.75em;
+$tdbc-body-color: #666;
+$tdbc-link-color: #7660eb;
+$tdbc-border-radius: 0.75em;
 
-$headings-font-family: "Source Sans Pro", sans-serif;
-$headings-font-weight: 400;
-$h1-font-size: 40px;
-$h2-font-size: 32px;
-$h3-font-size: 24px;
-$h4-font-size: 18px;
+$tdbc-headings-font-family: "Source Sans Pro", sans-serif;
+$tdbc-headings-font-weight: 400;
+$tdbc-h1-font-size: 40px;
+$tdbc-h2-font-size: 32px;
+$tdbc-h3-font-size: 24px;
+$tdbc-h4-font-size: 18px;

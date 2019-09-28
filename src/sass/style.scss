@@ -1,45 +1,17 @@
 // Essential includes for variables, mixins, and functions
 @import "theme";
 
-@mixin keyboard-focus($el, $space: ".1em") {
+@mixin tdbc-keyboard-focus($el, $space: ".tdbc-1em") {
   #{$el}:focus {
+    margin: -#{$space};
+    border: #{$space} solid transparent;
+    border-radius: 2px;
     outline: none;
     box-shadow: 0 0 4px 2px currentColor;
-    border-radius: 2px;
-    border: #{$space} solid transparent;
-    margin: -#{$space};
   }
 }
 
-body {
-  background-color: color(primary);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: "Source Sans Pro";
-  font-size: 16px;
-  text-align: center;
-  padding: 0.5rem;
-  padding-top: calc(40vh - 150px);
-  overflow: hidden;
-
-  &,
-  a {
-    color: color(light);
-  }
-
-  @include keyboard-focus("a", 0.2em);
-
-  @media (max-width: 600px) {
-    justify-content: flex-start;
-    padding-top: 20vh;
-  }
-
-  @media (max-width: 320px) {
-    padding-top: 8vh;
-  }
-}
+// stylelint-disable selector-max-type, selector-max-universal
 
 * {
   box-sizing: border-box;
@@ -54,26 +26,55 @@ a {
   font-size: 1.75rem;
 }
 
-.statement {
-  width: 60vw;
-  max-width: 600px;
-  margin: 1rem;
-  color: rgba(color(light), 0.85);
+body {
+  @include tdbc-keyboard-focus("a", 0.2em);
 
-  strong {
-    color: color(light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0.5rem;
+  padding-top: calc(40vh - 150px);
+  background-color: tdbc-color(primary);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  overflow: hidden;
+
+  &,
+  a {
+    color: tdbc-color(light);
+  }
+
+  @media (max-width: 600px) {
+    justify-content: flex-start;
+    padding-top: 20vh;
+  }
+
+  @media (max-width: 320px) {
+    padding-top: 8vh;
   }
 }
 
-.splash-graphic {
-  position: absolute;
-  top: 60vh;
-  right: 0;
-  z-index: -1;
-  width: 110vw;
+.tdbc-statement {
+  width: 60vw;
+  max-width: 600px;
+  margin: 1rem;
+  color: rgba(tdbc-color(light), 0.85);
 
-  $svg-colors: map-remove($brand-colors, "primary");
+  strong {
+    color: tdbc-color(light);
+  }
+}
+
+.tdbc-splash-graphic {
+  min-width: 115vw;
+  min-height: 55vh;
+  z-index: -1;
+
+  $svg-colors: map-remove($tdbc-brand-colors, "primary");
   $length: length($svg-colors);
+
   @each $name, $color in $svg-colors {
     // index = current item # in the list
     $i: index(($svg-colors), ($name $color));
@@ -85,9 +86,11 @@ a {
   }
 }
 
-.hidden {
+.tdbc-hidden {
   display: none;
 }
+
+//stylelint-enable
 
 @import "forms";
 @import "buttons";

@@ -16,7 +16,7 @@ document.addEventListener("click", function(e) {
   if (e.target && e.target.id == "close-form") {
     closeForm();
   }
-});
+}); 
 
 function handleSubmit(e) {
   return fetch("/", {
