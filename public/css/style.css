@@ -1,32 +1,3 @@
-body {
-  background-color: #7660eb;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: "Source Sans Pro";
-  font-size: 16px;
-  text-align: center;
-  padding: 0.5rem;
-  padding-top: calc(40vh - 150px);
-  overflow: hidden; }
-  body,
-  body a {
-    color: #f9f9f9; }
-  body a:focus {
-    outline: none;
-    box-shadow: 0 0 4px 2px currentColor;
-    border-radius: 2px;
-    border: 0.2em solid transparent;
-    margin: -0.2em; }
-  @media (max-width: 600px) {
-    body {
-      justify-content: flex-start;
-      padding-top: 20vh; } }
-  @media (max-width: 320px) {
-    body {
-      padding-top: 8vh; } }
-
 * {
   box-sizing: border-box;
   margin: 0; }
@@ -37,46 +8,73 @@ h1 {
 a {
   font-size: 1.75rem; }
 
-.statement {
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0.5rem;
+  padding-top: calc(40vh - 150px);
+  background-color: #7660eb;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  overflow: hidden; }
+  body a:focus {
+    margin: -0.2em;
+    border: 0.2em solid transparent;
+    border-radius: 2px;
+    outline: none;
+    box-shadow: 0 0 4px 2px currentColor; }
+  body,
+  body a {
+    color: #f9f9f9; }
+  @media (max-width: 600px) {
+    body {
+      justify-content: flex-start;
+      padding-top: 20vh; } }
+  @media (max-width: 320px) {
+    body {
+      padding-top: 8vh; } }
+
+.tdbc-statement {
   width: 60vw;
   max-width: 600px;
   margin: 1rem;
   color: rgba(249, 249, 249, 0.85); }
-  .statement strong {
+  .tdbc-statement strong {
     color: #f9f9f9; }
 
-.splash-graphic {
-  position: absolute;
-  top: 60vh;
-  right: 0;
-  z-index: -1;
-  width: 110vw; }
-  .splash-graphic path:nth-child(3n + 1) {
+.tdbc-splash-graphic {
+  min-width: 115vw;
+  min-height: 55vh;
+  z-index: -1; }
+  .tdbc-splash-graphic path:nth-child(3n + 1) {
     fill: #21c2b7; }
-  .splash-graphic path:nth-child(3n + 2) {
+  .tdbc-splash-graphic path:nth-child(3n + 2) {
     fill: #fc5d6d; }
-  .splash-graphic path:nth-child(3n + 3) {
+  .tdbc-splash-graphic path:nth-child(3n + 3) {
     fill: #ffbc00; }
 
-.hidden {
+.tdbc-hidden {
   display: none; }
 
 form {
-  color: #767676;
+  display: flex;
   position: absolute;
   top: 0;
-  left: 0;
   bottom: 0;
-  background: rgba(249, 249, 249, 0.9);
-  padding: 24px;
-  display: flex;
+  left: 0;
   flex-direction: column;
-  transition: all 200ms cubic-bezier(0, 0, 0.2, 1);
-  transform-origin: top left;
-  transform: translateX(-100%);
   width: 25vw;
-  min-width: 300px; }
-  form.visible {
+  min-width: 300px;
+  padding: 24px;
+  transform: translateX(-100%);
+  transform-origin: top left;
+  transition: all 200ms cubic-bezier(0, 0, 0.2, 1);
+  background: rgba(249, 249, 249, 0.9);
+  color: #767676; }
+  form.tdbc-visible {
     transform: translateX(0);
     overflow-y: auto; }
 
@@ -85,69 +83,102 @@ legend {
   legend:focus {
     outline: none; }
 
-.form-notice {
-  font-size: 1.15rem;
-  margin-top: 5vh; }
-  .form-notice a {
+.tdbc-form-notice {
+  margin-top: 5vh;
+  font-size: 1.15rem; }
+  .tdbc-form-notice a {
     color: #7660eb;
     font-size: inherit; }
 
-.form-control {
-  margin: 24px 0 0;
-  border: 0;
-  display: inline-flex;
-  padding: 0;
-  position: relative;
-  min-width: 0;
-  flex-direction: column;
-  vertical-align: top;
-  z-index: 1; }
-  .form-control label {
-    top: 0;
-    left: 0;
-    position: absolute;
-    color: #767676;
-    line-height: 1;
-    font-size: 1.25rem;
-    transform-origin: top left;
-    transform: translate(4px, -8px) scale(0.75); }
-  .form-control:focus-within .label-notch label:after, .form-control:focus-within .label-notch:before, .form-control:focus-within .label-notch:after {
-    border-color: #7660eb;
-    border-width: 2px; }
-  .form-control:focus-within label,
-  .form-control:focus-within span label span {
-    color: #7660eb; }
-
-.input {
-  color: #666;
-  border-radius: 4px 4px 0 0;
-  background-color: transparent;
-  border: none;
+.tdbc-form-control label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(4px, -8px) scale(0.75);
+  transform-origin: top left;
+  color: #767676;
   font-size: 1.25rem;
+  line-height: 1; }
+
+.tdbc-label-notch {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1; }
+  .tdbc-label-notch label::before,
+  .tdbc-label-notch label::after, .tdbc-label-notch::before, .tdbc-label-notch::after {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666;
+    content: ""; }
+  .tdbc-label-notch::before {
+    width: 10px;
+    border-right: none;
+    border-radius: 4px 0 0 4px; }
+  .tdbc-label-notch::after {
+    flex-grow: 1;
+    border-left: none;
+    border-radius: 0 4px 4px 0; }
+  .tdbc-label-notch label {
+    position: relative;
+    max-width: calc(100% - 12px * 2);
+    padding-right: 10px;
+    transform: none; }
+    .tdbc-label-notch label span {
+      display: block;
+      margin-right: calc(-1.15em + 4px);
+      padding-right: 4px;
+      transform: translate(4px, -8px) scale(0.75);
+      transform-origin: top left; }
+    .tdbc-label-notch label::before, .tdbc-label-notch label::after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      pointer-events: none; }
+    .tdbc-label-notch label::before {
+      top: 0;
+      transition: border 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+      border: none;
+      border-top: 1px solid transparent; }
+    .tdbc-label-notch label::after {
+      bottom: 0; }
+
+.tdbc-input {
   padding: 16px 14px 8px;
-  outline: none; }
-  .input:-webkit-autofill {
-    z-index: auto !important;
-    padding-top: 0;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  outline: none;
+  background-color: transparent;
+  color: #666;
+  font-size: 1.25rem; }
+  .tdbc-input:-webkit-autofill {
     margin-top: 14px;
-    margin-left: 2px;
     margin-right: 2px;
-    margin-bottom: 2px; }
-  .input::placeholder {
+    margin-bottom: 2px;
+    margin-left: 2px;
+    padding-top: 0;
+    z-index: auto !important; }
+  .tdbc-input::placeholder {
     color: transparent; }
-  .input:focus {
-    outline: none;
-    box-shadow: inset 0 -1px 0 0 #7660eb;
-    border-bottom-color: #7660eb; }
-    .input:focus ~ span label:after, .input:focus ~ span:before, .input:focus ~ span:after {
-      border-color: #7660eb;
-      border-width: 2px; }
-    .input:focus ~ label,
-    .input:focus ~ span label span {
-      color: #7660eb; }
-  .input ~ span label:after, .input ~ span:before, .input ~ span:after {
+  .tdbc-input ~ span label::after, .tdbc-input ~ span::before, .tdbc-input ~ span::after {
     transition: all 200ms cubic-bezier(0, 0, 0.2, 1); }
-  .input--textarea textarea {
+  .tdbc-input:focus {
+    border-bottom-color: #7660eb;
+    outline: none;
+    box-shadow: inset 0 -1px 0 0 #7660eb; }
+    .tdbc-input:focus ~ span label::after, .tdbc-input:focus ~ span::before, .tdbc-input:focus ~ span::after {
+      border-width: 2px;
+      border-color: #7660eb; }
+    .tdbc-input:focus ~ label,
+    .tdbc-input:focus ~ span label span {
+      color: #7660eb; }
+  .tdbc-input--textarea textarea {
     position: relative;
     align-self: auto;
     box-sizing: content-box;
@@ -162,133 +193,99 @@ legend {
     color: inherit;
     font-family: inherit;
     font-size: inherit; }
-    .input--textarea textarea:focus + .textarea--focus {
-      border-radius: 4px;
-      box-shadow: inset 0 -2px 0 1px #7660eb;
+    .tdbc-input--textarea textarea:focus + .tdbc-textarea--focus {
       position: absolute;
       top: 0;
       right: 0;
       bottom: -1px;
       left: 0;
+      border-radius: 4px;
+      box-shadow: inset 0 -2px 0 1px #7660eb;
       z-index: -1; }
 
-.label-notch {
-  position: absolute;
-  z-index: -1;
-  display: flex;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
-  .label-notch label:before,
-  .label-notch label:after, .label-notch:before, .label-notch:after {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #666; }
-  .label-notch label:before,
-  .label-notch label:after, .label-notch:before, .label-notch:after {
-    content: ""; }
-  .label-notch:before {
-    border-radius: 4px 0 0 4px;
-    border-right: none;
-    width: 10px; }
-  .label-notch:after {
-    border-radius: 0 4px 4px 0;
-    border-left: none;
-    flex-grow: 1; }
-  .label-notch label {
-    transform: none;
-    position: relative;
-    padding-right: 10px;
-    max-width: calc(100% - 12px * 2); }
-    .label-notch label span {
-      display: block;
-      transform-origin: top left;
-      transform: translate(4px, -8px) scale(0.75);
-      padding-right: 4px;
-      margin-right: calc(-1.15em + 4px); }
-    .label-notch label:before, .label-notch label:after {
-      border-left: none;
-      border-right: none;
-      border-top: none;
-      width: 100%;
-      pointer-events: none;
-      position: absolute;
-      left: 0; }
-    .label-notch label:before {
-      border: none;
-      border-top: 1px solid transparent;
-      top: 0;
-      transition: border 200ms cubic-bezier(0, 0, 0.2, 1) 0ms; }
-    .label-notch label:after {
-      bottom: 0; }
-
-.button {
+.tdbc-form-control {
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+  min-width: 0;
+  margin: 24px 0 0;
+  padding: 0;
   border: 0;
-  padding: 0 24px;
-  min-height: 48px;
-  min-width: 120px;
+  vertical-align: top;
+  z-index: 1; }
+  .tdbc-form-control:focus-within .tdbc-label-notch label::after, .tdbc-form-control:focus-within .tdbc-label-notch::before, .tdbc-form-control:focus-within .tdbc-label-notch::after {
+    border-width: 2px;
+    border-color: #7660eb; }
+  .tdbc-form-control:focus-within label,
+  .tdbc-form-control:focus-within span label span {
+    color: #7660eb; }
+
+.tdbc-button {
   display: flex;
   align-content: center;
+  align-self: start;
   justify-content: center;
-  color: #fff;
-  background-color: #7660eb;
-  font-size: 18px;
+  min-width: 120px;
+  min-height: 48px;
   margin-top: 24px;
+  padding: 0 24px;
+  border: 0;
   border-radius: 4px;
+  background-color: #7660eb;
+  color: #fff;
+  font-size: 18px;
   cursor: pointer; }
-  .button:focus {
+  .tdbc-button:focus {
     outline: none;
     box-shadow: 0 0 0 3px #3419c5; }
-  .button--cancel {
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    color: #767676;
-    background-color: transparent;
+  .tdbc-button--cancel {
+    align-self: center;
+    min-width: auto;
     min-height: 24px;
-    min-width: auto; }
-    .button--cancel:only-of-type {
-      align-self: center; }
-    .button--cancel:focus {
-      box-shadow: none;
+    background-color: transparent;
+    color: #767676;
+    font-size: 0.8rem;
+    text-transform: uppercase; }
+    .tdbc-button--cancel:focus {
       border-bottom: 1px solid currentColor;
-      border-radius: 0; }
+      border-radius: 0;
+      box-shadow: none; }
 
-.button-group {
+.tdbc-button-group {
   display: flex;
   align-items: center; }
-  .button-group .button:not(:first-child) {
+  .tdbc-button-group .tdbc-button:not(:first-child) {
     margin-left: 8px; }
 
-.icon-button {
-  position: relative;
-  background: transparent;
-  border: none;
-  color: #fff;
+.tdbc-icon-button {
   display: inline-flex;
+  position: relative;
   width: 1em;
   height: 1em;
   padding: 0;
+  border: none;
+  background: transparent;
+  color: #fff;
   font-size: 32px;
   cursor: pointer; }
-  .icon-button svg {
+  .tdbc-icon-button svg {
     display: inline-block;
-    fill: currentColor;
-    opacity: 0.7;
     width: 1em;
-    height: 1em; }
-  p + .icon-button {
+    height: 1em;
+    fill: currentColor;
+    opacity: 0.7; }
+  p + .tdbc-icon-button {
     margin-top: 24px; }
-  .icon-button:focus, .icon-button:hover {
+  .tdbc-icon-button:focus, .tdbc-icon-button:hover {
     outline: none; }
-    .icon-button:focus svg, .icon-button:hover svg {
+    .tdbc-icon-button:focus svg, .tdbc-icon-button:hover svg {
       opacity: 1; }
-  .icon-button:focus:after {
-    content: "";
-    border: 1px solid currentColor;
-    border-radius: 50%;
+  .tdbc-icon-button:focus::after {
     position: absolute;
     top: -0.3em;
     right: -0.3em;
     bottom: -0.3em;
-    left: -0.3em; }
+    left: -0.3em;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    content: ""; }
