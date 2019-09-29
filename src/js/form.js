@@ -13,7 +13,7 @@ formOpenTrigger.addEventListener("click", function(e) {
 });
 
 document.addEventListener("click", function(e) {
-  if (e.target && e.target.id == "tdbc-close-form") {
+  if (e.target && e.target.id == "close-form") {
     closeForm();
   }
 });
