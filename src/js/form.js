@@ -1,22 +1,4 @@
 const form = document.querySelector("form");
-const formOpenTrigger = document.getElementById("open-form");
-const formCloseTrigger = document.getElementById("close-form");
-
-function closeForm() {
-  form.classList.remove("tdbc-visible");
-  formOpenTrigger.focus();
-}
-
-formOpenTrigger.addEventListener("click", function(e) {
-  form.classList.add("tdbc-visible");
-  document.getElementById("name").focus();
-});
-
-document.addEventListener("click", function(e) {
-  if (e.target && e.target.id == "close-form") {
-    closeForm();
-  }
-});
 
 function handleSubmit(e) {
   return fetch("/", {

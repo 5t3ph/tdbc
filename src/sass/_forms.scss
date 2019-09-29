@@ -2,23 +2,20 @@
 form {
   display: flex;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  top: calc(100vh - 68px);
   flex-direction: column;
-  width: 25vw;
+  width: 30vw;
   min-width: 300px;
+  margin-bottom: 30vh;
   padding: $tdbc-unit * 3;
-  transform: translateX(-100%);
-  transform-origin: top left;
-  transition: all 200ms cubic-bezier(0, 0, 0.2, 1);
-  background: rgba(tdbc-color(light), 0.9);
+  border-radius: 4px;
+  background: tdbc-color(light);
   color: tdbc-color(gray-text);
+  box-shadow: 0 0 0 10px rgba(tdbc-color(light), 0.3);
 
-  // stylelint-disable-next-line selector-no-qualifying-type
-  &.tdbc-visible {
-    transform: translateX(0);
-    overflow-y: auto;
+  .tdbc-icon {
+    align-self: center;
+    margin-bottom: 8px;
   }
 }
 
