@@ -1,22 +1,4 @@
 const form = document.querySelector("form");
-const formOpenTrigger = document.getElementById("open-form");
-const formCloseTrigger = document.getElementById("close-form");
-
-function closeForm() {
-  form.classList.remove("tdbc-visible");
-  formOpenTrigger.focus();
-}
-
-formOpenTrigger.addEventListener("click", function(e) {
-  form.classList.add("tdbc-visible");
-  document.getElementById("name").focus();
-});
-
-document.addEventListener("click", function(e) {
-  if (e.target && e.target.id == "close-form") {
-    closeForm();
-  }
-});
 
 function handleSubmit(e) {
   return fetch("/", {
@@ -26,7 +8,7 @@ function handleSubmit(e) {
   })
     .then(function() {
       form.innerHTML =
-        '<p class="tdbc-form-notice">Thanks! I\'ll respond as soon as I am able. Feel free to reach out on <a href="https://twitter.com/5t3ph">Twitter</a>.</p><button id="close-form" class="tdbc-button tdbc-button--cancel" type="button">Close Panel</button >';
+        '<p class="tdbc-form-notice">Thanks! I\'ll respond as soon as I am able. Feel free to reach out on <a href="https://twitter.com/5t3ph">Twitter</a>.</p>';
     })
     .catch((error) => alert("Oops! Can you please try again?"));
 }

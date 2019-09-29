@@ -1,0 +1,14 @@
+.tdbc-d-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tdbc-m-x {
+  margin-right: $tdbc-unit * 2;
+  margin-left: $tdbc-unit * 2;
+}
+
+.tdbc-hidden {
+  display: none;
+}
