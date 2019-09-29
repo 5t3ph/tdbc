@@ -38,6 +38,7 @@
 
 .tdbc-button-group {
   display: flex;
+  align-items: center;
 
   .tdbc-button:not(:first-child) {
     margin-left: $tdbc-unit;

@@ -5,3 +5,4 @@
 .htaccess
 node_modules/
 public/
+src/css/style.css
