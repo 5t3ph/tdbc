@@ -5,7 +5,7 @@ $tdbc-brand-colors: (
   "secondary": #21c2b7,
   "tertiary": #fc5d6d,
   "support": #ffbc00,
-);
+) !default;
 
 $tdbc-theme-colors: map-merge(
   $tdbc-brand-colors,
@@ -22,12 +22,12 @@ $tdbc-theme-colors: map-merge(
   @return map-get($tdbc-theme-colors, $key);
 }
 
-$tdbc-body-color: #666;
-$tdbc-link-color: #7660eb;
-$tdbc-border-radius: 0.75em;
+$tdbc-body-color: #666 !default;
+$tdbc-link-color: #7660eb !default;
+$tdbc-border-radius: 0.75em !default;
 
-$tdbc-strong-font-weight: 500;
-$tdbc-h1-font-size: 40px;
-$tdbc-h2-font-size: 32px;
-$tdbc-h3-font-size: 24px;
-$tdbc-h4-font-size: 18px;
+$tdbc-strong-font-weight: 500 !default;
+$tdbc-h1-font-size: 40px !default;
+$tdbc-h2-font-size: 32px !default;
+$tdbc-h3-font-size: 24px !default;
+$tdbc-h4-font-size: 18px !default;

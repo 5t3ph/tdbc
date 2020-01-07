@@ -1,14 +1,4 @@
-// stylelint-disable selector-max-type, selector-max-universal
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-html,
-body {
-  min-height: 100%;
-  font-size: 16px;
-}
+// stylelint-disable selector-max-type
 
 body {
   @include tdbc-keyboard-focus("a:not(.tdbc-icon-button)", 0.2em);

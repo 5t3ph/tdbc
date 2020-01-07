@@ -211,6 +211,7 @@ rules:
     font-size:
       - "rem"
       - "px"
+      - "%"
   # The following prefix rules are enabled since we use autoprefixer
   at-rule-no-vendor-prefix: true
   media-feature-name-no-vendor-prefix: true

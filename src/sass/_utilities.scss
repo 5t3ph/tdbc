@@ -1,7 +1,20 @@
+.tdbc-wrapper {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
 .tdbc-d-flex-wrap {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+}
+
+.tdbc-d-flex-column {
+  flex-direction: column;
 }
 
 .tdbc-m-x {
@@ -9,6 +22,49 @@
   margin-left: $tdbc-unit * 2;
 }
 
+$tdbc-v-spacers: (sm: 16px, md: 24px, lg: 40px);
+
+@each $key, $spacer in $tdbc-v-spacers {
+  .tdbc-margin-v-#{$key} {
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+  }
+
+  .tdbc-padding-v-#{$key} {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+  }
+}
+
 .tdbc-hidden {
   display: none;
+}
+
+@each $key, $color in $tdbc-brand-colors {
+  .tdbc-background-#{$key} {
+    background-color: $color;
+  }
+}
+
+@each $key, $color in $tdbc-theme-colors {
+  .tdbc-ink-#{$key} {
+    color: $color;
+  }
+}
+
+.tdbc-video {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+
+  // stylelint-disable
+  iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

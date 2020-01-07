@@ -13,3 +13,42 @@ h2 {
 strong {
   font-weight: $tdbc-strong-font-weight;
 }
+
+.tdbc-max-line-length {
+  max-width: 60ch;
+}
+
+.tdbc-lead {
+  font-size: 1.25rem;
+}
+
+.tdbc-list-decorated {
+  display: grid;
+  align-items: center;
+  padding: 0;
+  grid-gap: 1em;
+  list-style-type: none;
+
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  li {
+    display: inline-flex;
+    position: relative;
+    padding-left: 1em;
+    
+    &::before {
+      flex: 0 0 22px;
+    margin-right: 0.5em;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2022%2022%22%3E%3Cpath%20fill%3D%22%237893DC%22%20d%3D%22M21.5%204.2L18%2010.7l3.5%206.7-7.4-1.2-5.2%205.3-1.2-7.4L1%2010.7l6.7-3.3L8.9%200l5.2%205.4%207.4-1.2z%22%2F%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: left 0.25em;
+      content: "";
+    }
+
+    &:nth-child(2n)::before {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2022%2022%22%3E%3Cpath%20fill%3D%22%23ff7ca6%22%20d%3D%22M21.5%204.2L18%2010.7l3.5%206.7-7.4-1.2-5.2%205.3-1.2-7.4L1%2010.7l6.7-3.3L8.9%200l5.2%205.4%207.4-1.2z%22%2F%3E%3C%2Fsvg%3E");
+    }
+  }
+}
