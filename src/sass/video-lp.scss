@@ -90,6 +90,14 @@ main a:not(.tdbc-button) {
   text-align: center;
   box-shadow: inset 100vw 100vh rgba(tdbc-color(primary), 0.4);
   overflow: hidden;
+
+  @media (max-width: 900px) {
+    min-height: 60vh;
+  }
+
+  @media (max-width: 425px) {
+    min-height: 80vh;
+  }
 }
 
 .header-wrapper .tdbc-max-line-length {
@@ -141,7 +149,7 @@ main a:not(.tdbc-button) {
   }
 
   .tdbc-ink-primary {
-    text-shadow: .03em 0.03em 0.2em rgba(255,255,255,0.4)
+    text-shadow: 0.03em 0.03em 0.1em rgba(255, 255, 255, 0.5);
   }
 }
 
