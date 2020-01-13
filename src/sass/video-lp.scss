@@ -1,0 +1,176 @@
+// stylelint-disable selector-max-type
+
+$tdbc-brand-colors: (
+  "primary": #150f64,
+  "secondary": #ff7ca6,
+  "tertiary": #7893dc,
+  "support": scale-color(#ff7ca6, $lightness: 60%)
+);
+
+$tdbc-body-color: #797979;
+$tdbc-strong-font-weight: 600;
+
+// Essential includes for variables, mixins, and functions
+@import "theme";
+@import "reset";
+@import "typography";
+@import "buttons";
+@import "nav";
+@import "card";
+@import "assets";
+@import "utilities"; 
+
+$tdbc-lp-secondary-a11y: scale-color(tdbc-color(secondary), $lightness: -10%);
+
+body {
+  font-family: sans-serif;
+}
+
+/*
+ * Typography
+ */
+
+h1,
+h2,
+h3,
+.tdbc-lead,
+.tdbc-button,
+nav li,
+label {
+  font-family: "Kulim Park", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+
+  span {
+    display: block;
+    font-size: 80%;
+    font-style: italic;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+main a:not(.tdbc-button) {
+  color: $tdbc-lp-secondary-a11y;
+}
+
+// stylelint-disable-next-line selector-class-pattern
+.tdbc-button--secondary { 
+  background-color: $tdbc-lp-secondary-a11y;
+}
+
+/*
+ * Layout
+ */
+
+ // stylelint-disable selector-class-pattern
+.header-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background: url("../img/starry-sky.jpg") center no-repeat;
+  color: #fff;
+  text-align: center;
+  box-shadow: inset 100vw 100vh rgba(tdbc-color(primary), 0.4);
+  overflow: hidden;
+
+  @media (max-width: 900px) {
+    min-height: 60vh;
+  }
+
+  @media (max-width: 425px) {
+    min-height: 80vh;
+  }
+}
+
+.header-wrapper .tdbc-max-line-length {
+  max-width: 40ch;
+}
+
+.header-graphic {
+  position: absolute;
+  bottom: 1vh;
+  left: 0;
+  max-width: 25vw;
+  max-height: 48vh;
+}
+
+.course-logo {
+  align-self: center;
+  max-width: 6rem;
+}
+// stylelint-disable
+
+#about {
+  background-image: url("../img/stars-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+
+  @media (max-width: 800px) {
+    padding-top: 60px;
+    background-position: right top;
+    background-size: 25vw auto;
+
+  .max-line-length {
+    max-width: 50ch;
+  }
+}
+}
+
+#support {
+  margin-top: 80px;
+  background-image: linear-gradient(
+      -20deg,
+      rgba(121, 147, 221, 0.5) 20%,
+      rgba(251, 169, 195, 0.9) 100%
+    ),
+    url("../img/starry-sky.jpg");
+
+  .tdbc-lead {
+    font-weight: $tdbc-strong-font-weight;
+  }
+
+  .tdbc-ink-primary {
+    text-shadow: 0.03em 0.03em 0.1em rgba(255, 255, 255, 0.5);
+  }
+}
+
+#launch {
+  .tdbc-wrapper {
+    display: grid;
+    grid-gap: 1em; 
+
+    @media (min-width: 600px) {
+      align-items: center;
+      justify-content: space-around;
+      grid-template-columns: 30vmin 0.8fr;
+    }
+
+    .tdbc-lead {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    width: 30vmin;
+  }
+}
+// stylelint-enable
