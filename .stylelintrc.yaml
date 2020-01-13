@@ -210,7 +210,7 @@ rules:
   declaration-property-unit-whitelist:
     font-size:
       - "rem"
-      - "px"
+      - "em"
       - "%"
   # The following prefix rules are enabled since we use autoprefixer
   at-rule-no-vendor-prefix: true

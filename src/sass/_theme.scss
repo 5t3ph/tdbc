@@ -25,6 +25,7 @@ $tdbc-theme-colors: map-merge(
 $tdbc-body-color: #666 !default;
 $tdbc-link-color: #7660eb !default;
 $tdbc-border-radius: 0.75em !default;
+$tdbc-nav-surface: tdbc-color(support) !default;
 
 $tdbc-strong-font-weight: 500 !default;
 $tdbc-h1-font-size: 40px !default;

@@ -4,7 +4,7 @@ $tdbc-brand-colors: (
   "primary": #150f64,
   "secondary": #ff7ca6,
   "tertiary": #7893dc,
-  "support": scale-color(#ff7ca6, $lightness: -60%)
+  "support": scale-color(#ff7ca6, $lightness: 60%)
 );
 
 $tdbc-body-color: #797979;
@@ -15,8 +15,12 @@ $tdbc-strong-font-weight: 600;
 @import "reset";
 @import "typography";
 @import "buttons";
+@import "nav";
+@import "card";
 @import "assets";
 @import "utilities"; 
+
+$tdbc-lp-secondary-a11y: scale-color(tdbc-color(secondary), $lightness: -10%);
 
 body {
   font-family: sans-serif;
@@ -30,7 +34,7 @@ h1,
 h2,
 h3,
 .tdbc-lead,
-.tdbc-btn,
+.tdbc-button,
 nav li,
 label {
   font-family: "Kulim Park", sans-serif;
@@ -61,12 +65,20 @@ h3 {
   font-size: 1.5rem;
 }
 
+main a:not(.tdbc-button) {
+  color: $tdbc-lp-secondary-a11y;
+}
+
+// stylelint-disable-next-line selector-class-pattern
+.tdbc-button--secondary { 
+  background-color: $tdbc-lp-secondary-a11y;
+}
+
 /*
  * Layout
  */
 
  // stylelint-disable selector-class-pattern
-
 .header-wrapper {
   display: flex;
   position: relative;
@@ -96,8 +108,8 @@ h3 {
   align-self: center;
   max-width: 6rem;
 }
-
 // stylelint-disable
+
 #about {
   background-image: url("../img/stars-icon.svg");
   background-repeat: no-repeat;
@@ -122,5 +134,35 @@ h3 {
       rgba(251, 169, 195, 0.9) 100%
     ),
     url("../img/starry-sky.jpg");
+  margin-top: 80px;
+
+  .tdbc-lead {
+    font-weight: $tdbc-strong-font-weight;
+  }
+
+  .tdbc-ink-primary {
+    text-shadow: .03em 0.03em 0.2em rgba(255,255,255,0.4)
+  }
+}
+
+#launch {
+  .tdbc-wrapper {
+    display: grid;
+    grid-gap: 1em; 
+
+    @media (min-width: 600px) {
+      grid-template-columns: 30vmin .8fr;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .tdbc-lead {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    width: 30vmin;
+  }
 }
 // stylelint-enable

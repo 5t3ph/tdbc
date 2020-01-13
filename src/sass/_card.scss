@@ -1,0 +1,67 @@
+.tdbc-card-wrapper {
+	display: flex;
+	justify-content: space-between; 
+}
+ 
+.tdbc-card {
+	display: flex;
+	flex: 0 1 30%;
+	flex-direction: column;
+  border-radius: 8px;
+	background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+	overflow: hidden;
+	
+	&__img {
+		min-height: 20vh;
+		transition: box-shadow 80ms ease-in-out;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		box-shadow: inset 0 0 30px 60px rgba(21, 15, 100, 0.3);
+	}
+
+	&:hover .tdbc-card__img {
+		box-shadow: inset 0 0 10px 10px rgba(21, 15, 100, 0.3);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		padding: 24px;
+	}
+
+	// stylelint-disable selector-max-type
+	h3 span {
+		display: inline-block;
+		padding: 0.05em 0.25em;
+		border-radius: 4px;
+		background-color: rgba(255, 124, 166, 0.4);
+		font-family: monospace;
+		font-size: 0.8em;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	ul {
+		margin-bottom: 2em;
+	}
+	// stylelint-enable
+
+	.tdbc-button {
+		margin-top: auto;
+	}
+}
+
+@media (max-width: 767px) {
+  .tdbc-card {
+		flex-basis: 100%;
+		
+		+ .tdbc-card {
+			margin-top: 2em;
+		}
+	}
+}

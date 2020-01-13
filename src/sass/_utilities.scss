@@ -17,12 +17,16 @@
   flex-direction: column;
 }
 
+.tdbc-d-flex-between {
+  justify-content: space-between;
+}
+
 .tdbc-m-x {
   margin-right: $tdbc-unit * 2;
   margin-left: $tdbc-unit * 2;
 }
 
-$tdbc-v-spacers: (sm: 16px, md: 24px, lg: 40px);
+$tdbc-v-spacers: (sm: 16px, md: 24px, lg: 40px, xl: 80px);
 
 @each $key, $spacer in $tdbc-v-spacers {
   .tdbc-margin-v-#{$key} {

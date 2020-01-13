@@ -30,7 +30,9 @@ strong {
   list-style-type: none;
 
   @media (min-width: 600px) {
-    grid-template-columns: 1fr 1fr;
+    &--columns {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   li {
