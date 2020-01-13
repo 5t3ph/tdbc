@@ -86,6 +86,28 @@ body {
   .tdbc-statement strong {
     color: #f9f9f9; }
 
+#learn {
+  position: relative;
+  margin: 10vh auto; }
+  #learn::before {
+    position: absolute;
+    top: 5vh;
+    left: -50vw;
+    width: 200vw;
+    height: 80%;
+    transform: rotate(-4deg);
+    background-color: #6248e8;
+    content: "";
+    z-index: -1; }
+  #learn .tdbc-wrapper {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 15vh auto;
+    grid-gap: 2rem;
+    grid-template-columns: 20vmin 0.8fr;
+    text-align: left; }
+
 h1 {
   font-size: 2.5rem;
   font-weight: 500; }
@@ -128,12 +150,9 @@ strong {
 
 form {
   display: flex;
-  position: absolute;
-  top: calc(100vh - 68px);
   flex-direction: column;
-  width: 30vw;
   min-width: 300px;
-  margin-bottom: 30vh;
+  margin-bottom: 20vh;
   padding: 24px;
   border-radius: 4px;
   background: #f9f9f9;

@@ -39,3 +39,32 @@ body {
     color: tdbc-color(light);
   }
 }
+
+// stylelint-disable selector-id-pattern, selector-max-id, selector-max-specificity
+#learn {
+  position: relative;
+  margin: 10vh auto;
+
+  &::before {
+    position: absolute;
+    top: 5vh;
+    left: -50vw;
+    width: 200vw;
+    height: 80%;
+    transform: rotate(-4deg);
+    background-color: scale-color(tdbc-color(primary), $lightness: -8%);
+    content: "";
+    z-index: -1;
+  }
+
+  .tdbc-wrapper {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 15vh auto;
+    grid-gap: 2rem;
+    grid-template-columns: 20vmin 0.8fr; 
+    text-align: left;
+  }
+}
+// stylelint-enable

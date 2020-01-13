@@ -1,12 +1,9 @@
 // stylelint-disable selector-max-type
 form {
   display: flex;
-  position: absolute;
-  top: calc(100vh - 68px);
   flex-direction: column;
-  width: 30vw;
   min-width: 300px;
-  margin-bottom: 30vh;
+  margin-bottom: 20vh;
   padding: $tdbc-unit * 3;
   border-radius: 4px;
   background: tdbc-color(light);
