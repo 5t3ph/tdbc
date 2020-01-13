@@ -5,7 +5,7 @@
   "main": "public/index.html",
   "author": "5t3ph",
   "scripts": {
-    "scss": "node-sass src/sass/*.scss public/css/*.css",
+    "scss": "node-sass src/sass --o public/css",
     "css": "postcss public/css/*.css -u autoprefixer cssnano -r -m",
     "copy:img": "copyfiles -u 1 ./src/img/* ./src/img/ public",
     "copy:html": "copyfiles -u 1 ./src/*.html ./src/**/*.html public",
