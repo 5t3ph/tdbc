@@ -23,6 +23,10 @@
 
   &--secondary {
     background-color: tdbc-color(secondary);
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(#fff, 0.54);
+    }
   }
 
   &--cancel {

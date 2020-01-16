@@ -61,7 +61,7 @@ body {
   font-family: Heebo, sans-serif;
   text-align: center;
   overflow-x: hidden; }
-  body a:not(.tdbc-icon-button):focus {
+  body a:not(.tdbc-icon-button):not(.tdbc-button):focus {
     margin: -0.2em;
     border: 0.2em solid transparent;
     border-radius: 2px;
@@ -325,6 +325,8 @@ legend {
     box-shadow: 0 0 0 3px #3419c5; }
   .tdbc-button--secondary {
     background-color: #21c2b7; }
+    .tdbc-button--secondary:focus {
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.54); }
   .tdbc-button--cancel {
     align-self: center;
     min-width: auto;
@@ -512,7 +514,10 @@ legend {
 .tdbc-video {
   position: relative;
   height: 0;
-  padding-bottom: 56.25%; }
+  padding-bottom: 56.25%;
+  border-radius: 7px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.27);
+  overflow: hidden; }
   .tdbc-video iframe {
     position: absolute;
     top: 0;

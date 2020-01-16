@@ -85,7 +85,9 @@ main a:not(.tdbc-button) {
   align-items: center;
   justify-content: center;
   min-height: 50vh;
-  background: url("../img/starry-sky.jpg") center no-repeat;
+  background-image: url("../img/starry-sky.jpg");
+  background-repeat: no-repeat; 
+  background-position: center center;
   color: #fff;
   text-align: center;
   box-shadow: inset 100vw 100vh rgba(tdbc-color(primary), 0.4);

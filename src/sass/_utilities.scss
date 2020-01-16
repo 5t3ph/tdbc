@@ -60,6 +60,9 @@ $tdbc-v-spacers: (sm: 16px, md: 24px, lg: 40px, xl: 80px);
   position: relative;
   height: 0;
   padding-bottom: 56.25%;
+  border-radius: 7px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.27);
+  overflow: hidden;
 
   // stylelint-disable
   iframe {
