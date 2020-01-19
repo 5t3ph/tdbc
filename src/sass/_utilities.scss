@@ -34,6 +34,10 @@ $tdbc-v-spacers: (sm: 16px, md: 24px, lg: 40px, xl: 80px);
     margin-bottom: $spacer;
   }
 
+  .tdbc-margin-b-#{$key} {
+    margin-bottom: $spacer;
+  }
+
   .tdbc-padding-v-#{$key} {
     padding-top: $spacer;
     padding-bottom: $spacer;

@@ -74,6 +74,12 @@ main a:not(.tdbc-button) {
   background-color: $tdbc-lp-secondary-a11y;
 }
 
+h3, h4, p {
+  &.tdbc-ink-secondary {
+  color: $tdbc-lp-secondary-a11y;
+  }
+}
+
 /*
  * Layout
  */
@@ -174,6 +180,69 @@ main a:not(.tdbc-button) {
 
   img {
     width: 30vmin;
+  }
+}
+
+#schedule {
+  > h3 {
+    background-color: tdbc-color(tertiary);
+    background-image: linear-gradient(
+      -20deg,
+      rgba(121, 147, 221, 0.5) 20%,
+      rgba(251, 169, 195, 0.9) 100%
+    );
+    border-radius: 4px;
+    padding: .5em;
+    margin-left: -.5em;
+  }
+
+  .tdbc-card:not(.promo) {
+    box-shadow: none;
+    border-left: 2px solid tdbc-color(secondary);
+    border-radius: 0;
+
+     p {
+      font-style: italic;
+     }
+  }
+
+  .promo {
+    grid-column: 1 / 3;
+    margin-top: 2rem;
+    border: 2px solid tdbc-color(tertiary);
+
+    @media (min-width: 960px) {
+      grid-column: 2 / 4;
+    }
+
+    .tdbc-card__content {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 24px;
+      
+
+      h3 {
+        margin-bottom: .5rem;
+      }
+
+      img {
+        width: 6rem;
+      }
+    }
+  }
+
+  .tdbc-card__content {
+    h4 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-top: auto;
+
+      + .tdbc-button {
+        margin-top: 16px;
+      }
+    }
   }
 }
 // stylelint-enable
