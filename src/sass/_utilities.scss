@@ -57,6 +57,17 @@ $tdbc-v-spacers: (sm: 16px, md: 24px, lg: 40px, xl: 80px);
 @each $key, $color in $tdbc-theme-colors {
   .tdbc-ink-#{$key} {
     color: $color;
+
+    > a {
+      border: 2px solid transparent;
+      color: inherit;
+
+      &:focus {
+        border-radius: 2px;
+        outline: none;
+        box-shadow: 0 0 0 3px currentColor;
+      }
+    }
   }
 }
 

@@ -70,11 +70,17 @@ main a:not(.tdbc-button) {
 }
 
 // stylelint-disable-next-line selector-class-pattern
+.tdbc-button:not(.tdbc-button--secondary):focus {
+  box-shadow: 0 0 0 3px $tdbc-lp-secondary-a11y;
+}
+
+// stylelint-disable-next-line selector-class-pattern
 .tdbc-button--secondary { 
   background-color: $tdbc-lp-secondary-a11y;
 }
 
 h3, h4, p {
+  // stylelint-disable-next-line
   &.tdbc-ink-secondary {
   color: $tdbc-lp-secondary-a11y;
   }

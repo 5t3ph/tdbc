@@ -109,6 +109,8 @@ body {
     grid-gap: 2rem;
     grid-template-columns: 20vmin 0.8fr;
     text-align: left; }
+  #learn .tdbc-button--secondary {
+    background-color: #1DCFC5; }
 
 h1 {
   font-size: 2.5rem;
@@ -330,7 +332,7 @@ legend {
   .tdbc-button--secondary {
     background-color: #21c2b7; }
     .tdbc-button--secondary:focus {
-      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.54); }
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.87); }
   .tdbc-button--cancel {
     align-self: center;
     min-width: auto;
@@ -506,30 +508,93 @@ legend {
 
 .tdbc-ink-primary {
   color: #7660eb; }
+  .tdbc-ink-primary > a {
+    border: 2px solid transparent;
+    color: inherit; }
+    .tdbc-ink-primary > a:focus {
+      border-radius: 2px;
+      outline: none;
+      box-shadow: 0 0 0 3px currentColor; }
 
 .tdbc-ink-secondary {
   color: #21c2b7; }
+  .tdbc-ink-secondary > a {
+    border: 2px solid transparent;
+    color: inherit; }
+    .tdbc-ink-secondary > a:focus {
+      border-radius: 2px;
+      outline: none;
+      box-shadow: 0 0 0 3px currentColor; }
 
 .tdbc-ink-tertiary {
   color: #fc5d6d; }
+  .tdbc-ink-tertiary > a {
+    border: 2px solid transparent;
+    color: inherit; }
+    .tdbc-ink-tertiary > a:focus {
+      border-radius: 2px;
+      outline: none;
+      box-shadow: 0 0 0 3px currentColor; }
 
 .tdbc-ink-support {
   color: #ffbc00; }
+  .tdbc-ink-support > a {
+    border: 2px solid transparent;
+    color: inherit; }
+    .tdbc-ink-support > a:focus {
+      border-radius: 2px;
+      outline: none;
+      box-shadow: 0 0 0 3px currentColor; }
 
 .tdbc-ink-light {
   color: #f9f9f9; }
+  .tdbc-ink-light > a {
+    border: 2px solid transparent;
+    color: inherit; }
+    .tdbc-ink-light > a:focus {
+      border-radius: 2px;
+      outline: none;
+      box-shadow: 0 0 0 3px currentColor; }
 
 .tdbc-ink-dark {
   color: #162310; }
+  .tdbc-ink-dark > a {
+    border: 2px solid transparent;
+    color: inherit; }
+    .tdbc-ink-dark > a:focus {
+      border-radius: 2px;
+      outline: none;
+      box-shadow: 0 0 0 3px currentColor; }
 
 .tdbc-ink-gray {
   color: #e9e9ea; }
+  .tdbc-ink-gray > a {
+    border: 2px solid transparent;
+    color: inherit; }
+    .tdbc-ink-gray > a:focus {
+      border-radius: 2px;
+      outline: none;
+      box-shadow: 0 0 0 3px currentColor; }
 
 .tdbc-ink-gray-dark {
   color: #bbb9ba; }
+  .tdbc-ink-gray-dark > a {
+    border: 2px solid transparent;
+    color: inherit; }
+    .tdbc-ink-gray-dark > a:focus {
+      border-radius: 2px;
+      outline: none;
+      box-shadow: 0 0 0 3px currentColor; }
 
 .tdbc-ink-gray-text {
   color: #767676; }
+  .tdbc-ink-gray-text > a {
+    border: 2px solid transparent;
+    color: inherit; }
+    .tdbc-ink-gray-text > a:focus {
+      border-radius: 2px;
+      outline: none;
+      box-shadow: 0 0 0 3px currentColor; }
 
 .tdbc-video {
   position: relative;
