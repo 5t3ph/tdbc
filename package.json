@@ -18,6 +18,7 @@
     "watch": "npm run watch:html & npm run watch:sass & npm run watch:js & npm run watch:img",
     "serve": "browser-sync start --server public --files public --port 1337",
     "develop": "npm run copy && npm run scss ; npm run watch & npm run serve",
+    "prebuild": "rm -rf public",
     "build": "npm run copy && npm run scss ; npm run css",
     "lint": "stylelint 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
     "lint:fix": "stylelint --fix 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'"
