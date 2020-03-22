@@ -39,10 +39,11 @@ strong {
     display: inline-flex;
     position: relative;
     padding-left: 1em;
-    
+
     &::before {
       flex: 0 0 22px;
-    margin-right: 0.5em;
+      margin-top: -0.2em;
+      margin-right: 0.5em;
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2022%2022%22%3E%3Cpath%20fill%3D%22%237893DC%22%20d%3D%22M21.5%204.2L18%2010.7l3.5%206.7-7.4-1.2-5.2%205.3-1.2-7.4L1%2010.7l6.7-3.3L8.9%200l5.2%205.4%207.4-1.2z%22%2F%3E%3C%2Fsvg%3E");
       background-repeat: no-repeat;
       background-position: left 0.25em;

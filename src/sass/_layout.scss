@@ -59,16 +59,23 @@ body {
 
   .tdbc-wrapper {
     display: grid;
-    align-items: center;
-    justify-content: center;
     margin: 15vh auto;
-    grid-gap: 2rem;
-    grid-template-columns: 20vmin 0.8fr; 
+    grid-gap: 1em;
     text-align: left;
+
+    @media (min-width: 600px) {
+      align-items: center;
+      justify-content: space-around;
+      grid-template-columns: 20vmin 0.8fr;
+    }
+  }
+
+  svg {
+    width: 20vmin;
   }
 
   .tdbc-button--secondary {
-    background-color: #1DCFC5;
+    background-color: #1dcfc5;
   }
 }
 // stylelint-enable
