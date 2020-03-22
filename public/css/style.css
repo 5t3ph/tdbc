@@ -99,10 +99,10 @@ body {
     height: 80%;
     transform: rotate(-4deg);
     background-color: #6248e8;
-    content: "";
-    z-index: -1; }
+    content: ""; }
   #learn .tdbc-wrapper {
     display: grid;
+    position: relative;
     margin: 15vh auto;
     grid-gap: 1em;
     text-align: left; }

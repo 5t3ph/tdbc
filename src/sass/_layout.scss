@@ -54,11 +54,11 @@ body {
     transform: rotate(-4deg);
     background-color: scale-color(tdbc-color(primary), $lightness: -8%);
     content: "";
-    z-index: -1;
   }
 
   .tdbc-wrapper {
     display: grid;
+    position: relative;
     margin: 15vh auto;
     grid-gap: 1em;
     text-align: left;
