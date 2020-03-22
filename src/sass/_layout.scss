@@ -7,7 +7,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   padding-top: calc(40vh - 150px);
   background-color: tdbc-color(primary);
   font-family: Heebo, sans-serif;
@@ -43,13 +43,16 @@ body {
 // stylelint-disable selector-id-pattern, selector-max-id, selector-max-specificity
 #learn {
   position: relative;
+  width: 100%;
   margin: 10vh auto;
+  overflow-x: hidden;
 
   &::before {
     position: absolute;
     top: 5vh;
-    left: -50vw;
-    width: 200vw;
+    bottom: 10vh;
+    left: -10%;
+    width: 120%;
     height: 80%;
     transform: rotate(-4deg);
     background-color: scale-color(tdbc-color(primary), $lightness: -8%);
@@ -76,6 +79,7 @@ body {
 
   .tdbc-button--secondary {
     background-color: #1dcfc5;
+    margin-bottom: 1rem;
   }
 }
 // stylelint-enable
