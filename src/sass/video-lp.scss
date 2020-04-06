@@ -4,10 +4,9 @@ $tdbc-brand-colors: (
   "primary": #150f64,
   "secondary": #ff7ca6,
   "tertiary": #7893dc,
-  "support": scale-color(#ff7ca6, $lightness: 60%)
+  "support": scale-color(#ff7ca6, $lightness: 60%),
 );
 
-$tdbc-body-color: #797979;
 $tdbc-strong-font-weight: 600;
 
 // Essential includes for variables, mixins, and functions
@@ -18,11 +17,13 @@ $tdbc-strong-font-weight: 600;
 @import "nav";
 @import "card";
 @import "assets";
-@import "utilities"; 
+@import "utilities";
 
-$tdbc-lp-secondary-a11y: scale-color(tdbc-color(secondary), $lightness: -10%);
+$tdbc-lp-secondary-a11y-lg: scale-color(tdbc-color(secondary), $lightness: -10%);
+$tdbc-lp-secondary-a11y-sm: scale-color(tdbc-color(secondary), $lightness: -38%, $saturation: 50%);
 
 body {
+  color: scale-color(tdbc-color(primary), $lightness: -25%);
   font-family: sans-serif;
 }
 
@@ -66,23 +67,31 @@ h3 {
 }
 
 main a:not(.tdbc-button) {
-  color: $tdbc-lp-secondary-a11y;
+  color: $tdbc-lp-secondary-a11y-sm;
 }
 
 // stylelint-disable-next-line selector-class-pattern
 .tdbc-button:not(.tdbc-button--secondary):focus {
-  box-shadow: 0 0 0 3px $tdbc-lp-secondary-a11y;
+  box-shadow: 0 0 0 3px $tdbc-lp-secondary-a11y-lg;
 }
 
 // stylelint-disable-next-line selector-class-pattern
-.tdbc-button--secondary { 
-  background-color: $tdbc-lp-secondary-a11y;
+.tdbc-button--secondary {
+  background-color: $tdbc-lp-secondary-a11y-lg;
 }
 
-h3, h4, p {
+h3,
+h4 {
   // stylelint-disable-next-line
   &.tdbc-ink-secondary {
-  color: $tdbc-lp-secondary-a11y;
+    color: $tdbc-lp-secondary-a11y-lg;
+  }
+}
+
+p {
+  // stylelint-disable-next-line
+  &.tdbc-ink-secondary {
+    color: $tdbc-lp-secondary-a11y-sm;
   }
 }
 
@@ -90,7 +99,7 @@ h3, h4, p {
  * Layout
  */
 
- // stylelint-disable selector-class-pattern
+// stylelint-disable selector-class-pattern
 .header-wrapper {
   display: flex;
   position: relative;
@@ -98,7 +107,7 @@ h3, h4, p {
   justify-content: center;
   min-height: 50vh;
   background-image: url("../img/starry-sky.jpg");
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   color: #fff;
@@ -144,10 +153,10 @@ h3, h4, p {
     background-position: right top;
     background-size: 25vw auto;
 
-  .max-line-length {
-    max-width: 50ch;
+    .max-line-length {
+      max-width: 50ch;
+    }
   }
-}
 }
 
 #support {
@@ -171,7 +180,7 @@ h3, h4, p {
 #launch {
   .tdbc-wrapper {
     display: grid;
-    grid-gap: 1em; 
+    grid-gap: 1em;
 
     @media (min-width: 600px) {
       align-items: center;
@@ -198,8 +207,8 @@ h3, h4, p {
       rgba(251, 169, 195, 0.9) 100%
     );
     border-radius: 4px;
-    padding: .5em;
-    margin-left: -.5em;
+    padding: 0.5em;
+    margin-left: -0.5em;
   }
 
   .tdbc-card:not(.promo) {
@@ -207,9 +216,9 @@ h3, h4, p {
     border-left: 2px solid tdbc-color(secondary);
     border-radius: 0;
 
-     p {
+    p {
       font-style: italic;
-     }
+    }
   }
 
   .promo {
@@ -225,10 +234,9 @@ h3, h4, p {
       display: grid;
       grid-template-columns: auto 1fr;
       grid-gap: 24px;
-      
 
       h3 {
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
       }
 
       img {
