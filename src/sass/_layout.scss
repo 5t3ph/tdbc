@@ -1,4 +1,8 @@
 // stylelint-disable selector-max-type
+html,
+body {
+  overflow-x: hidden;
+}
 
 body {
   @include tdbc-keyboard-focus("a:not(.tdbc-icon-button):not(.tdbc-button)", 0.2em);
@@ -8,11 +12,10 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 0.5rem 0;
-  padding-top: calc(40vh - 150px);
+  padding-top: calc(30vh - 150px);
   background-color: tdbc-color(primary);
   font-family: Heebo, sans-serif;
   text-align: center;
-  overflow-x: hidden;
 
   &,
   a {
@@ -34,6 +37,7 @@ body {
   max-width: 600px;
   margin: 1rem;
   color: rgba(tdbc-color(light), 0.85);
+  font-size: 1.125rem;
 
   strong {
     color: tdbc-color(light);
@@ -44,25 +48,23 @@ body {
 #learn {
   position: relative;
   width: 100%;
-  margin: 10vh auto;
-  overflow-x: hidden;
+  margin: 10vmin auto;
 
   &::before {
     position: absolute;
-    top: 5vh;
-    bottom: 10vh;
+    top: 3vmin;
+    bottom: 5vmin;
     left: -10%;
     width: 120%;
-    height: 80%;
     transform: rotate(-4deg);
-    background-color: scale-color(tdbc-color(primary), $lightness: -8%);
+    background-color: scale-color(tdbc-color(primary), $lightness: -8%, $saturation: -10%);
     content: "";
   }
 
   .tdbc-wrapper {
     display: grid;
     position: relative;
-    margin: 15vh auto;
+    margin: 15vmin auto;
     grid-gap: 1em;
     text-align: left;
 

@@ -31,22 +31,6 @@
     }
   }
 
-  &--cancel {
-    align-self: center;
-    min-width: auto;
-    min-height: 24px;
-    background-color: transparent;
-    color: tdbc-color(gray-text);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-
-    &:focus {
-      border-bottom: 1px solid currentColor;
-      border-radius: 0;
-      box-shadow: none;
-    }
-  }
-
   &--small {
     min-height: 34px;
     padding: 0.25em 0.75em;

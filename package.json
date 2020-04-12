@@ -24,18 +24,18 @@
     "lint:fix": "stylelint --fix 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'"
   },
   "dependencies": {
-    "autoprefixer": "^9.7.4",
+    "autoprefixer": "^9.7.6",
     "browser-sync": "^2.26.3",
     "copyfiles": "^2.2.0",
     "cssnano": "^4.1.10",
     "node-sass": "^4.13.1",
     "onchange": "^6.1.0",
     "postcss-cli": "^7.1.0",
-    "stylelint": "^13.2.1",
+    "stylelint": "^13.3.2",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.0.0",
-    "stylelint-scss": "^3.16.0",
+    "stylelint-scss": "^3.16.1",
     "stylelint-selector-bem-pattern": "^2.1.0"
   },
   "browserslist": [
