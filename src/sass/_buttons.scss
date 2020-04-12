@@ -55,6 +55,10 @@
   h2 {
     flex: 1 0 50%;
   }
+
+  @media (max-width: 450px) {
+    margin-top: 1rem;
+  }
 }
 
 .tdbc-icon-button {

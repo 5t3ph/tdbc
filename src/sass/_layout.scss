@@ -24,7 +24,7 @@ body {
 
   @media (max-width: 600px) {
     justify-content: flex-start;
-    padding-top: 20vh;
+    padding-top: 10vh;
   }
 
   @media (max-width: 320px) {
@@ -33,8 +33,7 @@ body {
 }
 
 .tdbc-statement {
-  width: 60vw;
-  max-width: 600px;
+  max-width: 60ch;
   margin: 1rem;
   color: rgba(tdbc-color(light), 0.85);
   font-size: 1.125rem;
