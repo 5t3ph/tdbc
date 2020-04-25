@@ -10,8 +10,18 @@ h2 {
   font-weight: $tdbc-strong-font-weight;
 }
 
+h4,
+.tdbc-h4 {
+  font-size: 1.125rem;
+  font-weight: $tdbc-strong-font-weight;
+}
+
 strong {
   font-weight: $tdbc-strong-font-weight;
+}
+
+.tdbc-align-left {
+  text-align: left;
 }
 
 .tdbc-max-line-length {
