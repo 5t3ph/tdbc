@@ -4,13 +4,13 @@ const apiRoot = "https://dev.to/api/articles/me/published?per_page=3";
 
 exports.handler = async (event, context, callback) => {
   try {
-    const items = await axios.get(apiRoot, { headers: { "api-key": process.env.DEVTO } });
+    const { data } = await axios.get(apiRoot, { headers: { "api-key": process.env.DEVTO } });
 
     let response = [];
 
     // Grab the items and smoosh them into something the front-end will like
-    if (items.length) {
-      response = items.map((item) => ({
+    if (data.length) {
+      response = data.map((item) => ({
         title: item.title,
         url: item.url,
         description: item.description,
