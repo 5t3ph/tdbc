@@ -49,6 +49,10 @@ body {
     opacity: 1;
   }
 
+  .tdbc-button {
+    box-shadow: 0 0 0 3px tdbc-color(primary);
+  }
+
   .tdbc-card__content {
     position: relative;
 

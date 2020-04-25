@@ -12,11 +12,11 @@ function createPostList(posts) {
       </li>`;
   });
   const list = `<ul class="tdbc-card-wrapper" role="list">${items.join("")}</ul>`;
-  postList.innerHTML = list;
+  postList.innerHTML = list + postList.innerHTML;
   postList.classList.add("loaded");
 }
 
-const postsApi = "https://devto--tdbc.netlify.app/.netlify/functions/devto";
+const postsApi = "/.netlify/functions/devto";
 // const postsApi = "/js/postdata.json";
 
 fetch(postsApi, {
