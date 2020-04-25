@@ -1,10 +1,7 @@
 .tdbc-card-wrapper {
   display: grid;
   grid-gap: 2em;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
 
   &--4col {
     display: block;
@@ -35,7 +32,6 @@ ul.tdbc-card-wrapper {
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-  overflow: hidden;
 
   &__img {
     min-height: 20vh;

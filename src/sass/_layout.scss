@@ -5,7 +5,7 @@ body {
 }
 
 body {
-  @include tdbc-keyboard-focus("a:not(.tdbc-icon-button):not(.tdbc-button)", 0.2em);
+  @include tdbc-keyboard-focus("a:not(.tdbc-icon-button):not(.tdbc-button):not(.tdbc-h4)", 0.2em);
 
   display: flex;
   flex-direction: column;
@@ -16,11 +16,6 @@ body {
   background-color: tdbc-color(primary);
   font-family: Heebo, sans-serif;
   text-align: center;
-
-  &,
-  a {
-    color: tdbc-color(light);
-  }
 
   @media (max-width: 600px) {
     justify-content: flex-start;
@@ -38,8 +33,57 @@ body {
   color: rgba(tdbc-color(light), 0.85);
   font-size: 1.125rem;
 
+  a,
   strong {
     color: tdbc-color(light);
+  }
+}
+
+.tdbc-posts {
+  min-height: 250px;
+  transition: 320ms opacity ease-in;
+  opacity: 0;
+
+  // stylelint-disable-next-line selector-class-pattern
+  &.loaded {
+    opacity: 1;
+  }
+
+  .tdbc-card__content {
+    position: relative;
+
+    a {
+      margin-bottom: 1rem;
+      color: scale-color(tdbc-color(secondary), $lightness: -15%);
+      line-height: 1.15;
+      text-decoration: none;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 180ms box-shadow ease-in;
+        border-radius: 8px;
+        content: "";
+      }
+
+      &:focus {
+        outline: none;
+      }
+      &:focus,
+      &:hover {
+        // stylelint-disable-next-line max-nesting-depth
+        &::before {
+          box-shadow: 0 0 0 3px tdbc-color(secondary);
+        }
+      }
+    }
+
+    span:last-child {
+      margin-top: auto;
+    }
   }
 }
 
@@ -48,6 +92,7 @@ body {
   position: relative;
   width: 100%;
   margin: 10vmin auto;
+  color: tdbc-color(light);
 
   &::before {
     position: absolute;

@@ -6,3 +6,4 @@
 node_modules/
 public/
 src/css/style.css
+src/js/postdata.json

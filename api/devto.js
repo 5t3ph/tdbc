@@ -8,7 +8,7 @@ exports.handler = async (event, context, callback) => {
 
     let response = [];
 
-    // Grab the items and smoosh them into something the front-end will like
+    // Grab the items and re-format to the fields we want
     if (data.length) {
       response = data.map((item) => ({
         title: item.title,
