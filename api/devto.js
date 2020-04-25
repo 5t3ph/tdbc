@@ -7,9 +7,11 @@ exports.handler = async (event, context, callback) => {
     const { items } = await axios.get(apiRoot, { headers: { "api-key": process.env.DEVTO } });
     let response = [];
 
+    console.log(items);
+
     // Grab the items and smoosh them into something the front-end will like
-    if (items.length) {
-      response = items.map((item) => ({
+    if (items.data.length) {
+      response = items.data.map((item) => ({
         title: item.title,
         url: item.url,
         description: item.description,
