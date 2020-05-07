@@ -16,8 +16,11 @@ function createPostList(posts) {
   postList.classList.add("loaded");
 }
 
-const postsApi = "/.netlify/functions/devto";
-// const postsApi = "/js/postdata.json";
+let postsApi = "/.netlify/functions/devto";
+
+if (window.location.port) {
+  postsApi = "/js/postdata.json";
+}
 
 fetch(postsApi, {
   method: "GET",
