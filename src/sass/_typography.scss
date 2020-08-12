@@ -144,6 +144,28 @@ a:not(.tdbc-button) {
   }
 }
 
+.tdbc-skip-link {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  background-color: var(--tdbc-color-primary-dark);
+  color: #fff;
+  font-size: 1.125rem;
+  overflow: hidden;
+  z-index: 2;
+
+  &:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 0.5em;
+  }
+}
+
 blockquote {
   margin: var(--tdbc-space-md) 0;
   padding-left: 1.5rem;

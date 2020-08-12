@@ -23,8 +23,6 @@ $tdbc-articles-breakpoint: 100ch;
 
   a {
     --tdbc-color-anchor-active: var(--tdbc-color-primary-dark);
-
-    text-decoration: none;
   }
 
   h3 {
@@ -38,6 +36,10 @@ $tdbc-articles-breakpoint: 100ch;
     p {
       padding-right: var(--tdbc-space-md);
       padding-left: var(--tdbc-space-md);
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 
@@ -89,6 +91,7 @@ $tdbc-articles-breakpoint: 100ch;
 
   footer {
     background-color: #e3deff;
+    font-size: 1.15rem;
     text-align: center;
   }
 
