@@ -1,3 +1,8 @@
 **/node_modules
+_reset.scss
+_prism.scss
 public/
-src/index.html
+src/css/
+functions/template.html
+*.md
+*.njk

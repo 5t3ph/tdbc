@@ -9,9 +9,4 @@
   publish = "public"
 
   # Default build command.
-  command = "npm run build"
-
-  [[redirects]]
-    from = "/learnwebdev/"
-    to = "https://learnfromsteph.dev"
-    status = 301
+  command = "AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer npm run build"

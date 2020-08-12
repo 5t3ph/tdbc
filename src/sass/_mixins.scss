@@ -1,9 +1,0 @@
-@mixin tdbc-keyboard-focus($el, $space: ".1em") {
-  #{$el}:focus {
-    margin: -#{$space};
-    border: #{$space} solid transparent;
-    border-radius: 2px;
-    outline: none;
-    box-shadow: 0 0 4px 2px currentColor;
-  }
-}

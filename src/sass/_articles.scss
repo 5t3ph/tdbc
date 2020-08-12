@@ -1,0 +1,138 @@
+$tdbc-articles-breakpoint: 100ch;
+
+.tdbc-articles {
+  --tdbc-articles-breakpoint: 100ch;
+
+  display: grid;
+  grid-gap: var(--tdbc-space-lg);
+
+  @media (min-width: $tdbc-articles-breakpoint) {
+    grid-template-areas:
+      "a ."
+      ".  b"
+      "c  .";
+  }
+}
+
+.tdbc-article {
+  position: relative;
+  padding-top: var(--tdbc-space-lg);
+  border-radius: var(--tdbc-border-radius);
+  background-color: var(--tdbc-color-light);
+  color: var(--tdbc-color-primary-dark);
+
+  a {
+    --tdbc-color-anchor-active: var(--tdbc-color-primary-dark);
+
+    text-decoration: none;
+  }
+
+  h3 {
+    a {
+      font-size: 0.9em;
+    }
+  }
+
+  &:not(.tdbc-article--page) {
+    h3,
+    p {
+      padding-right: var(--tdbc-space-md);
+      padding-left: var(--tdbc-space-md);
+    }
+  }
+
+  img {
+    position: relative;
+    width: 2.75rem;
+    margin-top: -5.5rem;
+    margin-right: auto;
+    margin-bottom: var(--tdbc-space-md);
+    margin-left: auto;
+    padding: 0.25rem;
+    border-radius: 50%;
+    background-color: var(--tdbc-color-light);
+    z-index: 1;
+    object-fit: contain;
+    filter: drop-shadow(1px 1px 3px var(--tdbc-color-primary-dark));
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  &::before {
+    top: -0.25rem;
+    right: -0.25rem;
+    bottom: -0.25rem;
+    left: -0.25rem;
+    border-radius: inherit;
+    background-image: var(--tdbc-gradient);
+    z-index: -1;
+  }
+
+  &:not(.tdbc-article--solid)::after {
+    top: -0.25rem;
+    left: 50%;
+    width: 6rem;
+    height: 2.5rem;
+    transform: translateX(-50%);
+    background-image: radial-gradient(
+        circle at top,
+        var(--tdbc-color-primary) 50%,
+        rgba(255, 0, 0, 0) 51%
+      ),
+      var(--tdbc-gradient);
+    clip-path: circle(50% at 50% 0);
+  }
+
+  footer {
+    background-color: #e3deff;
+    text-align: center;
+  }
+
+  @media (min-width: $tdbc-articles-breakpoint) {
+    &--dev {
+      grid-area: b;
+      margin-top: -10rem;
+    }
+
+    &--csstricks {
+      grid-area: c;
+      margin-top: -8rem;
+    }
+  }
+
+  &--page {
+    --tdbc-container-width: 80ch;
+
+    width: calc(100vw - var(--tdbc-space-sm));
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    padding-bottom: var(--tdbc-space-md);
+
+    @media (min-width: 80ch) {
+      padding-right: var(--tdbc-space-md);
+      padding-left: var(--tdbc-space-md);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    article {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    // stylelint-disable-next-line no-descending-specificity
+    a {
+      text-decoration: underline;
+    }
+
+    * + h2 {
+      margin-top: var(--tdbc-space-lg);
+    }
+  }
+}

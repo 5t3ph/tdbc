@@ -1,34 +1,80 @@
-$tdbc-unit: 8px;
+$tdbc-color-primary: #7660eb;
+$tdbc-color-primary-light: scale-color($tdbc-color-primary, $lightness: 35%);
+$tdbc-color-primary-dark: scale-color($tdbc-color-primary, $lightness: -55%);
+$tdbc-color-secondary: #21c2b7;
+$tdbc-color-tertiary: #fc5d6d;
+$tdbc-color-support: #ffcd42;
+$tdbc-color-background: $tdbc-color-primary;
 
 $tdbc-brand-colors: (
-  "primary": #7660eb,
-  "secondary": #21c2b7,
-  "tertiary": #fc5d6d,
-  "support": #ffbc00,
-) !default;
+  primary: $tdbc-color-primary,
+  primary-light: $tdbc-color-primary-light,
+  primary-dark: $tdbc-color-primary-dark,
+  secondary: $tdbc-color-secondary,
+  tertiary: $tdbc-color-tertiary,
+  support: $tdbc-color-support,
+);
 
-$tdbc-theme-colors: map-merge(
+$tdbc-colors: map-merge(
   $tdbc-brand-colors,
   (
-    "light": #f9f9f9,
-    "dark": #162310,
-    "gray": #e9e9ea,
-    "gray-dark": #bbb9ba,
-    "gray-text": #767676,
+    background: $tdbc-color-background,
+    light: #fff,
+    dark: rgba(black, 0.87),
   )
 );
 
 @function tdbc-color($key) {
-  @return map-get($tdbc-theme-colors, $key);
+  @return map-get($tdbc-colors, $key);
 }
 
-$tdbc-body-color: #666 !default;
-$tdbc-link-color: #7660eb !default;
-$tdbc-border-radius: 0.75em !default;
-$tdbc-nav-surface: tdbc-color(support) !default;
+// Add/remove to selectively generate `ink` (text color) classes
+$tdbc-ink-colors: primary-light, primary-dark, light;
 
-$tdbc-strong-font-weight: 500 !default;
-$tdbc-h1-font-size: 40px !default;
-$tdbc-h2-font-size: 32px !default;
-$tdbc-h3-font-size: 24px !default;
-$tdbc-h4-font-size: 18px !default;
+// Add/remove to selectively generate `background` (text color) classes
+$tdbc-background-colors: primary-dark, secondary;
+
+$tdbc-button-variants: primary, secondary;
+$tdbc-color-anchor: tdbc-color(secondary);
+$tdbc-color-anchor-active: tdbc-color(light);
+$tdbc-border-radius: 4px;
+
+$tdbc-font-family: "Baloo 2", sans-serif;
+$tdbc-font-weight-strong: 500;
+$tdbc-type-base-size: 1.15rem; // Baloo 2 is a bit small
+
+$tdbc-spacing: (
+  sm: 1rem,
+  md: 2rem,
+  lg: 4rem,
+  xl: 6rem,
+  auto: "auto",
+);
+
+:root {
+  @each $key, $color in $tdbc-colors {
+    --tdbc-color-#{$key}: #{$color};
+  }
+
+  --tdbc-color-anchor: #{$tdbc-color-anchor};
+  --tdbc-color-anchor-active: #{$tdbc-color-anchor-active};
+  --tdbc-font-family: "Baloo 2", sans-serif;
+  --tdbc-font-weight-strong: #{$tdbc-font-weight-strong};
+  --tdbc-border-radius: #{$tdbc-border-radius};
+  --tdbc-highlight-alpha: 0.15;
+  --tdbc-highlight-pos: 45%;
+  --tdbc-column-min: 30ch;
+  --tdbc-stack-gap: 0.5rem;
+  --tdbc-container-width: 120ch;
+
+  @each $key, $space in $tdbc-spacing {
+    --tdbc-space-#{$key}: #{$space};
+  }
+
+  --tdbc-gradient: linear-gradient(
+    to right,
+    var(--tdbc-color-tertiary),
+    var(--tdbc-color-support),
+    var(--tdbc-color-secondary)
+  );
+}

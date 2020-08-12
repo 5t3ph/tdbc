@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+
+{% include 'sitenav.njk' %} 
+
+{% set iconSrc %}/img/{{ icon }}{% endset %}
+{% set contactWidth %}{% if page.url === '/contact/' %}--tdbc-container-width: 60ch;{% endif %}{% endset %}
+<div class="tdbc-article tdbc-article--page {% if not icon %}tdbc-article--solid{% endif %} tdbc-container" style="--tdbc-color-anchor: var(--tdbc-color-primary); {{ contactWidth }}" >
+  {% if icon %}<img src="{{ iconSrc | url }}" alt="" />{% endif %}
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  <main class="tdbc-container">
+    <article>
+      {{ content | safe }}
+    </article>
+  </main>
+</div>
