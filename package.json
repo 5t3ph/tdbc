@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "scss": "node-sass src/sass -o src/css",
-    "css": "postcss src/css/*.css -u autoprefixer cssnano -r -m",
+    "css": "postcss src/css/style.css -u autoprefixer cssnano -r -m",
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "node-sass --watch src/sass -o src/css",
     "develop": "npm run scss ; ELEVENTY_ENV=dev npm run watch:eleventy & npm run watch:sass",
-    "build": "npm run scss ; ELEVENTY_ENV=prod eleventy ; npm run css ; npm run screenshot",
+    "build": "npm run scss ; npm run css ; ELEVENTY_ENV=prod eleventy ; npm run screenshot",
     "lint": "stylelint 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
     "lint:fix": "stylelint --fix 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
     "screenshot": "node functions/images.js",

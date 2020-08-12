@@ -48,10 +48,6 @@ $tdbc-level-size: $tdbc-type-base-size;
 }
 
 h1 {
-  font-weight: var(--tdbc-font-weight-strong);
-  position: relative;
-  z-index: 1;
-
   small {
     display: inline-grid;
     grid-template-areas: "text";
