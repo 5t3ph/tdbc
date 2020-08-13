@@ -2,6 +2,7 @@ $tdbc-articles-breakpoint: 100ch;
 
 .tdbc-articles {
   --tdbc-articles-breakpoint: 100ch;
+  --tdbc-color-anchor: var(--tdbc-color-primary);
 
   display: grid;
   grid-gap: var(--tdbc-space-lg);
@@ -109,6 +110,7 @@ $tdbc-articles-breakpoint: 100ch;
 
   &--page {
     --tdbc-container-width: 80ch;
+    --tdbc-color-anchor: var(--tdbc-color-primary);
 
     width: calc(100vw - var(--tdbc-space-sm));
     margin-top: 5vh;

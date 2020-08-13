@@ -79,12 +79,6 @@ layout: base.njk
   <section
     id="speaking"
     class="tdbc-background--secondary tdbc-ink--primary-dark tdbc-element-highlight"
-    style="
-      --tdbc-highlight-alpha: 0.25;
-      --tdbc-color-anchor: var(--tdbc-color-primary-dark);
-      --tdbc-color-anchor-active: #5949b3;
-      --tdbc-column-min: 25ch;
-    "
   >
     <article class="tdbc-container">
       <h2>
@@ -119,7 +113,7 @@ layout: base.njk
     <h2>
       {%- include "svg.njk" %} Latest Articles
     </h2>
-    <div class="tdbc-articles tdbc-mt-lg" style="--tdbc-color-anchor: var(--tdbc-color-primary);">
+    <div class="tdbc-articles tdbc-mt-lg">
       {% for post in devposts | source("moderncss") %}
       <article class="tdbc-article tdbc-article--moderncss">
         <img src="{{ '/img/logo-moderncss.png' | url }}" alt="" />
