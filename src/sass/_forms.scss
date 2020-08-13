@@ -1,27 +1,10 @@
-// stylelint-disable selector-max-type
-form {
-  display: flex;
-  flex-direction: column;
-  min-width: 300px;
-  margin-bottom: 20vh;
-  padding: $tdbc-unit * 3;
-  border-radius: 4px;
-  background: tdbc-color(light);
-  color: tdbc-color(gray-text);
-  box-shadow: 0 0 0 10px rgba(tdbc-color(light), 0.3);
-
-  .tdbc-icon {
-    align-self: center;
-    margin-bottom: 8px;
-  }
-}
-
-legend {
-  font-size: $tdbc-unit * 3;
-
-  &:focus {
-    outline: none;
-  }
+.tdbc-form {
+  display: grid;
+  width: 100%;
+  max-width: 40ch;
+  margin-right: auto;
+  margin-left: auto;
+  grid-gap: var(--tdbc-space-md);
 }
 
 .tdbc-form-notice {
@@ -33,190 +16,24 @@ legend {
   }
 }
 
-$tdbc-label-position-default: translate($tdbc-unit/2, -$tdbc-unit) scale(0.75);
-
-.tdbc-form-control label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: $tdbc-label-position-default;
-  transform-origin: top left;
-  color: tdbc-color(gray-text);
-  font-size: 1.25rem;
-  line-height: 1;
+.tdbc-form__field {
+  display: grid;
+  grid-gap: 0.5rem;
 }
 
-.tdbc-label-notch {
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-
-  label::before,
-  label::after,
-  &::before,
-  &::after {
-    border-width: 1px;
-    border-style: solid;
-    border-color: $tdbc-body-color;
-    content: "";
-  }
-
-  &::before {
-    width: 10px;
-    border-right: none;
-    border-radius: 4px 0 0 4px;
-  }
-
-  &::after {
-    flex-grow: 1;
-    border-left: none;
-    border-radius: 0 4px 4px 0;
-  }
-
-  label {
-    position: relative;
-    max-width: calc(100% - 12px * 2);
-    padding-right: 10px;
-    transform: none;
-
-    span {
-      display: block;
-      margin-right: calc(-1.15em + 4px);
-      padding-right: 4px;
-      transform: $tdbc-label-position-default;
-      transform-origin: top left;
-    }
-
-    &::before,
-    &::after {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      border-top: none;
-      border-right: none;
-      border-left: none;
-      pointer-events: none;
-    }
-
-    &::before {
-      top: 0;
-      transition: border 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-      border: none;
-      border-top: 1px solid transparent;
-    }
-
-    &::after {
-      bottom: 0;
-    }
-  }
+.tdbc-form__label {
+  font-size: tdbc-type-style(h4);
 }
 
-.tdbc-input {
-  padding: $tdbc-unit * 2 $tdbc-unit * 1.75 $tdbc-unit;
-  border: none;
-  border-radius: $tdbc-unit/2 $tdbc-unit/2 0 0;
-  outline: none;
-  background-color: transparent;
-  color: $tdbc-body-color;
+.tdbc-form__input {
+  padding: 0.25em 0.5em;
+  border: 2px solid var(--tdbc-color-primary-dark);
+  border-radius: var(--tdbc-border-radius);
   font-size: 1.25rem;
-
-  &:-webkit-autofill {
-    margin-top: 14px;
-    margin-right: 2px;
-    margin-bottom: 2px;
-    margin-left: 2px;
-    padding-top: 0;
-    z-index: auto !important;
-  }
-
-  &::placeholder {
-    color: transparent;
-  }
-
-  // stylelint-disable-next-line no-descending-specificity
-  ~ span {
-    label::after,
-    &::before,
-    &::after {
-      transition: all 200ms cubic-bezier(0, 0, 0.2, 1);
-    }
-  }
 
   &:focus {
-    outline: none;
-
-    ~ span {
-      label::after,
-      &::before,
-      &::after {
-        border-width: 2px;
-        border-color: tdbc-color(primary);
-      }
-    }
-
-    ~ label,
-    ~ span label span {
-      color: tdbc-color(primary);
-    }
-  }
-
-  &--textarea textarea {
-    position: relative;
-    align-self: auto;
-    box-sizing: content-box;
-    width: 100%;
-    height: auto;
-    min-height: 3.4em;
-    margin: 0;
-    padding: 0;
-    border: 1px solid transparent;
-    outline: none;
-    background: transparent;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-
-    &:focus + .tdbc-textarea--focus {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: -1px;
-      left: 0;
-      border-radius: 4px;
-      box-shadow: inset 0 -2px 0 1px tdbc-color(primary);
-      z-index: -1;
-    }
-  }
-}
-
-.tdbc-form-control {
-  display: inline-flex;
-  position: relative;
-  flex-direction: column;
-  min-width: 0;
-  margin: $tdbc-unit * 3 0 0;
-  padding: 0;
-  border: 0;
-  vertical-align: top;
-  z-index: 1;
-
-  &:focus-within {
-    .tdbc-label-notch {
-      label::after,
-      &::before,
-      &::after {
-        border-width: 2px;
-        border-color: tdbc-color(primary);
-      }
-    }
-
-    label,
-    span label span {
-      color: tdbc-color(primary);
-    }
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 2px #fff, 0 0 4px 4px scale-color(tdbc-color(primary), $lightness: -40%);
   }
 }

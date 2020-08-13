@@ -1,5 +1,6 @@
-// stylelint-disable
 @import "reset";
+
+// stylelint-disable
 
 body {
   font-family: sans-serif;
@@ -9,24 +10,24 @@ body {
 $hlevels: 1, 2, 3, 4, 5, 6;
 @each $level in $hlevels {
   h#{$level} {
-    @if($level < 6) {
+    @if ($level < 6) {
       font-size: 1rem * (5 - (0.65 * $level));
     } @else {
       font-size: 1rem;
     }
 
     line-height: 1.15;
-    margin-bottom: .15em;
+    margin-bottom: 0.15em;
   }
 }
 
 .section {
   padding: 5vmin;
-  
+
   h2:first-child {
     text-align: center;
   }
-  
+
   @media (min-width: 960px) {
     min-height: 100vh;
   }
@@ -53,7 +54,7 @@ $hlevels: 1, 2, 3, 4, 5, 6;
 
 .poor-text-contrast {
   p {
-    padding: .5em;
+    padding: 0.5em;
   }
 
   p:nth-child(1) {
@@ -79,7 +80,7 @@ $hlevels: 1, 2, 3, 4, 5, 6;
 
 .good-text-contrast {
   p {
-    padding: .5em;
+    padding: 0.5em;
     line-height: 1.5;
   }
 
@@ -92,7 +93,7 @@ $hlevels: 1, 2, 3, 4, 5, 6;
   p:nth-child(2) {
     color: pink;
     background: rebeccapurple;
-    letter-spacing: .02em;
+    letter-spacing: 0.02em;
   }
 
   p:nth-child(3) {
@@ -112,7 +113,7 @@ $hlevels: 1, 2, 3, 4, 5, 6;
 .ui-contrast {
   span {
     display: block;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
     color: #999;
   }
 
@@ -126,7 +127,7 @@ $hlevels: 1, 2, 3, 4, 5, 6;
     border-radius: 4px;
     width: 100%;
     min-height: 34px;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
     outline: none;
   }
 

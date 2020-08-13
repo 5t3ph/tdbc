@@ -1,0 +1,43 @@
+.tdbc-resources {
+  li {
+    display: grid;
+    align-content: start;
+    justify-content: space-between;
+    padding: var(--tdbc-space-md);
+    grid-gap: var(--tdbc-space-md);
+
+    + li {
+      border-top: 2px solid var(--tdbc-color-primary-light);
+    }
+
+    h3,
+    p {
+      margin: 0;
+    }
+
+    p {
+      max-width: 60ch;
+    }
+
+    a {
+      font-size: 1.25rem;
+    }
+
+    @media (min-width: 100ch) {
+      grid-template-columns: minmax(1fr, 60ch) max-content;
+      grid-template-areas: "title ." "content links";
+
+      h3 {
+        grid-area: title;
+      }
+
+      p {
+        grid-area: content;
+      }
+
+      .tdbc-row {
+        grid-area: links;
+      }
+    }
+  }
+}

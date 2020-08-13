@@ -1,0 +1,57 @@
+.tdbc-features {
+  --tdbc-feature-space: 8rem;
+
+  > * {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--tdbc-border-radius);
+
+    img {
+      position: relative;
+      width: 100%;
+      height: calc(var(--tdbc-feature-space) * 2);
+      margin-bottom: calc(var(--tdbc-feature-space) * -1);
+      transition: 280ms all 100ms ease-in-out;
+      border-radius: var(--tdbc-border-radius) var(--tdbc-border-radius) 0 0;
+      object-fit: cover;
+
+      @media (min-width: 620px) {
+        width: 80%;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        will-change: clip-path;
+      }
+    }
+
+    h3 {
+      display: grid;
+      place-content: center;
+      min-height: 2em;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    p {
+      grid-gap: var(--tdbc-space-sm);
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: calc(var(--tdbc-feature-space) + 1.5rem) var(--tdbc-space-md) var(--tdbc-space-md);
+      border-radius: var(--tdbc-border-radius);
+
+      :last-child {
+        margin-top: auto;
+      }
+    }
+
+    &:hover,
+    &:focus-within {
+      img {
+        width: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+  }
+}
