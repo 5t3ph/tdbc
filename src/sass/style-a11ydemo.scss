@@ -1,0 +1,170 @@
+@import "reset";
+
+// stylelint-disable
+
+body {
+  font-family: sans-serif;
+  background-color: #eee;
+}
+
+$hlevels: 1, 2, 3, 4, 5, 6;
+@each $level in $hlevels {
+  h#{$level} {
+    @if ($level < 6) {
+      font-size: 1rem * (5 - (0.65 * $level));
+    } @else {
+      font-size: 1rem;
+    }
+
+    line-height: 1.15;
+    margin-bottom: 0.15em;
+  }
+}
+
+.section {
+  padding: 5vmin;
+
+  h2:first-child {
+    text-align: center;
+  }
+
+  @media (min-width: 960px) {
+    min-height: 100vh;
+  }
+}
+
+.grid {
+  padding: 10vh 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 280px));
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 960px) {
+    height: calc(100vh - 8rem);
+  }
+}
+
+.poor-text-contrast {
+  p {
+    padding: 0.5em;
+  }
+
+  p:nth-child(1) {
+    color: #999;
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+  }
+
+  p:nth-child(2) {
+    color: pink;
+    background: red;
+  }
+
+  p:nth-child(3) {
+    font-family: "Amatic SC";
+    font-size: 14px;
+  }
+
+  p:nth-child(4) {
+    font-family: Monoton;
+  }
+}
+
+.good-text-contrast {
+  p {
+    padding: 0.5em;
+    line-height: 1.5;
+  }
+
+  p:nth-child(1) {
+    color: rgba(black, 0.45);
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  p:nth-child(2) {
+    color: pink;
+    background: rebeccapurple;
+    letter-spacing: 0.02em;
+  }
+
+  p:nth-child(3) {
+    font-family: "Amatic SC";
+    font-size: 42px;
+    color: black;
+  }
+
+  p:nth-child(4) {
+    font-family: Monoton;
+    font-size: 48px;
+    letter-spacing: 0.3em;
+    color: mediumturquoise;
+  }
+}
+
+.ui-contrast {
+  span {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #999;
+  }
+
+  .good-input span {
+    color: rgba(black, 0.57);
+  }
+
+  input {
+    background: transparent;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    min-height: 34px;
+    padding: 0 0.5rem;
+    outline: none;
+  }
+
+  .good-input input {
+    border: 1px solid rgba(black, 0.45);
+    box-shadow: 0 0 3px 2px rgba(black, 0.08);
+
+    &:focus {
+      box-shadow: 0 0 3px 1px blue;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #999;
+    min-height: 34px;
+    margin-top: 2.3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 1rem;
+    outline: none;
+    padding: 0 1em;
+    margin-left: 1rem;
+  }
+
+  .good-button {
+    color: rgba(black, 0.57);
+    border: 3px solid rgba(black, 0.45);
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      background-color: rgba(black, 0.57);
+      color: #fff;
+    }
+  }
+}

@@ -31,8 +31,6 @@
   }
 }
 
-@each $key, $unit in $tdbc-spacing {
-  .tdbc-mt-#{$key} {
-    margin-top: $unit;
-  }
+.tdbc-mt-lg {
+  margin-top: var(--tdbc-space-md);
 }
