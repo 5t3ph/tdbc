@@ -2,7 +2,7 @@ const emojiRegex = require("emoji-regex");
 const slugify = require("slugify");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const { minify } = require("terser");
+const Terser = require("terser");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -49,7 +49,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {
     try {
-      const minified = await minify(code);
+      const minified = await Terser.minify(code);
       return callback(null, minified.code);
     } catch (err) {
       console.error("Error during terser minify:", err);
