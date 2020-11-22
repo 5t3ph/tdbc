@@ -42,6 +42,17 @@ article {
   grid-template-columns: repeat(auto-fit, minmax(var(--tdbc-column-min), 1fr));
 }
 
+#speaking .tdbc-column-container li:last-child {
+  display: grid;
+  padding: var(--tdbc-space-sm);
+  grid-gap: var(--tdbc-space-sm);
+  border-radius: var(--tdbc-border-radius);
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  grid-column-end: -1;
+  place-content: center;
+}
+
 .tdbc-hero {
   display: grid;
   min-height: 80vh;

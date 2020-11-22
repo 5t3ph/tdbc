@@ -16,8 +16,8 @@ layout: base.njk
     Front-end focused Software Engineer at Microsoft,
     <a href="https://learnfromsteph.dev">publishing a video series for beginner developers</a>,
     author of <a href="https://moderncss.dev">ModernCSS.dev</a>, creator of the CSS community
-    project <a href="https://stylestage.dev">Style Stage</a>, and an
-    <a href="https://egghead.io/instructors/stephanie-eckles?af=2s65ms">egghead&nbsp;instructor</a>.
+    project <a href="https://stylestage.dev">Style Stage</a>, an
+    <a href="https://egghead.io/instructors/stephanie-eckles?af=2s65ms">egghead&nbsp;instructor</a>, and co-host of the <a href="https://wordwrap.dev">Word Wrap podcast</a>.
     <strong class="tdbc-ink--light">Available for</strong> speaking, writing, teaching, and
     consulting - <a href="{{ '/contact/' | url }}">get&nbsp;in&nbsp;touch</a>.
   </p>
@@ -86,10 +86,17 @@ layout: base.njk
       </h2>
       <ul role="list" class="tdbc-column-container tdbc-list-unstyled tdbc-mt-lg">
         <li class="tdbc-stack tdbc-stack--separator">
-          <span class="tdbc-h4">Building a Community-Driven Site with 11ty</span>
-          <strong>5to9 Virtual Conference</strong>
-          <small>August 25-27, 2020</small>
-          <small><em>Recording coming soon</em></small>
+          <span class="tdbc-h4">Going Beyond Static Sites With Eleventy</span>
+          <strong>TheJam.dev 2021</strong>
+          <small>January 28-29, 2021</small>
+          <a href="https://cfe.dev/events/the-jam-2021/">Get Your Ticket</a>
+        </li>
+        <li class="tdbc-stack tdbc-stack--separator">
+          <span class="tdbc-h4">CSS Track Curator</span>
+          <strong>Modern Web Summit</strong>
+          <small>March 22-26, 2021</small>
+          <a href="https://modernwebsummit.com/">Get Tickets</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2mAqQAEs1K8HpTs41XcX7u8CpPx975gJ2VJCjE3bjNb-vzQ/viewform">Submit a Talk</a>
         </li>
         <li class="tdbc-stack tdbc-stack--separator">
           <span class="tdbc-h4">Style Stage and Modern CSS</span>
@@ -104,11 +111,13 @@ layout: base.njk
           <a href="https://www.youtube.com/watch?v=3g6oS0VL2zg">Watch on YouTube</a>
         </li>
         <li class="tdbc-stack tdbc-stack--separator">
-          <span class="tdbc-h4">CSS Track Curator</span>
-          <strong>Modern Web Summit</strong>
-          <small>March 22-26, 2021</small>
-          <a href="https://modernwebsummit.com/">Get Tickets</a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2mAqQAEs1K8HpTs41XcX7u8CpPx975gJ2VJCjE3bjNb-vzQ/viewform">Submit a Talk</a>
+          <span class="tdbc-h4">Building a Community-Driven Site with 11ty</span>
+          <strong>5to9 Virtual Conference</strong>
+          <small>August 25-27, 2020</small>
+          <small><em>Recording coming soon</em></small>
+        </li>
+        <li><strong>Get in touch with your opportunity</strong>
+        <a href="/contact/" class="tdbc-button">Send your request</a>
         </li>
       </ul>
     </article>
@@ -160,6 +169,20 @@ layout: base.njk
         </footer>
       </article>
       {% endfor %}
+      {% for post in 11tyrocks %}
+      <article class="tdbc-article tdbc-article--11ty">
+        <img src="{{ '/img/logo-11tyrocks.png' | url }}" alt="" />
+        <h3>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h3>
+        <p>
+          {{ post.description }}
+        </p>
+        <footer>
+          <a href="https://11ty.rocks">View All 11ty Rocks Resources</a>
+        </footer>
+      </article>
+      {% endfor %}
     </div>
   </section>
 </main>
@@ -184,6 +207,18 @@ layout: base.njk
           >20 Min. Landing page</a
         >
         <a href="https://egghead.io/instructors/stephanie-eckles?af=2s65ms">View All Videos</a>
+      </div>
+    </li>
+    <li>
+      <h3>Word Wrap Podcast</h3>
+      <p>
+        The podcast I co-host with Claire Lipskey, in which we talk about a bunch of things relating to being developers in the 21st century.
+      </p>
+      <div class="tdbc-row">
+        <a
+          href="https://wordwrap.dev"
+          >Listen Now</a
+        >
       </div>
     </li>
     <li>

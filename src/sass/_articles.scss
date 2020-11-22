@@ -11,7 +11,8 @@ $tdbc-articles-breakpoint: 100ch;
     grid-template-areas:
       "a ."
       ".  b"
-      "c  .";
+      "c  ."
+      ". d";
   }
 }
 
@@ -104,6 +105,11 @@ $tdbc-articles-breakpoint: 100ch;
 
     &--csstricks {
       grid-area: c;
+      margin-top: -8rem;
+    }
+
+    &--11ty {
+      grid-area: d;
       margin-top: -8rem;
     }
   }
