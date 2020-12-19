@@ -41,6 +41,12 @@
     
     <meta property="og:image" content="{{ meta.url }}/previews/{{ ogImg }}.png" />
     <meta name="twitter:image" content="{{ meta.url }}/previews/{{ ogImg }}.png" />
+    <link rel="preconnect" href="https://plausible.io">
+    <link rel="dns-prefetch" href="https://plausible.io">
+    {% if 'thinkdobecreate' in meta.url %}
+    <script async defer data-domain="thinkdobecreate.com" src="https://plausible.io/js/plausible.outbound-links.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    {% endif %}
   </head>
   <body>
     <a href="#main" class="tdbc-skip-link">Skip to main content</a>
