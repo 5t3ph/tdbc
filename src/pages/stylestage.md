@@ -23,4 +23,4 @@ Style Stage has attracted many upcoming developers, but also recognized experts 
 - [Official launch announcement](https://moderncss.dev/announcing-style-stage-a-community-css-showcase/)
 - [Launch livestream](https://youtu.be/O2hLsVX5eN0) - originally broadcast on Twitch, this is the lightly edited version on YouTube
 - [CSS Masters Talk](https://www.youtube.com/watch?v=3g6oS0VL2zg) - interview that focused heavily on Style Stage
-- Upcoming on Sept 10: [LondonCSS meetup]() talk that will cover modern CSS via Style Stage
+- [LondonCSS meetup](https://youtu.be/Pu4cgMq4dDw) - my recorded talk about modern CSS and Style Stage

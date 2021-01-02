@@ -16,9 +16,9 @@ Popular articles include:
 - [Solutions to Replace the 12-Column Grid](https://moderncss.dev/solutions-to-replace-the-12-column-grid/)
 - [CSS-Only Accessible Dropdown Navigation Menu](https://moderncss.dev/css-only-accessible-dropdown-navigation-menu/)
 
-The site averages 20K unique visitors and 45K pageviews per month, and has solidly grabbed the #1 position for the term "modern CSS" on Google search results.
+The site averages 35K unique visitors and 60K pageviews per month, and has solidly grabbed the #1 position for the term "modern CSS" on Google search results.
 
-The full series is available at [ModernCSS.dev](https://moderncss.dev) and offers and RSS feed.
+The full series is available at [ModernCSS.dev](https://moderncss.dev) and offers an RSS feed.
 
 ## Press and Events
 

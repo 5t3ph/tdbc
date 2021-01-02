@@ -1,5 +1,5 @@
 {%- set titleValue -%}
-{%- if title %}{{ title }} | {% endif %}{{ meta.siteName }}{% if not title %} | Frontend Developer, Author, Speaker{% endif -%}
+{%- if title %}{{ title }} | {% endif %}{{ meta.siteName }}{% if not title %} | Front-End SWE, Author, Speaker{% endif -%}
 {%- endset -%}
 {%- set ogImg %}{% if title %}{{ title | slug }}{% else %}home{% endif %}{% endset %}
 {%- set pgDesc %}{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}{% endset %}
@@ -41,9 +41,9 @@
     
     <meta property="og:image" content="{{ meta.url }}/previews/{{ ogImg }}.png" />
     <meta name="twitter:image" content="{{ meta.url }}/previews/{{ ogImg }}.png" />
+    {% if 'thinkdobecreate' in meta.url %}
     <link rel="preconnect" href="https://plausible.io">
     <link rel="dns-prefetch" href="https://plausible.io">
-    {% if 'thinkdobecreate' in meta.url %}
     <script async defer data-domain="thinkdobecreate.com" src="https://plausible.io/js/plausible.outbound-links.js"></script>
     <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
     {% endif %}
