@@ -23,6 +23,11 @@ $tdbc-articles-breakpoint: 100ch;
   background-color: var(--tdbc-color-light);
   color: var(--tdbc-color-primary-dark);
 
+  .tdbc-container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   a {
     --tdbc-color-anchor-active: var(--tdbc-color-primary-dark);
   }
@@ -144,6 +149,28 @@ $tdbc-articles-breakpoint: 100ch;
 
     * + h2 {
       margin-top: var(--tdbc-space-lg);
+    }
+  }
+
+  &--links {
+    .tdbc-row {
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    main ul {
+      display: grid;
+      margin: 0;
+      padding: 0;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(15ch, 1fr));
+      list-style: none;
+      text-align: center;
+
+      a {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

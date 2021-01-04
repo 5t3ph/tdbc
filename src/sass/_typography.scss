@@ -137,6 +137,10 @@ a:not(.tdbc-button) {
   &:hover,
   &:focus {
     color: var(--tdbc-color-anchor-active);
+
+    .tdbc-article--links main ul & {
+      color: var(--tdbc-color-light);
+    }
   }
 }
 

@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+
+{% include 'sitenav.njk' %} 
+<div class="tdbc-article tdbc-article--page tdbc-article--solid tdbc-article--links tdbc-container" style="--tdbc-container-width: 60ch;">
+  <header>
+    <h1>{{ title }}</h1>
+  {% include "links.njk" %}
+  </header>
+  <main id="main" class="tdbc-container">
+    <article>
+      {{ content | safe }}
+    </article>
+  </main>
+</div>
