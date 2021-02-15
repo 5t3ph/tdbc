@@ -26,6 +26,10 @@ const getExcerpt = (md) => {
   const bq = /\s>/gm;
   content = content.replace(bq, "").trim();
 
+  // Remove tags comment
+  const tags = /<!-- \[(.+?)\] -->/gm;
+  content = content.replace(tags, "").trim();
+
   return content.substr(0, content.lastIndexOf(" ", 160)) + "...";
 };
 
