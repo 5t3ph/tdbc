@@ -24,7 +24,7 @@ body {
   overflow-x: hidden;
 }
 
-html {
+html:focus-within {
   scroll-behavior: smooth;
 }
 

@@ -5,7 +5,7 @@ layout: quicklinks.njk
 
 ## Newest Project
 
-> [SmolCSS.dev](https://smolcss.dev) - Minimal snippets for modern CSS layouts and components
+> [Accessible Cross-Browser CSS Form Styling](https://5t3ph.dev/a11y-forms) - my egghead video course
 
 ## Additional Links
 

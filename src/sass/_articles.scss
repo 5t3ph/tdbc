@@ -12,7 +12,8 @@ $tdbc-articles-breakpoint: 100ch;
       "a ."
       ".  b"
       "c  ."
-      ". d";
+      ". d"
+      "e .";
   }
 }
 
@@ -103,18 +104,23 @@ $tdbc-articles-breakpoint: 100ch;
   }
 
   @media (min-width: $tdbc-articles-breakpoint) {
-    &--dev {
+    &--sm {
       grid-area: b;
       margin-top: -10rem;
     }
 
-    &--csstricks {
+    &--dev {
       grid-area: c;
       margin-top: -8rem;
     }
 
-    &--11ty {
+    &--csstricks {
       grid-area: d;
+      margin-top: -8rem;
+    }
+
+    &--11ty {
+      grid-area: e;
       margin-top: -8rem;
     }
   }

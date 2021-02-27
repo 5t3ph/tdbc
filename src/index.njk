@@ -86,14 +86,16 @@ layout: base.njk
       </h2>
       <ul role="list" class="tdbc-column-container tdbc-list-unstyled tdbc-mt-lg">
         <li class="tdbc-stack tdbc-stack--separator">
-          <span class="tdbc-h4">International Woman's Day Event</span>
-          <strong>To be announced...</strong>
+          <span class="tdbc-h4">Eleventy: The Perfect Idea Playground</span>
+          <strong>Ladies of Jamstack / Jamstack Toronto</strong>
           <small>March 8, 2021</small>
+          <a href="https://www.meetup.com/JAMstack-Toronto/events/276313928/">Free RSVP</a>
         </li>
         <li class="tdbc-stack tdbc-stack--separator">
-          <span class="tdbc-h4">CSS Meetup</span>
-          <strong>To be announced...</strong>
-          <small>March 2021</small>
+          <span class="tdbc-h4">Minimal CSS Solutions to (Previously) Complex Problems</span>
+          <strong>CSS Café</strong>
+          <small>March 25, 2021</small>
+          <a href="https://www.meetup.com/CSS-Cafe/events/276534685/">Meetup RSVP</a>
         </li>
         <li class="tdbc-stack tdbc-stack--separator">
           <span class="tdbc-h4">CSS Track Curator</span>
@@ -118,12 +120,6 @@ layout: base.njk
           <span class="tdbc-h4">CSS Masters Talk Interview</span>
           <small>August 2020</small>
           <a href="https://www.youtube.com/watch?v=3g6oS0VL2zg">Watch on YouTube</a>
-        </li>
-        <li class="tdbc-stack tdbc-stack--separator">
-          <span class="tdbc-h4">Building a Community-Driven Site with 11ty</span>
-          <strong>5to9 Virtual Conference</strong>
-          <small>August 25-27, 2020</small>
-          <small><em>Recording coming soon</em></small>
         </li>
         <li><strong>Get in touch with your opportunity</strong>
         <a href="/contact/" class="tdbc-button">Send your request</a>
@@ -150,6 +146,18 @@ layout: base.njk
         </footer>
       </article>
       {% endfor %} 
+      <article class="tdbc-article tdbc-article--sm">
+        <img src="{{ '/img/logo-smashingmag.png' | url }}" alt="" />
+        <h3>
+          <a href="https://www.smashingmagazine.com/2021/02/responsive-image-effects-css-gradients-aspect-ratio/">Create Responsive Image Effects With CSS Gradients And aspect-ratio</a>
+        </h3>
+        <p>
+          A classic problem in CSS is maintaining the aspect ratio of images across related components, such as cards. The newly supported aspect-ratio property in combination with...
+        </p>
+        <footer>
+          <a href="https://www.smashingmagazine.com/author/stephanie-eckles/">View Smashing Magazine Author Profile</a>
+        </footer>
+      </article>
       {% for post in devposts | source("dev") %}
       <article class="tdbc-article tdbc-article--dev">
         <img src="{{ '/img/logo-dev.png' | url }}" alt="" />
@@ -185,7 +193,7 @@ layout: base.njk
           <a href="{{ post.url }}">{{ post.title }}</a>
         </h3>
         <p>
-          {{ post.description }}
+          {{ post.description | safe }}
         </p>
         <footer>
           <a href="https://11ty.rocks">View All 11ty Rocks Resources</a>
@@ -204,6 +212,15 @@ layout: base.njk
     {%- include "svg.njk" %} Developer Resources
   </h2>
   <ul role="list" class="tdbc-resources tdbc-list-unstyled tdbc-mt-lg">
+    <li>
+      <h3>Accessible Cross-Browser CSS Form Styling</h3>
+      <p>
+        In this video course, you'll work through the semantics and Sass styles of a mini form design system featuring the most common controls while learning how to keep them accessible.
+      </p>
+      <div class="tdbc-row">
+        <a href="https://5t3ph.dev/a11y-forms">Begin the Course</a>
+      </div>
+    </li>
     <li>
       <h3>egghead Front-End Videos</h3>
       <p>

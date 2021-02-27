@@ -10,7 +10,10 @@ module.exports = async () => {
       title: feed.items[0].title,
       url: feed.items[0].link,
       description:
-        content.replace(/(<([^>]+)>)/gi, "").substr(0, content.lastIndexOf(" ", 160)) + "...",
+        content
+          .replace(/(<([^>]+)>)/gi, "")
+          .substr(0, content.lastIndexOf(" ", 180))
+          .replace("#", "") + "...",
     },
   ];
 };
