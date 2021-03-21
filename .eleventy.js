@@ -10,7 +10,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./src/sass/");
 
-  eleventyConfig.addPassthroughCopy("./src/css/style*");
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
@@ -32,15 +31,6 @@ module.exports = function (eleventyConfig) {
       replacement: "-",
       remove: /[*+~·,()'"`´%!?¿:@\/]/g,
     });
-  });
-
-  eleventyConfig.addFilter("jsonTitle", (str) => {
-    if (!str) {
-      return;
-    }
-    let title = str.replace(/((.*)\s(.*)\s(.*))$/g, "$2&nbsp;$3&nbsp;$4");
-    title = title.replace(/"(.*)"/g, '\\"$1\\"');
-    return title;
   });
 
   eleventyConfig.addFilter("source", function (arr, source) {
