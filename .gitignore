@@ -3,10 +3,7 @@ node_modules
 
 # build artefacts
 public
-src/css
-functions/*.json
-functions/*.html
-src/previews/*
+pages.json
 
 # secrets and errors
 .env

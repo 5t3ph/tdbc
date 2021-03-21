@@ -1,12 +1,12 @@
-const emojiRegex = require("emoji-regex");
-const slugify = require("slugify");
+const Terser = require("terser");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const Terser = require("terser");
+const socialImages = require("@11tyrocks/eleventy-plugin-social-images");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(socialImages);
 
   eleventyConfig.addWatchTarget("./src/sass/");
 
@@ -16,22 +16,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/_headers");
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-
-  eleventyConfig.addFilter("slug", (str) => {
-    if (!str) {
-      return;
-    }
-
-    const regex = emojiRegex();
-    // Remove Emoji first
-    let string = str.replace(regex, "");
-
-    return slugify(string, {
-      lower: true,
-      replacement: "-",
-      remove: /[*+~·,()'"`´%!?¿:@\/]/g,
-    });
-  });
 
   eleventyConfig.addFilter("source", function (arr, source) {
     return arr.filter((item) => item.source === source);

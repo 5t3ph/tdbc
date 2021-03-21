@@ -10,9 +10,10 @@
     "build:eleventy": "eleventy",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
     "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "npm-run-all build:sass build:eleventy",
+    "build": "npm-run-all build:sass build:eleventy social-images",
     "lint": "stylelint 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
     "lint:fix": "stylelint --fix 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
+    "social-images": "eleventy-social-images --siteName 'ThinkDoBeCreate' --outputDir public --dataFile src/_generate/pages.json",
     "bump": "npm --no-git-tag-version version"
   },
   "keywords": [
@@ -26,11 +27,12 @@
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-rss": "^1.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
+    "@11tyrocks/eleventy-plugin-social-images": "^0.1.3",
     "autoprefixer": "^10.2.4",
     "cssnano": "^4.1.10",
     "dotenv": "^8.2.0",
-    "emoji-regex": "^9.2.1",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.8",
     "postcss-cli": "^8.3.1",
     "rss-parser": "^3.12.0",
     "sass": "^1.32.8",
@@ -43,9 +45,5 @@
   },
   "browserslist": [
     "last 2 versions"
-  ],
-  "dependencies": {
-    "chrome-aws-lambda": "7.0.0",
-    "puppeteer-core": "7.0.0"
-  }
+  ]
 }
