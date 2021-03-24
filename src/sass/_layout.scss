@@ -57,6 +57,10 @@ header + *:not(section) {
   margin-top: max(8vh, 4rem);
 }
 
+article {
+  max-width: calc(100vw - 2rem);
+}
+
 main {
   display: grid;
   margin-top: max(8vh, 4rem);
