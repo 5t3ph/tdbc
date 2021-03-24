@@ -24,16 +24,26 @@ a:focus {
   outline: 2px solid transparent;
 }
 
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
+:is(a, button, input, textarea) {
   --outline-offset: max(2px, 0.08em);
   --outline-style: solid;
   --outline-color: currentColor;
 
-  outline: max(2px, 0.08em) var(--outline-style) var(--outline-color);
-  outline-offset: var(--outline-offset);
+  &:focus {
+    outline: max(2px, 0.08em) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-offset);
+  }
+
+  @supports selector(:focus-visible) {
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: max(2px, 0.08em) var(--outline-style) var(--outline-color);
+      outline-offset: var(--outline-offset);
+    }
+  }
 }
 
 [id] {
