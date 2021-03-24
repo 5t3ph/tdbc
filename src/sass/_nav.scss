@@ -10,6 +10,13 @@ nav {
     line-height: 1;
     text-decoration: none;
 
+    &:focus {
+      --outline-style: none;
+
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
     &:focus-visible {
       --outline-style: none;
 
@@ -40,6 +47,10 @@ nav {
 }
 
 .home nav li:first-child a {
+  &:focus {
+    --outline-style: solid;
+  }
+
   &:focus-visible {
     --outline-style: solid;
   }

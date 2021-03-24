@@ -58,6 +58,11 @@
     &:not([class]) {
       padding: 0 0.25em;
 
+      &:focus {
+        --outline-color: var(--color-on-secondary);
+        --outline-style: dashed;
+      }
+
       &:focus-visible {
         --outline-color: var(--color-on-secondary);
         --outline-style: dashed;
@@ -109,6 +114,10 @@
       font-size: 0.9rem;
       line-height: 1;
       text-decoration: none;
+
+      &:focus {
+        --outline-color: var(--color-on-secondary);
+      }
 
       &:focus-visible {
         --outline-color: var(--color-on-secondary);

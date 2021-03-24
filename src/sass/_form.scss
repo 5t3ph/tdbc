@@ -23,6 +23,10 @@ form {
     // stylelint-disable-next-line
     font-size: max(16px, 1.125rem);
 
+    &:focus {
+      --outline-color: var(--color-on-surface);
+    }
+
     &:focus-visible {
       --outline-color: var(--color-on-surface);
     }
@@ -34,6 +38,10 @@ form {
 
     .callout & {
       border: none;
+
+      &:focus {
+        --outline-color: var(--color-on-primary);
+      }
 
       &:focus-visible {
         --outline-color: var(--color-on-primary);

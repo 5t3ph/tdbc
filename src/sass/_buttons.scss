@@ -17,6 +17,11 @@
   color: var(--color);
   font-size: 1.25rem;
 
+  &:focus {
+    --outline-offset: -6px;
+    --outline-style: dashed;
+  }
+
   &:focus-visible {
     --outline-offset: -6px;
     --outline-style: dashed;
