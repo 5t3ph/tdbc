@@ -44,41 +44,6 @@
   }
 }
 
-[role="note"] {
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  border-left: 2px dashed var(--color-on-secondary);
-  background-color: var(--color-secondary);
-  color: var(--color-on-secondary);
-
-  a {
-    background-color: var(--color-on-secondary);
-    color: var(--color-secondary);
-
-    &:not([class]) {
-      padding: 0 0.25em;
-
-      &:focus {
-        --outline-color: var(--color-on-secondary);
-        --outline-style: dashed;
-      }
-
-      &:focus-visible {
-        --outline-color: var(--color-on-secondary);
-        --outline-style: dashed;
-      }
-    }
-  }
-
-  :first-child:not(p) {
-    margin-top: 1rem;
-  }
-
-  :last-child:not(p) {
-    margin-bottom: 1rem;
-  }
-}
-
 .scroll-grid {
   display: grid;
   margin-top: 3rem;
@@ -232,5 +197,41 @@
         margin-top: 0.5em;
       }
     }
+  }
+}
+
+[role="note"] {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-left: 2px dashed var(--color-on-secondary);
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+
+  // stylelint-disable-next-line no-descending-specificity
+  a {
+    background-color: var(--color-on-secondary);
+    color: var(--color-secondary);
+
+    &:not([class]) {
+      padding: 0 0.25em;
+
+      &:focus {
+        --outline-color: var(--color-on-secondary);
+        --outline-style: dashed;
+      }
+
+      &:focus-visible {
+        --outline-color: var(--color-on-secondary);
+        --outline-style: dashed;
+      }
+    }
+  }
+
+  :first-child:not(p) {
+    margin-top: 1rem;
+  }
+
+  :last-child:not(p) {
+    margin-bottom: 1rem;
   }
 }
