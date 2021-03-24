@@ -1,0 +1,36 @@
+{% extends "base.njk" %} 
+{% block header %}
+<div class="profile">
+  <img src="img/steph.jpg" alt="Profile photo of Steph">
+  <div>
+    <h1>Stephanie Eckles <small>@5t3ph • she/her</small></h1>
+    {%- include "links.njk" -%}
+    <p>
+      <strong>Front-End Focused Software Engineer</strong>
+      <small>&lsaquo; a11y • HTML • CSS • 11ty • Design&nbsp;Systems • JS &rsaquo;</small>
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block precontent %}
+<article id="about" class="container">
+  <h2>Hello!</h2>
+  <p>
+    I'm the author of <a href="https://moderncss.dev">ModernCSS.dev</a> which provides modern
+    solutions to old CSS problems as in-depth tutorials. I'm also the creator of
+    <a href="https://stylestage.dev">Style Stage</a>, and author of
+    <a href="https://smolcss.dev">SmolCSS</a> and <a href="https://11ty.Rocks">11ty.Rocks</a>. I enjoy
+    sharing my experience as an author,
+    <a href="https://5t3ph.dev/egghead">egghead&nbsp;instructor</a>, co-host of the
+    <a href="https://wordwrap.dev">Word Wrap podcast</a>, and conference speaker.
+  </p>
+  <p>
+    I'm an advocate for accessibility, scalable CSS, and the Jamstack (especially Eleventy). Offline, I'm a mom to two girls and a cowboy corgi, and enjoy baking!
+  </p>
+  <aside role="note">
+    <p><strong>Available for</strong> speaking, writing, teaching, and consulting -
+    <a href="{{ '/contact/' | url }}">get&nbsp;in&nbsp;touch</a>.</p>
+  </aside>
+</article>
+{% endblock %}

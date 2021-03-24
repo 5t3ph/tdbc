@@ -10,13 +10,14 @@ This series examines modern CSS solutions to problems I've been solving over the
 
 Popular articles include:
 
+- [Custom Select Styles With Pure CSS](https://moderncss.dev/custom-select-styles-with-pure-css/)
 - [CSS Button Styling Guide](https://moderncss.dev/css-button-styling-guide/)
 - [Equal Height Elements: Flexbox vs. Grid](https://moderncss.dev/equal-height-elements-flexbox-vs-grid/)
 - [Pure CSS Smooth-Scroll "Back to Top"](https://moderncss.dev/pure-css-smooth-scroll-back-to-top/)
 - [Solutions to Replace the 12-Column Grid](https://moderncss.dev/solutions-to-replace-the-12-column-grid/)
 - [CSS-Only Accessible Dropdown Navigation Menu](https://moderncss.dev/css-only-accessible-dropdown-navigation-menu/)
 
-The site averages 35K unique visitors and 60K pageviews per month, and has solidly grabbed the #1 position for the term "modern CSS" on Google search results.
+The site averages 65K unique visitors and 90K pageviews per month, and has solidly grabbed the #1 position for the term "modern CSS" on Google search results.
 
 The full series is available at [ModernCSS.dev](https://moderncss.dev) and offers an RSS feed.
 

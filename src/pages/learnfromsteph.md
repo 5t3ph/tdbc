@@ -23,4 +23,4 @@ In particular, the following lessons have been well received outside the linear 
 
 > These techniques and solutions are aimed at true beginners, whereas my [Modern CSS](https://moderncss.dev) series includes upgrades for those who already have foundational CSS knowledge.
 
-The full lesson listing and more information on the series can be found at [LearnFromSteph.dev](https://learnfromsteph.dev).
+<p class="lead">The full lesson listing and more information on the series can be found at <a href="https://learnfromsteph.dev">LearnFromSteph.dev</a>.</p>

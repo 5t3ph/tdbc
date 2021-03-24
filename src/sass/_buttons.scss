@@ -1,84 +1,47 @@
-.tdbc-button,
-.tdbc-article--links main ul a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 10ch;
-  min-height: 44px;
-  // box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-  padding: 0.25em 0.75em;
-  transition: 220ms all ease-in-out;
-  border: none;
-  border-radius: var(--tdbc-border-radius);
-  background-color: var(--tdbc-color-primary);
-  color: #fff;
-  font-family: inherit;
-  font-size: 1.125rem;
+.button,
+.icon-button {
+  display: inline-grid;
   line-height: 1.1;
   text-align: center;
   text-decoration: none;
-  cursor: pointer;
+  place-content: center;
+}
 
-  &:hover,
-  &:active {
-    background-color: scale-color(tdbc-color(primary), $lightness: -20%);
-  }
+.button {
+  --background: var(--color-primary);
+  --color: var(--color-on-primary);
 
-  &:focus {
-    outline-color: transparent;
-    outline-style: solid;
-    box-shadow: 0 0 0 2px #fff, 0 0 4px 4px scale-color(tdbc-color(primary), $lightness: -40%);
-  }
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em;
+  background-color: var(--background);
+  color: var(--color);
+  font-size: 1.25rem;
 
-  @media screen and (-ms-high-contrast: active) {
-    border: 2px solid currentColor;
+  &:focus-visible {
+    --outline-offset: -6px;
+    --outline-style: dashed;
   }
 }
 
-.tdbc-icon-button {
-  display: inline-flex;
-  position: relative;
-  width: 1em;
-  height: 1em;
-  padding: 0;
-  border: none;
-  background: transparent;
-  font-size: 1.75rem;
-  cursor: pointer;
+.icon-button {
+  aspect-ratio: 1;
+  width: 1.5rem;
+  font-size: 1.5rem;
 
   svg {
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    transition: 180ms transform ease-in-out;
-    fill: currentColor;
-    opacity: 0.85;
+    width: 1em;
+    height: 1em;
   }
+}
 
-  &:focus,
-  &:hover {
-    outline: none;
+button.button {
+  --background: var(--color-secondary);
+  --color: var(--color-on-secondary);
 
-    // stylelint-disable-next-line selector-max-type
-    svg {
-      opacity: 1;
-    }
-  }
+  border: 2px solid var(--color);
+  cursor: pointer;
 
-  &:hover svg {
-    transform: translateY(-15%);
-  }
-
-  &:focus {
-    &::after {
-      position: absolute;
-      top: -0.3em;
-      right: -0.3em;
-      bottom: -0.3em;
-      left: -0.3em;
-      border: 2px solid currentColor;
-      border-radius: 50%;
-      content: "";
-    }
+  .callout & {
+    border: none;
   }
 }

@@ -1,0 +1,43 @@
+form {
+  display: grid;
+  grid-gap: 1rem;
+  justify-items: start;
+}
+
+.form-group {
+  display: grid;
+  width: 100%;
+  grid-gap: 0.25em;
+
+  label {
+    width: fit-content;
+    line-height: 1;
+  }
+
+  input,
+  textarea {
+    padding: 0 0.5em;
+    border: 2px solid var(--color-on-surface);
+    border-radius: 4px;
+    background-color: var(--color-on-primary);
+    // stylelint-disable-next-line
+    font-size: max(16px, 1.125rem);
+
+    &:focus-visible {
+      --outline-color: var(--color-on-surface);
+    }
+  }
+
+  // stylelint-disable-next-line no-descending-specificity
+  input {
+    min-height: 35px;
+
+    .callout & {
+      border: none;
+
+      &:focus-visible {
+        --outline-color: var(--color-on-primary);
+      }
+    }
+  }
+}

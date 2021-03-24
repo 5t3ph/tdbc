@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Create Responsive Image Effects With CSS Gradients And aspect-ratio",
+    "url": "https://www.smashingmagazine.com/2021/02/responsive-image-effects-css-gradients-aspect-ratio/",
+    "source": "smashingmag",
+    "description": "A classic problem in CSS is maintaining the aspect ratio of images across related components, such as cards. Learn how to solve this with modern CSS!"
+  },
+  {
+    "title": "A Community-Driven Site with Eleventy: Building the Site",
+    "url": "https://css-tricks.com/a-community-driven-site-with-eleventy-building-the-site/",
+    "source": "csstricks",
+    "description": "Develop an Eleventy setup that you can use as a starting point for your own community (or personal) site."
+  },
+  {
+    "title": "Guide to Advanced CSS Selectors - Part One",
+    "url": "https://moderncss.dev/guide-to-advanced-css-selectors-part-one/",
+    "source": "moderncss",
+    "description": "Understanding selectors, the cascade, and specificity are critical to developing CSS and modifying existing style rules. This two-part guide about advanced CSS selectors includes practical examples."
+  },
+  {
+    "title": "Custom Select Styles with Pure CSS",
+    "url": "https://moderncss.dev/custom-select-styles-with-pure-css/",
+    "source": "moderncss",
+    "description": "Modern CSS gives us a range of properties to achieve custom select styles that have a near-identical initial appearance for single, multiple, and disabled `select` elements across the top browsers."
+  },
+  {
+    "title": "Going Beyond Static Sites With Eleventy",
+    "url": "https://11ty.rocks/posts/going-beyond-static-with-eleventy/",
+    "source": "11tyrocks",
+    "description": "Eleventy includes features that allow exceeding the traditional limits of static. Learn how to leverage these features and think beyond static when using Eleventy."
+  },
+  {
+    "title": "How I Built and Launched A Small Web App in 17 Hours",
+    "url": "https://dev.to/5t3ph/how-i-built-and-launched-a-small-web-app-in-17-hours-1cc0",
+    "source": "dev",
+    "description": "This reflection post reviews the tech stack used, reveals a few tricks, and provides some techniques for how to rapidly go from idea to launch for small projects."
+  }
+]

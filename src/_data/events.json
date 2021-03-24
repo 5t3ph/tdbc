@@ -1,0 +1,84 @@
+[
+  {
+    "talkTitle": "CSS Track Curator",
+    "eventTitle": "Modern Web Conference",
+    "dateString": "May 17-28, 2021",
+    "date": "2021-05-17",
+    "links": [
+      {
+        "text": "Get Your Ticket",
+        "url": "https://modernwebconference.com/"
+      }
+    ]
+  },
+  {
+    "talkTitle": "Minimal CSS Solutions to (Previously) Complex Problems",
+    "eventTitle": "CSS Café",
+    "dateString": "March 25, 2021",
+    "date": "2021-03-25",
+    "links": [
+      {
+        "text": "Meetup RSVP",
+        "url": "https://www.meetup.com/CSS-Cafe/events/276534685/"
+      }
+    ]
+  },
+  {
+    "talkTitle": "Eleventy: The Perfect Idea Playground",
+    "eventTitle": "Ladies of Jamstack / Jamstack Toronto",
+    "dateString": "March 8, 2021",
+    "date": "2021-03-08"
+  },
+  {
+    "talkTitle": "Going Beyond Static Sites With Eleventy",
+    "eventTitle": "TheJam.dev 2021",
+    "dateString": "January 28-29, 2021",
+    "date": "2021-01-28",
+    "links": [
+      {
+        "text": "Slides and Article",
+        "url": "https://11ty.rocks/posts/going-beyond-static-with-eleventy/"
+      }
+    ]
+  },
+  {
+    "talkTitle": "Style Stage and Modern CSS",
+    "eventTitle": "LondonCSS Meetup",
+    "dateString": "September 10, 2020",
+    "date": "2020-09-10",
+    "links": [
+      {
+        "text": "Watch on YouTube",
+        "url": "https://youtu.be/Pu4cgMq4dDw"
+      },
+      {
+        "text": "Slides and Resources",
+        "url": "https://twitter.com/5t3ph/status/1304130761948311557"
+      }
+    ]
+  },
+  {
+    "talkTitle": "CSS Masters Talk Interview",
+    "eventTitle": "",
+    "dateString": "August 2020",
+    "date": "2020-08-01",
+    "links": [
+      {
+        "text": "Watch Interview on YouTube",
+        "url": "https://www.youtube.com/watch?v=3g6oS0VL2zg"
+      }
+    ]
+  },
+  {
+    "talkTitle": "Level-Up With Modern CSS",
+    "eventTitle": "Smashing Conference Workshop",
+    "dateString": "July 8-22, 2021",
+    "date": "2021-07-08",
+    "links": [
+      {
+        "text": "Workshop Registration and Details",
+        "url": "https://smashingconf.com/online-workshops/workshops/stephanie-eckles"
+      }
+    ]
+  }
+]

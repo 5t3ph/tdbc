@@ -2,7 +2,6 @@ extends:
   - stylelint-config-standard
   - stylelint-config-prettier
 plugins:
-  - stylelint-selector-bem-pattern
   - stylelint-scss
   - stylelint-order
 rules:
@@ -207,10 +206,12 @@ rules:
     - visibility
     - will-change
     - z-index
-  declaration-property-unit-whitelist:
+  declaration-property-unit-allowed-list:
     font-size:
       - "rem"
       - "em"
+      - "vw"
+      - "ex"
 
   # The following prefix rules are enabled since we use autoprefixer
   at-rule-no-vendor-prefix: true
@@ -226,7 +227,7 @@ rules:
   # For specificity: disallow IDs (0). Allow for complex combinations of classes, pseudo-classes,
   # attribute modifiers based on selector-max-compound-selectors, plus an addition for
   # pseudo-classes (4). Allow for pseudo-elements (1).
-  selector-max-specificity: 1,4,1
+  selector-max-specificity: 0,4,1
   at-rule-no-unknown:
     - true
     - ignoreAtRules:
@@ -242,12 +243,14 @@ rules:
         - mixin
         - return
         - warn
+        - use
+        - forward
   # Disallow "@extend" in scss.
   # http://csswizardry.com/2016/02/mixins-better-for-performance/
   # http://vanseodesign.com/css/sass-mixin-or-extend/
   # Besides performance, @extend actually *changes* the selector precedence by creating a compound
   # selector, which can lead to ambiguous results.
-  at-rule-blacklist:
+  at-rule-disallowed-list:
     - extend
   # Extremely useful for typos, and anything emergent can be ignored by this rule
   property-no-unknown:
@@ -255,29 +258,18 @@ rules:
     - ignoreProperties:
         - contain
   # There is no reason that a specific ID would be needed for UI components
-  selector-max-id: 1
+  selector-max-id: 0
   # In general, we should not be modifying elements within our components, since we can't
   # predict the use cases in which users would add a certain type of element into a component.
   selector-max-type:
     - 3
-    - ignoreTypes:
-        - /fieldset/
-        - /img/
-  # Styles for components should never need the universal selector.
-  selector-max-universal: 1
-  # Ensure any defined symbols are prefixed with "tdbc-"
-  custom-media-pattern: ^tdbc-.+
-  custom-property-pattern: ^tdbc-.+
-  selector-class-pattern:
-    - ^tdbc-.+
-    - resolveNestedSelectors: true
   # Names are more semantic than numbers
   font-weight-notation: named-where-possible
   # http://www.paulirish.com/2010/the-protocol-relative-url/
   function-url-no-scheme-relative: true
   # TODO: and FIXME: warnings are super useful because they remind us that we should address these
   # within our codebase
-  comment-word-blacklist:
+  comment-word-disallowed-list:
     - - /^TODO:/
       - /^FIXME:/
     - severity: warning
@@ -304,26 +296,6 @@ rules:
     - ignoreAtRules:
         - if
         - else
-
-  # We use Harry Roberts' BEM dialect as our preferred way to format classes.
-  # See: http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
-  # See: https://github.com/postcss/postcss-bem-linter/blob/c59db3f/lib/preset-patterns.js#L39
-  plugin/selector-bem-pattern:
-    componentName: ^[a-z]+(?:-[a-z]+)*$
-    # <namespace>-<block>__<element>*--<modifier>*[<attribute>]*
-    componentSelectors: ^\.tdbc-{componentName}(?:__[a-z]+(?:-[a-z]+)*)*(?:--[a-z]+(?:-[a-z]+)*)*(?:\[.+\])*$
-    ignoreSelectors:
-      - ^fieldset
-      - ^\[aria\-disabled=(?:.+)\]
-      - ^img
-
-  # SCSS naming patterns, just like our CSS conventions above.
-  # (note for $-vars we use a leading underscore for "private" variables)
-  scss/dollar-variable-pattern:
-    - ^_?tdbc-.+
-    - ignore: local
-  scss/at-function-pattern: ^tdbc-.+
-  scss/at-mixin-pattern: ^tdbc-.+
   # Prevents unneeded nesting selectors
   scss/selector-no-redundant-nesting-selector: true
   # Since leading underscores are not needed, they can be omitted

@@ -1,0 +1,46 @@
+nav {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary);
+
+  a {
+    display: flex;
+    align-items: center;
+    color: var(--color-on-primary);
+    font-size: 1rem;
+    line-height: 1;
+    text-decoration: none;
+
+    &:focus-visible {
+      --outline-style: none;
+
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 0.08em;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    margin: 0;
+    grid-gap: 1rem;
+  }
+
+  svg {
+    width: 1.35em;
+    height: 1.35em;
+    margin-right: 0.25em;
+  }
+}
+
+.home nav li:first-child a {
+  &:focus-visible {
+    --outline-style: solid;
+  }
+}

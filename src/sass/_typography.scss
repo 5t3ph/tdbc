@@ -1,195 +1,109 @@
-$tdbc-type-size-ratio: 1.333; // perfect fourth
-$tdbc-type-levels: 4, 3, 2, 1;
-
-$tdbc-type-styles: ();
-$tdbc-level-size: $tdbc-type-base-size;
-
-@each $level in $tdbc-type-levels {
-  $tdbc-level-size: $tdbc-level-size * $tdbc-type-size-ratio;
-  $tdbc-type-styles: map-merge($tdbc-type-styles, (#{"h"}$level: $tdbc-level-size));
-
-  // Output heading styles
-  // Assign to element and create utility class
-  // stylelint-disable order/properties-order
-  h#{$level},
-  .tdbc-h#{$level} {
-    // Fallback for browsers that don't support clamp
-    font-size: $tdbc-level-size;
-
-    // Recommendation courtesy of this brilliant work:
-    // @link https://hugogiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/
-    line-height: calc(2px + 2ex + 2px);
-
-    // Set with `em` to be relative to current `font-size`
-    margin-bottom: 0.65em;
-
-    // Remove unit for calculations
-    $level-unitless: $tdbc-level-size / ($tdbc-level-size * 0 + 1);
-
-    // Set minimum size to a percentage less than $level-size
-    // Reduction is greater for large font sizes (> 4rem) to help
-    // prevent overflow due to font-size on mobile devices
-    $fluid-reduction: if($tdbc-level-size > 4, 0.5, 0.15);
-    $fluid-min: $level-unitless - ($fluid-reduction * $level-unitless);
-
-    // Prevent dropping lower than 1rem (body font-size)
-    $fluid-min: if($fluid-min > $tdbc-type-base-size, $fluid-min, 1);
-
-    // Adjust max modifier slightly per level to prevent "same" size
-    // or lower levels appearing larger than higher levels
-    $fluid-scaler: ($level-unitless - $fluid-min) + 4vw;
-    // stylelint-disable-next-line declaration-block-no-duplicate-properties
-    font-size: clamp(#{$fluid-min}rem, #{$fluid-scaler}, #{$tdbc-level-size});
-  }
+:is(h1, h2, h3) {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1;
 }
 
-@function tdbc-type-style($key) {
-  @return map-get($tdbc-type-styles, $key);
+article :is(h2, h3):not(:first-child) {
+  margin-top: 2em;
 }
 
 h1 {
+  color: var(--color-alt);
+  font-size: 4rem;
+  font-size: clamp(2.5rem, 1rem + 5vw, 4rem);
+  text-align: center;
+
   small {
-    display: inline-grid;
-    grid-template-areas: "text";
-    place-items: center;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    font-weight: bolder;
-
-    $t: rgba(255, 255, 255, 0);
-    $w: rgba(255, 255, 255, 0.98);
-
-    span {
-      background: linear-gradient(3deg, $t 0%, $t 35%, $w 49.95%, $w 50.15%, $t 65%, $t),
-        var(--tdbc-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: 0.015em var(--tdbc-color-primary-dark);
-    }
-
-    > *,
-    &::before,
-    &::after {
-      grid-area: text;
-    }
-
-    &::before,
-    &::after {
-      content: attr(data-text);
-    }
-
-    &::before {
-      -webkit-text-stroke: 0.15em white;
-      background: no-repeat linear-gradient(white, white) 95% 50% / 80% 45%;
-    }
-
-    &::after {
-      text-shadow: 0.05em 0.06em 0.06em rgba(0, 0, 0, 0.35),
-        -0.05em -0.06em 0.05em rgba(61, 34, 34, 0.35);
-      z-index: -1;
-    }
+    display: block;
+    font-size: 0.6em;
   }
 }
 
-h1,
-h2 {
-  font-weight: var(--tdbc-font-weight-strong);
-}
+article h2 {
+  display: grid;
+  width: fit-content;
+  font-size: 2rem;
 
-h2 {
-  color: var(--tdbc-color-primary-dark);
-  text-align: center;
+  &::after {
+    width: 2ch;
+    transform: rotate(30deg) translate(-55%, 0.25em);
+    border-top: 0.08em dashed var(--color-primary);
+    content: "";
+  }
 }
 
 h3 {
-  font-weight: normal;
+  font-size: 1.5rem;
 }
 
-h4,
-.tdbc-h4 {
-  font-weight: var(--tdbc-font-weight-strong);
-}
+// stylelint-disable selector-max-specificity, selector-max-id
+#events {
+  h2::after {
+    content: unset;
+  }
 
-h2,
-h3,
+  h3 {
+    padding: 0.25em 0.5em;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+}
+// stylelint-enable
+
 h4 {
-  svg {
-    width: 1em;
-    vertical-align: top;
-    transform: translateY(7%);
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+header p {
+  line-height: 1.3;
+
+  small {
+    display: block;
+    margin-top: 0.5em;
   }
 }
 
-p,
-li {
-  font-size: $tdbc-type-base-size;
-}
+section {
+  h2 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+  }
 
-strong {
-  font-weight: $tdbc-font-weight-strong;
-}
+  p {
+    font-size: 1.5rem;
+  }
 
-a:not(.tdbc-button) {
-  color: var(--tdbc-color-anchor);
-  font-weight: var(--tdbc-font-weight-strong);
-  transition: 180ms color ease-in-out;
-
-  &:hover,
-  &:focus {
-    color: var(--tdbc-color-anchor-active);
-
-    .tdbc-article--links main ul & {
-      color: var(--tdbc-color-light);
+  header + & {
+    h2 {
+      font-size: 1.5rem;
     }
-  }
-}
 
-.tdbc-skip-link {
-  position: absolute;
-  top: auto;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  background-color: var(--tdbc-color-primary-dark);
-  color: #fff;
-  font-size: 1.125rem;
-  overflow: hidden;
-  z-index: 2;
-
-  &:focus {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    padding: 0.5em;
+    p {
+      font-size: unset;
+    }
   }
 }
 
 blockquote {
-  margin: var(--tdbc-space-md) 0;
-  padding-left: 1.5rem;
-  border-left: 2px solid var(--tdbc-color-secondary);
-  color: scale-color(tdbc-color(secondary), $lightness: -15%, $saturation: -30%);
+  margin-bottom: 4rem;
+  padding: 0.15rem 1.5rem;
+  border-left: 2px dashed var(--color-primary);
 
-  p {
-    font-size: 1.25rem;
+  &:not(:first-child) {
+    margin-top: 4rem;
   }
+}
 
-  &:first-of-type p {
-    color: var(--tdbc-color-primary);
-    font-size: tdbc-type-style(h4);
-  }
+.lead {
+  opacity: 0.8;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 code {
-  display: inline-flex;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  font-size: 0.75em;
-  line-height: 1.1;
-}
-
-.tdbc-list-unstyled {
-  list-style: none;
-  padding: 0;
+  font-size: 2.45ex;
 }

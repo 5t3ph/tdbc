@@ -1,8 +1,3 @@
-/*
- * [Modified] Modern CSS Reset
- * @link https://github.com/hankchizljaw/modern-css-reset
-*/
-
 /* Box sizing rules */
 *,
 *::before,
@@ -15,15 +10,20 @@ body,
 h1,
 h2,
 h3,
-h4 {
+h4,
+p,
+blockquote {
   margin: 0;
 }
 
-html,
-body {
-  overflow-x: hidden;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
 }
 
+/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -31,16 +31,19 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
   text-rendering: optimizeSpeed;
+  line-height: 1.7;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img {
-  display: block;
   max-width: 100%;
+  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -51,8 +54,12 @@ select {
   font: inherit;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
@@ -60,10 +67,5 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-
-  .tdbc-features img {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%) !important;
-    width: 100% !important;
   }
 }

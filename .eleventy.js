@@ -1,47 +1,31 @@
-const emojiRegex = require("emoji-regex");
-const slugify = require("slugify");
+const Terser = require("terser");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const Terser = require("terser");
+const socialImages = require("@11tyrocks/eleventy-plugin-social-images");
+const markdownIt = require("markdown-it");
+const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(socialImages);
 
   eleventyConfig.addWatchTarget("./src/sass/");
 
-  eleventyConfig.addPassthroughCopy("./src/css/style*");
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
   eleventyConfig.addPassthroughCopy("./src/_headers");
 
+  const md = new markdownIt({
+    html: true,
+  });
+
+  eleventyConfig.addFilter("markdown", (content) => {
+    return md.render(content);
+  });
+
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-
-  eleventyConfig.addFilter("slug", (str) => {
-    if (!str) {
-      return;
-    }
-
-    const regex = emojiRegex();
-    // Remove Emoji first
-    let string = str.replace(regex, "");
-
-    return slugify(string, {
-      lower: true,
-      replacement: "-",
-      remove: /[*+~·,()'"`´%!?¿:@\/]/g,
-    });
-  });
-
-  eleventyConfig.addFilter("jsonTitle", (str) => {
-    if (!str) {
-      return;
-    }
-    let title = str.replace(/((.*)\s(.*)\s(.*))$/g, "$2&nbsp;$3&nbsp;$4");
-    title = title.replace(/"(.*)"/g, '\\"$1\\"');
-    return title;
-  });
 
   eleventyConfig.addFilter("source", function (arr, source) {
     return arr.filter((item) => item.source === source);
@@ -57,8 +41,37 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addCollection("upcomingEvents", (collections) => {
+    const allEvents = collections.getAll()[0].data.events;
+
+    return allEvents
+      .filter((event) => {
+        const date = DateTime.fromISO(event.date);
+        return date > new Date();
+      })
+      .sort((a, b) => {
+        const aDate = DateTime.fromISO(a.date);
+        const bDate = DateTime.fromISO(b.date);
+        return aDate - bDate;
+      });
+  });
+
+  eleventyConfig.addCollection("pastEvents", (collections) => {
+    const allEvents = collections.getAll()[0].data.events;
+
+    return allEvents
+      .filter((event) => {
+        const date = DateTime.fromISO(event.date);
+        return date < new Date();
+      })
+      .sort((a, b) => {
+        const aDate = DateTime.fromISO(a.date);
+        const bDate = DateTime.fromISO(b.date);
+        return aDate + bDate;
+      });
+  });
+
   return {
-    passthroughFileCopy: true,
     dir: {
       input: "src",
       output: "public",

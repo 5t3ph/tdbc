@@ -1,0 +1,46 @@
+@use "color-tokens" as *;
+
+:root {
+  @include color-tokens();
+
+  --color-alt: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: "Baloo 2", system-ui, sans-serif;
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-underline-offset: 0.05em;
+}
+
+a:focus {
+  outline: 2px solid transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  --outline-offset: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: currentColor;
+
+  outline: max(2px, 0.08em) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset);
+}
+
+[id] {
+  scroll-margin-top: 2rem;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
