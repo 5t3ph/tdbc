@@ -1,0 +1,47 @@
+.button,
+.icon-button {
+  display: inline-grid;
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
+  place-content: center;
+}
+
+.button {
+  --background: var(--color-primary);
+  --color: var(--color-on-primary);
+
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em;
+  background-color: var(--background);
+  color: var(--color);
+  font-size: 1.25rem;
+
+  &:focus-visible {
+    --outline-offset: -6px;
+    --outline-style: dashed;
+  }
+}
+
+.icon-button {
+  aspect-ratio: 1;
+  width: 1.5rem;
+  font-size: 1.5rem;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+button.button {
+  --background: var(--color-secondary);
+  --color: var(--color-on-secondary);
+
+  border: 2px solid var(--color);
+  cursor: pointer;
+
+  .callout & {
+    border: none;
+  }
+}

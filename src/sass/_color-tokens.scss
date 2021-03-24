@@ -1,0 +1,29 @@
+/* 🛑 STOP!
+  Do not change this file directly.
+  Modify colors in color-tokens.js
+ */
+
+$color-surface: #faf0ff !default;
+$color-on-surface: #563566 !default;
+$color-primary: #7d4ce0 !default;
+$color-on-primary: #F2EAFF !default;
+$color-secondary: #65dce1 !default;
+$color-on-secondary: #185F62 !default;
+
+$color-tokens: (
+  "color-surface": $color-surface,
+  "color-on-surface": $color-on-surface,
+  "color-primary": $color-primary,
+  "color-on-primary": $color-on-primary,
+  "color-secondary": $color-secondary,
+  "color-on-secondary": $color-on-secondary
+) !default;
+
+@mixin color-tokens() {
+  --color-surface: #{$color-surface};
+  --color-on-surface: #{$color-on-surface};
+  --color-primary: #{$color-primary};
+  --color-on-primary: #{$color-on-primary};
+  --color-secondary: #{$color-secondary};
+  --color-on-secondary: #{$color-on-secondary};
+}

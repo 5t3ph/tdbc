@@ -1,0 +1,72 @@
+[
+  {
+    "title": "SmolCSS",
+    "description": "Demos of minimal snippets for modern CSS layouts and components that you can use _today_ in your projects.",
+    "repo": "smolcss",
+    "links": [
+      {
+        "text": "Visit SmolCSS.dev",
+        "url": "https://smolcss.dev"
+      }
+    ]
+  },
+  {
+    "title": "ButtonBuddy",
+    "description": "A web app to learn about accessible button contrast and generate your own accessible button color palette.",
+    "repo": "buttonbuddy",
+    "links": [
+      {
+        "text": "Visit ButtonBuddy.dev",
+        "url": "https://buttonbuddy.dev"
+      }
+    ]
+  },
+  {
+    "title": "a11y Color Tokens",
+    "description": "A web app to learn about accessible button contrast and generate your own accessible button color palette.",
+    "repo": "a11y-color-tokens",
+    "links": [
+      {
+        "text": "Get a11y-color-tokens",
+        "url": "https://www.npmjs.com/package/a11y-color-tokens"
+      }
+    ]
+  },
+  {
+    "title": "11ty Rocks!",
+    "description": "A collection of tutorials, tips, videos, starters, projects, plugins, and resources for the static site generator Eleventy (11ty).",
+    "repo": "11ty-rocks",
+    "links": [
+      {
+        "text": "Visit 11ty.Rocks",
+        "url": "https://11ty.rocks"
+      }
+    ]
+  },
+  {
+    "title": "11ty Netlify Jumpstart",
+    "description": "Quickly launch an 11ty-generated static site. Includes a minimal Sass framework, and generated sitemap, RSS feed, and social share preview images.",
+    "repo": "11ty-netlify-jumpstart",
+    "links": [
+      {
+        "text": "Generate Repo",
+        "url": "https://github.com/5t3ph/11ty-netlify-jumpstart/generate"
+      },
+      {
+        "text": "Preview the Jumpstart",
+        "url": "https://11ty-netlify-jumpstart.netlify.app/"
+      }
+    ]
+  },
+  {
+    "title": "11ty Sass Skeleton Starter",
+    "description": "Featuring absolutely nothing beyond a base HTML5 template and the essential setup to watch and compile your Sass alongside 11ty.",
+    "repo": "11ty-sass-skeleton",
+    "links": [
+      {
+        "text": "Get the Starter",
+        "url": "https://github.com/5t3ph/11ty-sass-skeleton"
+      }
+    ]
+  }
+]

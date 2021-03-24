@@ -1,0 +1,135 @@
+.skip-link {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 1rem;
+  line-height: 1;
+  overflow: hidden;
+
+  &:focus {
+    position: fixed;
+    clip: unset;
+    top: 0;
+    left: 50%;
+    width: auto;
+    height: auto;
+    padding: 0.5em;
+    transform: translateX(-50%);
+  }
+}
+
+header {
+  display: grid;
+  place-content: center;
+  padding-top: max(5vh, 4rem);
+  padding-bottom: max(5vh, 4rem);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+
+  a {
+    color: inherit;
+  }
+}
+
+.home header {
+  min-height: 60vh;
+}
+
+body > footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+article,
+aside {
+  > * + * {
+    margin-top: 1em;
+  }
+}
+
+header + * + *,
+header + *:not(section) {
+  margin-top: max(8vh, 4rem);
+}
+
+main {
+  display: grid;
+  margin-top: max(8vh, 4rem);
+  margin-bottom: max(8vh, 4rem);
+  grid-gap: max(8vh, 4rem);
+
+  &:focus {
+    outline: none;
+  }
+
+  > article:only-child {
+    max-width: 70ch;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+section,
+body > footer {
+  border-top: 2px dashed var(--color-primary);
+  background-color: var(--color-on-primary);
+}
+
+section {
+  display: grid;
+  place-content: center;
+  min-height: 50vh;
+  padding: max(3vh, 2rem) 0;
+  border-bottom: 2px dashed var(--color-primary);
+}
+
+header + section {
+  min-height: unset;
+  padding: 2rem 0;
+  border-top: none;
+}
+
+.links {
+  header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  main {
+    margin-top: 2rem;
+
+    ul:not([role]) {
+      --min: 15ch;
+
+      display: grid;
+      margin: 0;
+      padding: 0;
+      grid-gap: 0.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(var(--min), 1fr));
+      list-style: none;
+
+      li {
+        padding: 0.25rem;
+        background-color: var(--color-alt);
+        text-align: center;
+      }
+
+      @media (max-width: 380px) {
+        --min: 10ch;
+      }
+    }
+  }
+
+  .row {
+    grid-gap: 2rem;
+
+    .icon-button {
+      font-size: 2.25rem;
+    }
+  }
+}

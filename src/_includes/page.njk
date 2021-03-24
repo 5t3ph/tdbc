@@ -2,16 +2,6 @@
 layout: base.njk
 ---
 
-{% set iconSrc %}/img/{{ icon }}{% endset %}
-{% set contactWidth %}{% if page.url === '/contact/' %}style="--container-width: 60ch;"{% endif %}{% endset %}
-<div class="article article--page {% if not icon %}article--solid{% endif %} container" {{ contactWidth | safe }} >
-  {% if icon %}<img src="{{ iconSrc | url }}" alt="" />{% endif %}
-  <header>
-    <h1>{{ title }}</h1>
-  </header>
-  <main id="main" class="container">
-    <article>
-      {{ content | safe }}
-    </article>
-  </main>
-</div>
+<article>
+  {{ content | safe }}
+</article>

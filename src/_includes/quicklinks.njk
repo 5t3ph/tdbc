@@ -2,14 +2,7 @@
 layout: base.njk
 ---
 
-<div class="article article--page article--solid article--links container" style="--container-width: 60ch;">
-  <header>
-    <h1>{{ title }}</h1>
+<article>
   {% include "links.njk" %}
-  </header>
-  <main id="main" class="container">
-    <article>
-      {{ content | safe }}
-    </article>
-  </main>
-</div>
+  {{ content | safe }}
+</article>

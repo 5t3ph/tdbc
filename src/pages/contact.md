@@ -3,26 +3,23 @@ title: "Contact Steph"
 description: "Contact for speaking, writing, teaching, and consulting."
 ---
 
-> **Available for** speaking, writing, teaching, and consulting.
+<p class="lead">Available for speaking, writing, teaching, and consulting.</p>
 
-<form name="contact" action="/contact/" class="form" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+<form name="contact" action="/success" class="form" method="POST" netlify-honeypot="bot-field" data-netlify="true">
 	<p hidden>
 		<label>Don’t fill this out if you're human: <input name="bot-field" /></label>
 	</p>
-	<label class="form__field"><span class="form__label">First Name</span>
-		<input id="name" name="name" type="text" class="form__input" required />
-	</label>
-	<label class="form__field"><span class="form__label">Email</span>
-		<input
-			id="email"
-			name="email"
-			type="text"
-			class="form__input"
-			required
-		/>
-	</label>
-	<label class="form__field"><span class="form__label">Message</span>
-		<textarea id="message" name="message" class="form__input form__input--textarea" required></textarea>
-	</label>
-	<button class="button" type="submit">Send</button>
+	<div class="form-group">
+    <label for="first_name">First Name</label>
+    <input type="text" id="first_name" name="first_name" class="form-field">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" class="form-field">
+  </div>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea type="text" id="message" name="message" class="form-field"></textarea>
+  </div>
+  <button class="button" type="submit">Submit</button>
 </form>

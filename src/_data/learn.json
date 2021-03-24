@@ -1,0 +1,70 @@
+[
+  {
+    "title": "Modern CSS Solutions",
+    "description": "An in-depth tutorial series exploring modern CSS solutions for old CSS problems.",
+    "repo": "moderncss-dot-dev",
+    "links": [
+      {
+        "text": "Begin Learning Modern CSS",
+        "url": "https://moderncss.dev"
+      },
+      {
+        "text": "About ModernCSS.dev",
+        "url": "/moderncss/"
+      }
+    ]
+  },
+  {
+    "title": "Style Stage",
+    "description": "A modern CSS showcase styled by community contributions. This CSS playground is open to CSS practitioners of all skill levels!",
+    "repo": "stylestage",
+    "links": [
+      {
+        "text": "Contribute Your Stylesheet",
+        "url": "https://stylestage.dev"
+      },
+      {
+        "text": "About StyleStage.dev",
+        "url": "/stylestage/"
+      }
+    ]
+  },
+  {
+    "title": "Learn From Steph",
+    "description": "A free video series with enhanced transcripts to help beginners learn the essentials of HTML and CSS.",
+    "links": [
+      {
+        "text": "Start Your Webdev Journey",
+        "url": "https://LearnFromSteph.dev"
+      },
+      {
+        "text": "About LearnFromSteph.dev",
+        "url": "/learnfromsteph/"
+      }
+    ]
+  },
+  {
+    "title": "egghead Front-End Videos",
+    "description": "Learn more about various front-end development topics such as flexbox, grid, and Sass in 5 minutes or less. If you have 20 minutes available, you can create a whole landing page!",
+    "links": [
+      {
+        "text": "View All Video Lessons",
+        "url": "https://5t3ph.dev/egghead"
+      },
+      {
+        "text": "20 Min Landing Page",
+        "url": "https://egghead.io/courses/create-a-landing-page-with-css-grid-and-flexbox-6048?af=2s65ms"
+      }
+    ]
+  },
+  {
+    "title": "Build an Eleventy Site from Scratch",
+    "description": "Build a site in 20 mins in this video course! Start from a blank project and build up to an 11ty site that includes Sass, a blog collection, and is prepared to source content from a headless CMS.",
+    "links": [
+      {
+        "text": "Start the Eleventy Video Course",
+        "url": "https://5t3ph.dev/learn-11ty"
+      }
+    ]
+  }
+]

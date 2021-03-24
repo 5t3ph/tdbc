@@ -1,0 +1,227 @@
+.container {
+  width: min(80ch, 100vw - 2rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: var(--align, center);
+  justify-content: var(--justify, center);
+  grid-gap: 1rem;
+}
+
+.sidebar {
+  --sidebar: fit-content(30vw);
+  --gap: 0.5rem;
+
+  display: grid;
+  align-items: start;
+  grid-gap: var(--gap);
+  grid-template-columns: 1fr var(--sidebar);
+}
+
+.profile {
+  display: grid;
+  align-items: center;
+  grid-gap: 2rem;
+  text-align: center;
+
+  @media (min-width: 50rem) {
+    grid-template-columns: 1fr minmax(50ch, 1fr);
+  }
+
+  img {
+    width: min(80%, 30vw);
+    border: 3px dashed var(--color-on-primary);
+    border-radius: 50%;
+    place-self: center;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+[role="note"] {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-left: 2px dashed var(--color-on-secondary);
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+
+  a {
+    background-color: var(--color-on-secondary);
+    color: var(--color-secondary);
+
+    &:not([class]) {
+      padding: 0 0.25em;
+
+      &:focus-visible {
+        --outline-color: var(--color-on-secondary);
+        --outline-style: dashed;
+      }
+    }
+  }
+
+  :first-child:not(p) {
+    margin-top: 1rem;
+  }
+
+  :last-child:not(p) {
+    margin-bottom: 1rem;
+  }
+}
+
+.scroll-grid {
+  display: grid;
+  margin-top: 3rem;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+
+  li {
+    display: grid;
+    position: relative;
+    align-content: start;
+    padding-top: 2rem;
+    padding-right: clamp(0.5rem, 5%, 2rem);
+    padding-bottom: 2rem;
+    padding-left: clamp(0.5rem, 5%, 2rem);
+    border-bottom: 2px dashed var(--color-primary);
+    background-color: var(--color-alt);
+
+    p {
+      margin: 1em 0;
+      line-height: 1.5;
+    }
+
+    .github-stars {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: unset;
+      margin: 0;
+      padding: 0.5em 0.5em 0.25em;
+      border-radius: 0 0 0 4px;
+      background-color: var(--color-secondary);
+      color: var(--color-on-secondary);
+      font-size: 0.9rem;
+      line-height: 1;
+      text-decoration: none;
+
+      &:focus-visible {
+        --outline-color: var(--color-on-secondary);
+      }
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 0.08em;
+      }
+    }
+
+    img {
+      width: 2.75rem;
+      padding: 0.15rem;
+      border: 2px dashed var(--color-primary);
+      border-radius: 50%;
+      object-fit: contain;
+    }
+
+    .form-group {
+      width: 100%;
+    }
+  }
+
+  @media (any-hover: none) and (any-pointer: coarse) {
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+    grid-template-columns: unset;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    li {
+      width: min(45ch, 75vw);
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+    }
+  }
+}
+
+.callout {
+  background-image: linear-gradient(var(--color-primary), #461c9c);
+  color: #fff;
+
+  &--wide .container {
+    display: grid;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    grid-gap: 2rem;
+
+    div {
+      max-width: 20ch;
+    }
+
+    p {
+      margin-top: 1em;
+      line-height: 1.3;
+    }
+
+    @media (min-width: 40rem) {
+      grid-auto-flow: column;
+    }
+  }
+}
+
+.event-list {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+
+  li {
+    --sidebar: 10ch;
+    --gap: 1.5rem;
+
+    padding-left: 1rem;
+    border-left: 2px dashed var(--color-primary);
+
+    // stylelint-disable no-descending-specificity
+    p {
+      margin-top: 0.5em;
+      line-height: 1.3;
+
+      strong {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.1;
+      }
+    }
+    // stylelint-enable
+
+    a {
+      font-size: 1.15rem;
+    }
+
+    div:last-child {
+      display: grid;
+    }
+  }
+}
+
+.scroll-grid,
+.event-list {
+  li {
+    a {
+      width: fit-content;
+      line-height: 1.3;
+      text-decoration: underline;
+      text-decoration-thickness: 0.08em;
+
+      + a {
+        margin-top: 0.5em;
+      }
+    }
+  }
+}

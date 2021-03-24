@@ -1,7 +1,8 @@
 # dependencies installed by npm
 node_modules
 
-# build artefacts
+# build artifacts
+.cache
 public
 pages.json
 

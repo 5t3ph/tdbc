@@ -1,0 +1,109 @@
+:is(h1, h2, h3) {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+
+article :is(h2, h3):not(:first-child) {
+  margin-top: 2em;
+}
+
+h1 {
+  color: var(--color-alt);
+  font-size: 4rem;
+  font-size: clamp(2.5rem, 1rem + 5vw, 4rem);
+  text-align: center;
+
+  small {
+    display: block;
+    font-size: 0.6em;
+  }
+}
+
+article h2 {
+  display: grid;
+  width: fit-content;
+  font-size: 2rem;
+
+  &::after {
+    width: 2ch;
+    transform: rotate(30deg) translate(-55%, 0.25em);
+    border-top: 0.08em dashed var(--color-primary);
+    content: "";
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+// stylelint-disable selector-max-specificity, selector-max-id
+#events {
+  h2::after {
+    content: unset;
+  }
+
+  h3 {
+    padding: 0.25em 0.5em;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+}
+// stylelint-enable
+
+h4 {
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+header p {
+  line-height: 1.3;
+
+  small {
+    display: block;
+    margin-top: 0.5em;
+  }
+}
+
+section {
+  h2 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  header + & {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: unset;
+    }
+  }
+}
+
+blockquote {
+  margin-bottom: 4rem;
+  padding: 0.15rem 1.5rem;
+  border-left: 2px dashed var(--color-primary);
+
+  &:not(:first-child) {
+    margin-top: 4rem;
+  }
+}
+
+.lead {
+  opacity: 0.8;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+code {
+  font-size: 2.45ex;
+}

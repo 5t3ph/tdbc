@@ -206,10 +206,12 @@ rules:
     - visibility
     - will-change
     - z-index
-  declaration-property-unit-whitelist:
+  declaration-property-unit-allowed-list:
     font-size:
       - "rem"
       - "em"
+      - "vw"
+      - "ex"
 
   # The following prefix rules are enabled since we use autoprefixer
   at-rule-no-vendor-prefix: true
@@ -241,12 +243,14 @@ rules:
         - mixin
         - return
         - warn
+        - use
+        - forward
   # Disallow "@extend" in scss.
   # http://csswizardry.com/2016/02/mixins-better-for-performance/
   # http://vanseodesign.com/css/sass-mixin-or-extend/
   # Besides performance, @extend actually *changes* the selector precedence by creating a compound
   # selector, which can lead to ambiguous results.
-  at-rule-blacklist:
+  at-rule-disallowed-list:
     - extend
   # Extremely useful for typos, and anything emergent can be ignored by this rule
   property-no-unknown:
@@ -259,18 +263,13 @@ rules:
   # predict the use cases in which users would add a certain type of element into a component.
   selector-max-type:
     - 3
-    - ignoreTypes:
-        - /fieldset/
-        - /img/
-  # Styles for components infrequently use the universal selector.
-  selector-max-universal: 1
   # Names are more semantic than numbers
   font-weight-notation: named-where-possible
   # http://www.paulirish.com/2010/the-protocol-relative-url/
   function-url-no-scheme-relative: true
   # TODO: and FIXME: warnings are super useful because they remind us that we should address these
   # within our codebase
-  comment-word-blacklist:
+  comment-word-disallowed-list:
     - - /^TODO:/
       - /^FIXME:/
     - severity: warning

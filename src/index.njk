@@ -1,310 +1,107 @@
 ---
 title: "Stephanie Eckles"
-layout: base.njk
+layout: home.njk
 ---
 
-<header class="hero">
-  <h1>
-    <small role="img" aria-label="@5t3ph" data-text="@5t3ph"><span>@5t3ph</span></small
-    ><br />stephanie eckles
-  </h1>
-  {%- include "links.njk" -%}
-  <p>
-    <strong>Girl Geek, Software Engineer, she/her</strong><br />
-    &lsaquo; a11y • HTML • CSS • 11ty • Design Systems • JS &rsaquo;
-  </p>
-  <p class="ink--primary-light">
-    Front-end focused Software Engineer at Microsoft,
-    <a href="https://learnfromsteph.dev">publishing a video series for beginner developers</a>,
-    author of <a href="https://moderncss.dev">ModernCSS.dev</a>, <a href="https://11ty.Rocks">11ty.Rocks</a>, and <a href="https://smolcss.dev">SmolCSS</a>, creator of the CSS community
-    project <a href="https://stylestage.dev">Style Stage</a>, an
-    <a href="https://5t3ph.dev/egghead">egghead&nbsp;instructor</a>, and co-host of the <a href="https://wordwrap.dev">Word Wrap podcast</a>.
-    <strong class="ink--light">Available for</strong> speaking, writing, teaching, and
-    consulting - <a href="{{ '/contact/' | url }}">get&nbsp;in&nbsp;touch</a>.
-  </p>
-</header>
-<main id="main">
-  <section id="work" class="container">
-    <h2>
-      {%- include "svg.njk" %} Featured Work
-    </h2>
-    <div class="column-container features">
-      <article>
-        <img src="{{ '/img/moderncss.jpg' | url }}" alt="" />
-        <div class="background--primary-dark element-highlight">
-          <h3>Modern CSS Solutions</h3>
-          <p class="ink--primary-light gradient--before">
-            A tutorial series exploring modern CSS solutions to old CSS problems.
-          </p>
-          <span class="stack">
-            <a href="/moderncss/" aria-label="Learn more about ModernCSS.dev"
-              >Learn More</a
-            >
-            <a href="https://moderncss.dev">Visit ModernCSS.dev</a>
-          </span>
-        </div>
-      </article>
-      <article>
-        <img src="{{ '/img/stylestage.jpg' | url }}" alt="" />
-        <div class="background--primary-dark element-highlight">
-          <h3>Style Stage</h3>
-          <p class="ink--primary-light gradient--before">
-            A modern CSS showcase styled by community contributions.
-          </p>
-          <span class="stack">
-            <a href="/stylestage/" aria-label="Learn more about StyleStage.dev"
-              >Learn More</a
-            >
-            <a href="https://stylestage.dev">Visit StyleStage.dev</a>
-          </span>
-        </div>
-      </article>
-      <article>
-        <img src="{{ '/img/learnfromsteph.jpg' | url }}" alt="" />
-        <div class="background--primary-dark element-highlight">
-          <h3>Learn From Steph</h3>
-          <p class="ink--primary-light gradient--before">
-            A video series with enhanced transcripts to help beginners learn the essentials of HTML
-            and CSS.
-          </p>
-          <span class="stack">
-            <a href="/learnfromsteph/" aria-label="Learn more about LearnFromSteph.dev"
-              >Learn More</a
-            >
-            <a href="https://learnfromsteph.dev">Visit LearnFromSteph.dev</a>
-          </span>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section
-    id="speaking"
-    class="background--secondary ink--primary-dark element-highlight"
-  >
-    <article class="container">
-      <h2>
-        {%- include "svg.njk" %} Speaking & Events
-      </h2>
-      <ul role="list" class="column-container list-unstyled mt-lg">
-        <li class="stack stack--separator">
-          <span class="h4">Eleventy: The Perfect Idea Playground</span>
-          <strong>Ladies of Jamstack / Jamstack Toronto</strong>
-          <small>March 8, 2021</small>
-          <a href="https://www.meetup.com/JAMstack-Toronto/events/276313928/">Free RSVP</a>
-        </li>
-        <li class="stack stack--separator">
-          <span class="h4">Minimal CSS Solutions to (Previously) Complex Problems</span>
-          <strong>CSS Café</strong>
-          <small>March 25, 2021</small>
-          <a href="https://www.meetup.com/CSS-Cafe/events/276534685/">Meetup RSVP</a>
-        </li>
-        <li class="stack stack--separator">
-          <span class="h4">CSS Track Curator</span>
-          <strong>Modern Web Conference</strong>
-          <small>May 17-28, 2021</small>
-          <a href="https://modernwebconference.com/">Get Your Ticket</a>
-        </li>
-        <li class="stack stack--separator">
-          <span class="h4">Going Beyond Static Sites With Eleventy</span>
-          <strong>TheJam.dev 2021</strong>
-          <small>January 28-29, 2021</small>
-          <a href="https://11ty.rocks/posts/going-beyond-static-with-eleventy/">Slides and Article</a>
-        </li>
-        <li class="stack stack--separator">
-          <span class="h4">Style Stage and Modern CSS</span>
-          <strong>LondonCSS Meetup</strong>
-          <small>September 10, 2020</small>
-          <a href="https://youtu.be/Pu4cgMq4dDw">Watch on YouTube</a>
-          <a href="https://twitter.com/5t3ph/status/1304130761948311557">Slides and resources</a>
-        </li>
-        <li class="stack stack--separator">
-          <span class="h4">CSS Masters Talk Interview</span>
-          <small>August 2020</small>
-          <a href="https://www.youtube.com/watch?v=3g6oS0VL2zg">Watch on YouTube</a>
-        </li>
-        <li><strong>Get in touch with your opportunity</strong>
-        <a href="/contact/" class="button">Send your request</a>
-        </li>
-      </ul>
-    </article>
-  </section>
-  <section id="articles" class="container">
-    <h2>
-      {%- include "svg.njk" %} Latest Articles
-    </h2>
-    <div class="articles mt-lg">
-      {% for post in devposts | source("moderncss") %}
-      <article class="article article--moderncss">
-        <img src="{{ '/img/logo-moderncss.png' | url }}" alt="" />
-        <h3>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </h3>
-        <p>
-          {{ post.description }}
-        </p>
-        <footer>
-          <a href="https://moderncss.dev">View the ModernCSS.dev Series</a>
-        </footer>
-      </article>
-      {% endfor %} 
-      <article class="article article--sm">
-        <img src="{{ '/img/logo-smashingmag.png' | url }}" alt="" />
-        <h3>
-          <a href="https://www.smashingmagazine.com/2021/02/responsive-image-effects-css-gradients-aspect-ratio/">Create Responsive Image Effects With CSS Gradients And aspect-ratio</a>
-        </h3>
-        <p>
-          A classic problem in CSS is maintaining the aspect ratio of images across related components, such as cards. The newly supported aspect-ratio property in combination with...
-        </p>
-        <footer>
-          <a href="https://www.smashingmagazine.com/author/stephanie-eckles/">View Smashing Magazine Author Profile</a>
-        </footer>
-      </article>
-      {% for post in devposts | source("dev") %}
-      <article class="article article--dev">
-        <img src="{{ '/img/logo-dev.png' | url }}" alt="" />
-        <h3>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </h3>
-        <p>
-          {{ post.description }}
-        </p>
-        <footer>
-          <a href="https://dev.to/5t3ph">View All DEV Community Articles</a>
-        </footer>
-      </article>
+<article id="learn">
+  <h2>Front-End Learning Resources</h2>
+  <p class="lead">I offer learning resources in a variety of formats including in-depth written tutorials, short videos, courses, and even a CSS playground.</p>
+  <aside role="note">
+    <h3>Accessible Cross-Browser CSS Form Styling</h3>
+    <p>In just under 2 hrs and 18 lessons, you'll work through the semantics and Sass styles of a mini form design system featuring the most common controls while learning how to keep them accessible. <em>Requires an egghead membership</em>.</p>
+    <a href="https://5t3ph.dev/a11y-forms" class="button">Start the Video Course</a>
+  </aside>
+  <ul role="list" class="scroll-grid container">
+    {% for item in learn %}
+    <li>
+      <h3>{{ item.title }}</h3>
+      {{ item.description | markdown | safe }}
+      {% for link in item.links %}
+      <a href="{{ link.url }}">{{ link.text }}</a>
       {% endfor %}
-      {% for post in csstricks %}
-      <article class="article article--csstricks">
-        <img src="{{ '/img/logo-csstricks.png' | url }}" alt="" />
-        <h3>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </h3>
-        <p>
-          {{ post.description }}
-        </p>
-        <footer>
-          <a href="https://css-tricks.com/author/stephanieeckles/">View CSS-Tricks Author Profile</a>
-        </footer>
-      </article>
-      {% endfor %}
-      {% for post in 11tyrocks %}
-      <article class="article article--11ty">
-        <img src="{{ '/img/logo-11tyrocks.png' | url }}" alt="" />
-        <h3>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </h3>
-        <p>
-          {{ post.description | safe }}
-        </p>
-        <footer>
-          <a href="https://11ty.rocks">View All 11ty Rocks Resources</a>
-        </footer>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-</main>
-<aside
-  id="resources"
-  class="container section"
-  style="--color-anchor: var(--color-support);"
->
-  <h2>
-    {%- include "svg.njk" %} Developer Resources
-  </h2>
-  <ul role="list" class="resources list-unstyled mt-lg">
-    <li>
-      <h3>Accessible Cross-Browser CSS Form Styling</h3>
-      <p>
-        In this video course, you'll work through the semantics and Sass styles of a mini form design system featuring the most common controls while learning how to keep them accessible.
-      </p>
-      <div class="row">
-        <a href="https://5t3ph.dev/a11y-forms">Begin the Course</a>
-      </div>
+      {% if item.repo %}
+      <a class="github-stars" href="https://github.com/5t3ph/{{ item.repo }}" aria-label="{{ item.repo }} has {{ stars[item.repo] }} stars on GitHub">{{ stars[item.repo] }} stars on Github</a>
+      {% endif %}
     </li>
-    <li>
-      <h3>egghead Front-End Videos</h3>
-      <p>
-        Learn more about various front-end development topics such as flexbox, grid, and Sass in 5
-        minutes or less. If you have 20 minutes available, you can create a whole landing page!
-      </p>
-      <div class="row">
-        <a
-          href="https://egghead.io/playlists/create-a-landing-page-with-css-grid-and-flexbox-6048?af=2s65ms"
-          >20 Min. Landing page</a
-        >
-        <a href="https://egghead.io/instructors/stephanie-eckles?af=2s65ms">View All Videos</a>
-      </div>
-    </li>
-    <li>
-      <h3>Word Wrap Podcast</h3>
-      <p>
-        The podcast I co-host with Claire Lipskey, in which we talk about a bunch of things relating to being developers in the 21st century.
-      </p>
-      <div class="row">
-        <a
-          href="https://wordwrap.dev"
-          >Listen Now</a
-        >
-      </div>
-    </li>
-    <li>
-      <h3>11ty Rocks!</h3>
-      <p>
-        A collection of Eleventy (11ty) starters, projects, plugins, and resources.
-      </p>
-      <div class="row">
-        <a
-          href="https://11ty.rocks"
-          >Visit 11ty.Rocks</a
-        >
-      </div>
-    </li>
-    <li>
-      <h3>SmolCSS</h3>
-      <p>
-        Minimal snippets for modern CSS layouts and components
-      </p>
-      <div class="row">
-        <a
-          href="https://smolcss.dev"
-          >Visit SmolCSS</a
-        >
-      </div>
-    </li>
-    <li>
-      <h3>ButtonBuddy</h3>
-      <p>
-        A web app to learn about accessible button contrast and generate your own accessible button color palette.
-      </p>
-      <div class="row">
-        <a
-          href="https://buttonbuddy.dev"
-          >Visit ButtonBuddy</a
-        >
-      </div>
-    </li>
-    <li>
-      <h3>11ty Netlify Jumpstart</h3>
-      <p>
-        Quickly launch an 11ty-generated static site. Includes a minimal Sass framework, and
-        generated sitemap, RSS feed, and social share preview images.
-      </p>
-      <div class="row">
-        <a href="https://github.com/5t3ph/11ty-netlify-jumpstart/generate">Generate Repo</a>
-        <a href="https://11ty-netlify-jumpstart.netlify.app/">Preview Site</a>
-      </div>
-    </li>
-    <li>
-      <h3>HTML / Sass Jumpstart</h3>
-      <p>
-        node-sass powered, includes stylelint and prettier, and autoprefix upon build. Develop
-        script includes hot-reload via browsersync. Themeable and scalable.
-      </p>
-      <div class="row">
-        <a href="https://github.com/5t3ph/html-sass-jumpstart/generate">Generate Repo</a>
-        <a href="https://5t3ph.github.io/html-sass-jumpstart/">View Docs</a>
-      </div>
-    </li>
+    {% endfor %}
   </ul>
-</aside>
+</article>
+
+<article id="projects">
+  <h2>Developer Resources</h2>
+  <p class="lead">A few things I've made for you to enjoy and help you with your own projects!</p>
+  <ul role="list" class="scroll-grid container">
+    {% for item in projects %}
+    {% if loop.index0 === 1 %}
+    <li class="callout">
+      {% include "newsletter.njk" %}
+    </li>
+    {% endif %}
+    <li>
+      <h3>{{ item.title }}</h3>
+      {{ item.description | markdown | safe }}
+      {% for link in item.links %}
+      <a href="{{ link.url }}">{{ link.text }}</a>
+      {% endfor %}
+      <a class="github-stars" href="https://github.com/5t3ph/{{ item.repo }}" aria-label="{{ item.repo }} has {{ stars[item.repo] }} stars on GitHub">{{ stars[item.repo] }} stars on Github</a>
+    </li>
+    {% endfor %}
+  </ul>
+</article>
+
+<article id="writing">
+  <h2>Favorite Posts</h2>
+  <p class="lead">You can find me as a writer on <a href="https://www.smashingmagazine.com/author/stephanie-eckles/">Smashing Magazine</a>, <a href="https://css-tricks.com/author/stephanieeckles/">CSS-Tricks</a>, <a href="https://moderncss.dev/">ModernCSS</a>, <a href="https://11ty.rocks/">11ty Rocks</a>, and <a href="https://dev.to/5t3ph">DEV</a>.  Here is a selection of tutorials and articles I'm most proud of, and that have also received appreciation from the wider community.</p>
+  <ul role="list" class="scroll-grid container">
+    {% for item in writing %}
+    <li>
+      <div class="sidebar">
+        <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+        <img src="/img/logo-{{ item.source }}.png" alt="" />
+      </div>
+      {{ item.description | markdown | safe }}
+      {% for link in item.links %}
+      <a href="{{ link.url }}">{{ link.text }}</a>
+      {% endfor %}
+    </li>
+    {% endfor %}
+  </ul>
+</article>
+
+<article id="events">
+  <h2>Speaking and Events</h2>
+  <h3>Upcoming</h3>
+  <ul role="list" class="event-list">
+    {% for item in collections.upcomingEvents %}
+    <li class="sidebar">
+      <div>
+        <h4>{{ item.talkTitle }}</h4>
+        {% if item.eventTitle %}<p><strong>{{ item.eventTitle }}</strong></p>{% endif %}
+        <p>{{ item.dateString }}</p>
+      </div>
+      <div>
+        {% for link in item.links %}
+        <a href="{{ link.url }}">{{ link.text }}</a>
+        {% endfor %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <h3>Past</h3>
+  <ul role="list" class="event-list">
+    {% for item in collections.pastEvents %}
+    <li class="sidebar">
+      <div>
+        <h4>{{ item.talkTitle }}</h4>
+        {% if item.eventTitle %}<p><strong>{{ item.eventTitle }}</strong></p>{% endif %}
+        <p>{{ item.dateString }}</p>
+      </div>
+      <div>
+        {% for link in item.links %}
+        <a href="{{ link.url }}">{{ link.text }}</a>
+        {% endfor %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</article>

@@ -1,5 +1,5 @@
 {%- set titleValue -%}
-{{ title }} | {%- if page.filePath == '/' %}Front-End SWE, Author, Speaker{% else %}{{ meta.siteName }}{% endif -%}
+{{ title }} | {%- if page.fileSlug %} {{ meta.siteName }}{% else %} Front-End SWE, Author, Speaker{% endif -%}
 {%- endset -%}
 {%- set ogImg %}{{ meta.url }}/previews/{{ title | slug }}.png{% endset %}
 {%- set pgDesc %}{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}{% endset %}
@@ -40,6 +40,7 @@
     
     <meta property="og:image" content="{{ ogImg }}" />
     <meta name="twitter:image" content="{{ ogImg }}" />
+    <link rel="preload" href="{{ '/fonts/baloo-2-v1-latin-regular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
     {% if 'thinkdobecreate' in meta.url %}
     <link rel="preconnect" href="https://plausible.io">
     <link rel="dns-prefetch" href="https://plausible.io">
@@ -47,9 +48,45 @@
     <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
     {% endif %}
   </head>
-  <body>
+  <body class="{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
     <a href="#main" class="skip-link">Skip to main content</a>
-    {{ content | safe }}
+
+    {% include "nav.njk" %}
+
+    <header>
+      <div class="container">
+      {% block header %}
+        <h1>{{ title }}</h1>
+      {% endblock %}
+      </div>
+    </header>
+
+    {% block precontent %}{% endblock %}
+
+    {% if page.fileSlug != 'contact' and page.fileSlug != 'success' %}
+    <section>
+      <aside aria-labelledby="promo" class="container">
+        <h2 id="promo">Coming in July: Modern CSS Workshop</h2>
+        {% if page.fileSlug %}<div class="sidebar">{% endif %}
+        <p>I would love to meet you in my Smashing workshop&mdash;<strong>Level-Up With Modern CSS</strong>. 
+        {% if not page.fileSlug %} We'll create a framework for building practical, scalable components using modern CSS while also learning about the "why" of each decision, and emphasizing accessibility. <em>Spoiler alert: you'll learn a lot about custom properties and CSS grid!</em>{% endif %}</p>
+        <a href="https://smashingconf.com/online-workshops/workshops/stephanie-eckles" class="button">Register Now</a>
+        {% if page.fileSlug %}</div>{% endif %}
+      </aside>
+    </section>
+    {% endif %}
+
+    <main id="main" tabindex="-1" class="container">
+      {{ content | safe }}
+    </main>
+
+    {% if page.fileSlug and page.fileSlug != 'success' and page.fileSlug != 'confirmation' %}
+    <aside class="callout callout--wide">
+      <div class="container">
+      {% include "newsletter.njk" %}
+      </div>
+    </aside>
+    {% endif %}
 
     <footer>
       <div class="container">
