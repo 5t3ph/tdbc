@@ -63,7 +63,7 @@
 
     {% block precontent %}{% endblock %}
 
-    {% if page.fileSlug != 'contact' and page.fileSlug != 'success' %}
+    {% if page.fileSlug != 'contact' and page.fileSlug != 'success' and page.fileSlug != 'newsletter' %}
     <section>
       <aside aria-labelledby="promo" class="container">
         <h2 id="promo">Coming in July: Modern CSS Workshop</h2>
@@ -80,7 +80,7 @@
       {{ content | safe }}
     </main>
 
-    {% if page.fileSlug and page.fileSlug != 'success' and page.fileSlug != 'confirmation' %}
+    {% if page.fileSlug and page.fileSlug != 'success' and page.fileSlug != 'confirmation' and page.fileSlug != 'newsletter' %}
     <aside class="callout callout--wide">
       <div class="container">
       {% include "newsletter.njk" %}

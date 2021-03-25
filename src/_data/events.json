@@ -7,7 +7,8 @@
     "links": [
       {
         "text": "Get Your Ticket",
-        "url": "https://modernwebconference.com/"
+        "url": "https://modernwebconference.com/",
+        "removePast": true
       }
     ]
   },
@@ -19,7 +20,8 @@
     "links": [
       {
         "text": "Meetup RSVP",
-        "url": "https://www.meetup.com/CSS-Cafe/events/276534685/"
+        "url": "https://www.meetup.com/CSS-Cafe/events/276534685/",
+        "removePast": true
       }
     ]
   },

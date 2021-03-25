@@ -98,7 +98,9 @@ layout: home.njk
       </div>
       <div>
         {% for link in item.links %}
+        {% if not link.removePast %}
         <a href="{{ link.url }}">{{ link.text }}</a>
+        {% endif %}
         {% endfor %}
       </div>
     </li>

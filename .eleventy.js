@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
     return allEvents
       .filter((event) => {
         const date = DateTime.fromISO(event.date);
-        return date > new Date();
+        return date.endOf("day") > DateTime.now();
       })
       .sort((a, b) => {
         const aDate = DateTime.fromISO(a.date);
@@ -62,7 +62,7 @@ module.exports = function (eleventyConfig) {
     return allEvents
       .filter((event) => {
         const date = DateTime.fromISO(event.date);
-        return date < new Date();
+        return date.endOf("day") < DateTime.now();
       })
       .sort((a, b) => {
         const aDate = DateTime.fromISO(a.date);
