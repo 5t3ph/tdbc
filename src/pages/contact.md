@@ -11,15 +11,15 @@ description: "Contact for speaking, writing, teaching, and consulting."
 	</p>
 	<div class="form-group">
     <label for="first_name">First Name</label>
-    <input type="text" id="first_name" name="first_name" class="form-field">
+    <input required type="text" id="first_name" name="first_name" class="form-field">
   </div>
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="text" id="email" name="email" class="form-field">
+    <input required type="text" id="email" name="email" class="form-field">
   </div>
   <div class="form-group">
     <label for="message">Message</label>
-    <textarea type="text" id="message" name="message" class="form-field"></textarea>
+    <textarea required type="text" id="message" name="message" class="form-field"></textarea>
   </div>
   <button class="button" type="submit">Submit</button>
 </form>
