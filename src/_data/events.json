@@ -1,5 +1,18 @@
 [
   {
+    "talkTitle": "Actions Speak Louder",
+    "eventTitle": "Smashing Meets",
+    "dateString": "April 27, 2021",
+    "date": "2021-04-27",
+    "links": [
+      {
+        "text": "Get a Free Ticket",
+        "url": "https://hopin.com/events/smashing-meets-actions-speak-louder-april-27",
+        "removePast": true
+      }
+    ]
+  },
+  {
     "talkTitle": "CSS Track Curator",
     "eventTitle": "Modern Web Conference",
     "dateString": "May 17-28, 2021",
