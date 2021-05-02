@@ -34,15 +34,13 @@ a:focus {
     outline-offset: var(--outline-offset);
   }
 
-  @supports selector(:focus-visible) {
-    &:focus {
-      outline: none;
-    }
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
 
-    &:focus-visible {
-      outline: max(2px, 0.08em) var(--outline-style) var(--outline-color);
-      outline-offset: var(--outline-offset);
-    }
+  &:focus-visible {
+    outline: max(2px, 0.08em) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-offset);
   }
 }
 
