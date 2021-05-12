@@ -1,5 +1,11 @@
 [
   {
+    "title": "A Primer On CSS Container Queries",
+    "url": "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries/",
+    "source": "smashingmag",
+    "description": "Look at what problem is being solved, learn how container queries work, and see how they compare with and complement existing CSS features for layout."
+  },
+  {
     "title": "Create Responsive Image Effects With CSS Gradients And aspect-ratio",
     "url": "https://www.smashingmagazine.com/2021/02/responsive-image-effects-css-gradients-aspect-ratio/",
     "source": "smashingmag",

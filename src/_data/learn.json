@@ -66,5 +66,15 @@
         "url": "https://5t3ph.dev/learn-11ty"
       }
     ]
+  },
+  {
+    "title": "Streaming Front-End Topics on Twitch",
+    "description": "Join me on Twitch to explore topics across the front-end including CSS, HTML, and accessibility, as well as Eleventy.",
+    "links": [
+      {
+        "text": "Follow on Twitch",
+        "url": "https://twitch.tv/5t3phDev"
+      }
+    ]
   }
 ]
