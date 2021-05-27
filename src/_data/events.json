@@ -1,5 +1,17 @@
 [
   {
+    "talkTitle": "Podcast with Chris Coyier",
+    "eventTitle": "Codepen Radio on TV",
+    "dateString": "May 26, 2021",
+    "date": "2021-05-26",
+    "links": [
+      {
+        "text": "Watch our chat",
+        "url": "https://blog.codepen.io/2021/05/26/317-chattin-with-stephanie-eckles/"
+      }
+    ]
+  },
+  {
     "talkTitle": "Actions Speak Louder",
     "eventTitle": "Smashing Meets",
     "dateString": "April 27, 2021",
