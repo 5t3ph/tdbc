@@ -1,0 +1,44 @@
+[
+  {
+    "show": "Codepen Radio on TV",
+    "hosts": "Chris Coyier",
+    "dateString": "May 26, 2021",
+    "date": "2021-05-26",
+    "link": "https://blog.codepen.io/2021/05/26/317-chattin-with-stephanie-eckles/"
+  },
+  {
+    "show": "Frontend Heroes",
+    "hosts": "Scott Francis and Evan Payne",
+    "dateString": "May 18, 2021",
+    "date": "2021-05-18",
+    "link": "https://frontendheroes.transistor.fm/episodes/the-danger-room-w-stephanie-eckles"
+  },
+  {
+    "show": "DrunkenUX",
+    "hosts": "Aaron Hill and Michael Fienen",
+    "dateString": "May 24, 2021",
+    "date": "2021-05-24",
+    "link": "https://drunkenux.com/podcast/dux89/"
+  },
+  {
+    "show": "Modern Web Podcast",
+    "hosts": "Lindsay Wardell from This Dot",
+    "dateString": "June 4, 2021",
+    "date": "2021-06-04",
+    "link": "https://modernweb.podbean.com/e/s08e012-modern-web-podcast-modern-css-accessibility-with-stephanie-eckles/"
+  },
+  {
+    "show": "Front End Nerdery",
+    "hosts": "Todd Libby",
+    "dateString": "March 3, 2021",
+    "date": "2021-03-03",
+    "link": "https://anchor.fm/frontendnerdery/episodes/4---Stephanie-Eckles-e10hbij"
+  },
+  {
+    "show": "Accessible Cross-Browser CSS Form Styling",
+    "hosts": "Taylor Bell at egghead",
+    "dateString": "February 22, 2021",
+    "date": "2021-02-22",
+    "link": "https://egghead-io-course-notes.simplecast.com/episodes/accessible-cross-browser-css-form-styling-with-stephanie-eckles?share=true"
+  }
+]

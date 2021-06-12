@@ -30,16 +30,16 @@
     ]
   },
   {
-    "title": "Learn From Steph",
-    "description": "A free video series with enhanced transcripts to help beginners learn the essentials of HTML and CSS.",
+    "title": "Streaming Front-End Topics on Twitch",
+    "description": "Join me on Twitch to explore topics across the front-end including CSS, HTML, and accessibility, as well as Eleventy. Also featuring the Dev Roulette LIVE show",
     "links": [
       {
-        "text": "Start Your Webdev Journey",
-        "url": "https://LearnFromSteph.dev"
+        "text": "Follow on Twitch",
+        "url": "https://twitch.tv/5t3phDev"
       },
       {
-        "text": "About LearnFromSteph.dev",
-        "url": "/learnfromsteph/"
+        "text": "Dev Roulette Schedule",
+        "url": "https://devroulette.live"
       }
     ]
   },
@@ -68,12 +68,16 @@
     ]
   },
   {
-    "title": "Streaming Front-End Topics on Twitch",
-    "description": "Join me on Twitch to explore topics across the front-end including CSS, HTML, and accessibility, as well as Eleventy.",
+    "title": "Learn From Steph",
+    "description": "A free video series with enhanced transcripts to help beginners learn the essentials of HTML and CSS.",
     "links": [
       {
-        "text": "Follow on Twitch",
-        "url": "https://twitch.tv/5t3phDev"
+        "text": "Start Your Webdev Journey",
+        "url": "https://LearnFromSteph.dev"
+      },
+      {
+        "text": "About LearnFromSteph.dev",
+        "url": "/learnfromsteph/"
       }
     ]
   }

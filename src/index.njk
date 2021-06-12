@@ -13,7 +13,7 @@ layout: home.njk
   </aside>
   <ul role="list" class="scroll-grid container">
     {% for item in learn %}
-    <li>
+    <li {% if callout %}class="callout"{% endif %}>
       <h3>{{ item.title }}</h3>
       {{ item.description | markdown | safe }}
       {% for link in item.links %}
@@ -29,7 +29,10 @@ layout: home.njk
 
 <article id="projects">
   <h2>Developer Resources</h2>
-  <p class="lead">A few things I've made for you to enjoy and help you with your own projects!</p>
+  <aside role="note">
+    <h3>Dev Roulette LIVE</h3>
+    <p>Join on Twitch for a live conversation between Stephanie and up to two mystery guests about topics that are particularly important to front-end developers including: CSS, JS, and Accessibility. <a href="https://devroulette.live" class="button">Details and Schedule</a></p>
+  </aside>
   <ul role="list" class="scroll-grid container">
     {% for item in projects %}
     {% if loop.index0 === 1 %}
@@ -37,7 +40,7 @@ layout: home.njk
       {% include "newsletter.njk" %}
     </li>
     {% endif %}
-    <li>
+    <li {% if callout %}class="callout"{% endif %}>
       <h3>{{ item.title }}</h3>
       {{ item.description | markdown | safe }}
       {% for link in item.links %}
@@ -106,6 +109,19 @@ layout: home.njk
         <a href="{{ link.url }}">{{ link.text }}</a>
         {% endif %}
         {% endfor %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <h3>Podcast Appearances</h3>
+  <p class="lead">Check out all episodes of the podcast I co-host - <a href="https://wordwrap.dev">Word Wrap</a></p>
+  <ul role="list" class="event-list event-list--podcasts">
+    {% for item in collections.appearances %}
+    <li class="sidebar">
+      <div>
+        <h4><a href="{{ link }}">{{ item.show }}</a></h4>
+        <small><strong>Hosted by:</strong> {{ item.hosts }}</small>
+        <p>{{ item.dateString }}</p>
       </div>
     </li>
     {% endfor %}

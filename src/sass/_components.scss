@@ -178,6 +178,17 @@
       display: grid;
     }
   }
+
+  &--podcasts {
+    small {
+      line-height: 1.2;
+      margin-top: 0.5rem;
+
+      strong {
+        display: block;
+      }
+    }
+  }
 }
 
 .scroll-grid,
@@ -210,6 +221,7 @@
 
     &:not([class]) {
       padding: 0 0.25em;
+      white-space: nowrap;
 
       &:focus {
         --outline-color: var(--color-on-secondary);

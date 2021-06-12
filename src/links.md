@@ -5,6 +5,10 @@ layout: quicklinks.njk
 
 ## Newest Project
 
+> [Dev Roulette LIVE](https://devroulette.live) is a live conversation between myself and up to two mystery guests about topics that are particularly important to front-end developers.
+
+## Popular Resource
+
 > [Accessible Cross-Browser CSS Form Styling](https://5t3ph.dev/a11y-forms) - my egghead video course
 
 <aside role="note">

@@ -71,6 +71,16 @@ module.exports = function (eleventyConfig) {
       });
   });
 
+  eleventyConfig.addCollection("appearances", (collections) => {
+    const allEvents = collections.getAll()[0].data.appearances;
+
+    return allEvents.sort((a, b) => {
+      const aDate = DateTime.fromISO(a.date);
+      const bDate = DateTime.fromISO(b.date);
+      return bDate - aDate;
+    });
+  });
+
   return {
     dir: {
       input: "src",
