@@ -1,5 +1,17 @@
 [
   {
+    "talkTitle": "Container Queries Demo",
+    "eventTitle": "Component Carousel",
+    "dateString": "June 23, 2021",
+    "date": "2021-06-23",
+    "links": [
+      {
+        "text": "Catch the Replay",
+        "url": "https://www.youtube.com/watch?v=eEXhvtV4hkg"
+      }
+    ]
+  },
+  {
     "talkTitle": "Actions Speak Louder",
     "eventTitle": "Smashing Meets",
     "dateString": "April 27, 2021",
