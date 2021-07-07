@@ -63,15 +63,12 @@
 
     {% block precontent %}{% endblock %}
 
-    {% if page.fileSlug != 'contact' and page.fileSlug != 'success' and page.fileSlug != 'newsletter' %}
+    {% if not page.fileSlug %}
     <section>
       <aside aria-labelledby="promo" class="container">
-        <h2 id="promo">Coming in July: Modern CSS Workshop</h2>
-        {% if page.fileSlug %}<div class="sidebar">{% endif %}
-        <p>I would love to meet you in my Smashing workshop&mdash;<strong>Level-Up With Modern CSS</strong>. 
-        {% if not page.fileSlug %} We'll create a framework for building practical, scalable components using modern CSS while also learning about the "why" of each decision, and emphasizing accessibility. <em>Spoiler alert: you'll learn a lot about custom properties and CSS grid!</em>{% endif %}</p>
-        <a href="https://smashingconf.com/online-workshops/workshops/stephanie-eckles" class="button">Register Now</a>
-        {% if page.fileSlug %}</div>{% endif %}
+        <h2 id="promo">Dev Roulette LIVE</h2>
+        <p>Join on Twitch for a live conversation between Stephanie and up to two mystery guests about topics that are particularly important to front-end developers including: CSS, JS, and Accessibility.</p>
+        <a href="https://devroulette.live" class="button">Details and Schedule</a>
       </aside>
     </section>
     {% endif %}

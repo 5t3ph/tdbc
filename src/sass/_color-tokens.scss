@@ -10,6 +10,8 @@ $color-on-primary: #F2EAFF !default;
 $color-secondary: #65dce1 !default;
 $color-on-secondary: #185F62 !default;
 
+$base-color-tokens: ("surface", "primary", "secondary");
+
 $color-tokens: (
   "color-surface": $color-surface,
   "color-on-surface": $color-on-surface,

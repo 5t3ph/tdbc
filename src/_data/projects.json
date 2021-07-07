@@ -23,7 +23,7 @@
   },
   {
     "title": "a11y Color Tokens",
-    "description": "A web app to learn about accessible button contrast and generate your own accessible button color palette.",
+    "description": "Generate accessible complementary text or UI colors as Sass variables and/or CSS custom properties from your base color tokens.",
     "repo": "a11y-color-tokens",
     "links": [
       {
