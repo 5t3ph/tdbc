@@ -5,6 +5,7 @@ module.exports = async function () {
   const repos = [
     "stylestage",
     "smolcss",
+    "htmlrecipes",
     "11ty-rocks",
     "11ty-netlify-jumpstart",
     "11ty-sass-skeleton",

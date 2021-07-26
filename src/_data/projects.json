@@ -11,6 +11,17 @@
     ]
   },
   {
+    "title": "HTML Recipes",
+    "description": "A collection of quick copy HTML snippets for a variety of common scenarios such as navigation, heroes, and lists. Contributions welcome!",
+    "repo": "htmlrecipes",
+    "links": [
+      {
+        "text": "Visit HTMLRecipes.dev",
+        "url": "https://htmlrecipes.dev"
+      }
+    ]
+  },
+  {
     "title": "ButtonBuddy",
     "description": "A web app to learn about accessible button contrast and generate your own accessible button color palette.",
     "repo": "buttonbuddy",
