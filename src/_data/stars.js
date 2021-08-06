@@ -12,6 +12,7 @@ module.exports = async function () {
     "a11y-color-tokens",
     "buttonbuddy",
     "moderncss-dot-dev",
+    "objectfit-focalpoint",
   ];
 
   await Promise.all(

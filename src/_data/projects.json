@@ -79,5 +79,16 @@
         "url": "https://github.com/5t3ph/11ty-sass-skeleton"
       }
     ]
+  },
+  {
+    "title": "Object-Fit Focal Point",
+    "description": "Provide an absolute URL to an image and generate the object-position value to capture an image's focal point given a custom aspect-ratio.",
+    "repo": "objectfit-focalpoint",
+    "links": [
+      {
+        "text": "Generate Focal Point",
+        "url": "https://objectfit-focalpoint.netlify.app/"
+      }
+    ]
   }
 ]
