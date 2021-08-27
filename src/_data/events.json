@@ -24,19 +24,6 @@
     ]
   },
   {
-    "talkTitle": "CSS Track Curator",
-    "eventTitle": "Modern Web Conference",
-    "dateString": "Summer, 2021",
-    "date": "2021-08-31",
-    "links": [
-      {
-        "text": "Get Your Ticket",
-        "url": "https://modernwebconference.com/",
-        "removePast": true
-      }
-    ]
-  },
-  {
     "talkTitle": "Minimal CSS Solutions to (Previously) Complex Problems",
     "eventTitle": "CSS Café",
     "dateString": "March 25, 2021",

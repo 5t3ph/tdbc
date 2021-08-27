@@ -75,6 +75,9 @@ layout: home.njk
     <a href="{{ '/contact/' | url }}">get&nbsp;in&nbsp;touch</a>.</p>
   </aside>
   <h3>Upcoming</h3>
+  {% if not collections.upcomingEvents.length %}
+  <p><em>No upcoming events scheduled.</em></p>
+  {% else %}
   <ul role="list" class="event-list">
     {% for item in collections.upcomingEvents %}
     <li class="sidebar">
@@ -91,6 +94,7 @@ layout: home.njk
     </li>
     {% endfor %}
   </ul>
+  {% endif %}
   <h3>Past</h3>
   <ul role="list" class="event-list">
     {% for item in collections.pastEvents %}
