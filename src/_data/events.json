@@ -85,11 +85,17 @@
     "talkTitle": "Level-Up With Modern CSS",
     "eventTitle": "Smashing Conference Workshop",
     "dateString": "July 8-22, 2021",
-    "date": "2021-07-08",
+    "date": "2021-07-08"
+  },
+  {
+    "talkTitle": "Level-Up With Modern CSS",
+    "eventTitle": "Smashing Conference Workshop",
+    "dateString": "October 5-20, 2021",
+    "date": "2021-10-05",
     "links": [
       {
         "text": "Workshop Registration and Details",
-        "url": "https://smashingconf.com/online-workshops/workshops/stephanie-eckles"
+        "url": "https://smashingconf.com/online-workshops/workshops/stephanie-eckles-oct/"
       }
     ]
   }
