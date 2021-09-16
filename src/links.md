@@ -3,9 +3,9 @@ title: "Links"
 layout: quicklinks.njk
 ---
 
-## Newest Project
+## Coming October 5: CSS Workshop
 
-> [Dev Roulette LIVE](https://devroulette.live) is a live conversation between myself and up to two mystery guests about topics that are particularly important to front-end developers.
+> [Register for my October workshop "Level-Up with Modern CSS"](https://5t3ph.dev/workshop) in partnership with Smashing Conferences.
 
 ## Popular Resource
 
@@ -13,11 +13,11 @@ layout: quicklinks.njk
 
 <aside role="note">
 
-If you're able, support my work by buying me a coffee or scheduling a front-end code review or mentoring session. [View&nbsp;support&nbsp;options >](https://www.buymeacoffee.com/moderncss)
+If you're able, support my work by buying me a coffee. [View&nbsp;support&nbsp;options >](https://www.buymeacoffee.com/moderncss)
 
 </aside>
 
-## Additional Links
+## Additional Resources
 
 - [Top Articles](/#writing)
 - [ModernCSS.dev](https://ModernCSS.dev)
