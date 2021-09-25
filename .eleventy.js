@@ -67,7 +67,7 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => {
         const aDate = DateTime.fromISO(a.date);
         const bDate = DateTime.fromISO(b.date);
-        return aDate + bDate;
+        return bDate - aDate;
       });
   });
 

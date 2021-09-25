@@ -98,5 +98,21 @@
         "url": "https://smashingconf.com/online-workshops/workshops/stephanie-eckles-oct/"
       }
     ]
+  },
+  {
+    "talkTitle": "CSS Grid, Container Queries, and Aspect-Ratio",
+    "eventTitle": "Learn With Jason",
+    "dateString": "September 23, 2021",
+    "date": "2021-09-23",
+    "links": [
+      {
+        "text": "Watch the Episode",
+        "url": "https://www.learnwithjason.dev/modern-css-grid-aspect-ratio-container-queries-and-more"
+      },
+      {
+        "text": "View the Demo",
+        "url": "https://lwj-modcss.netlify.app/"
+      }
+    ]
   }
 ]
