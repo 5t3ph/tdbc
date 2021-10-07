@@ -91,13 +91,7 @@
     "talkTitle": "Level-Up With Modern CSS",
     "eventTitle": "Smashing Conference Workshop",
     "dateString": "October 5-20, 2021",
-    "date": "2021-10-05",
-    "links": [
-      {
-        "text": "Workshop Registration and Details",
-        "url": "https://smashingconf.com/online-workshops/workshops/stephanie-eckles-oct/"
-      }
-    ]
+    "date": "2021-10-05"
   },
   {
     "talkTitle": "CSS Grid, Container Queries, and Aspect-Ratio",
@@ -114,5 +108,17 @@
         "url": "https://lwj-modcss.netlify.app/"
       }
     ]
+  },
+  {
+    "talkTitle": "Revealing soon...",
+    "eventTitle": "TBA",
+    "dateString": "November 11, 2021",
+    "date": "2021-11-11"
+  },
+  {
+    "talkTitle": "Stay tuned!",
+    "eventTitle": "TBA",
+    "dateString": "November 15, 2021",
+    "date": "2021-11-15"
   }
 ]

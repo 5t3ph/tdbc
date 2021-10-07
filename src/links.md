@@ -3,10 +3,6 @@ title: "Links"
 layout: quicklinks.njk
 ---
 
-## Coming October 5: CSS Workshop
-
-> [Register for my October workshop "Level-Up with Modern CSS"](https://5t3ph.dev/workshop) in partnership with Smashing Conferences.
-
 ## Popular Resource
 
 > [Accessible Cross-Browser CSS Form Styling](https://5t3ph.dev/a11y-forms) - my egghead video course

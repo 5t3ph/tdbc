@@ -1,5 +1,11 @@
 [
   {
+    "title": "A Guide to CSS Debugging",
+    "url": "https://www.smashingmagazine.com/2021/10/guide-debugging-css/",
+    "source": "smashingmag",
+    "description": "Debugging in CSS means figuring out what might be the problem when you have unexpected layout results. We’ll look at a few categories bugs often fit into, see how we can evaluate the situation, and explore techniques that help prevent these bugs."
+  },
+  {
     "title": "A Primer On CSS Container Queries",
     "url": "https://www.smashingmagazine.com/2021/05/complete-guide-css-container-queries/",
     "source": "smashingmag",

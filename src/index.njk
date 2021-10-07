@@ -6,11 +6,6 @@ layout: home.njk
 <article id="learn">
   <h2>Front-End Learning Resources</h2>
   <p class="lead">I offer learning resources in a variety of formats including in-depth written tutorials, short videos, courses, and even a CSS playground.</p>
-  <aside role="note">
-    <h3>Accessible Cross-Browser CSS Form Styling</h3>
-    <p>In just under 2 hrs and 18 lessons, you'll work through the semantics and Sass styles of a mini form design system featuring the most common controls while learning how to keep them accessible. <em>Requires an egghead membership</em>.</p>
-    <a href="https://5t3ph.dev/a11y-forms" class="button">Start the Video Course</a>
-  </aside>
   <ul role="list" class="scroll-grid container">
     {% for item in learn %}
     <li {% if callout %}class="callout"{% endif %}>
@@ -25,6 +20,11 @@ layout: home.njk
     </li>
     {% endfor %}
   </ul>
+  <aside role="note">
+    <h3>Accessible Cross-Browser CSS Form Styling</h3>
+    <p>In just under 2 hrs and 18 lessons, you'll work through the semantics and Sass styles of a mini form design system featuring the most common controls while learning how to keep them accessible. <em>Requires an egghead membership</em>.</p>
+    <a href="https://5t3ph.dev/a11y-forms" class="button">Start the Video Course</a>
+  </aside>
 </article>
 
 <article id="projects">
