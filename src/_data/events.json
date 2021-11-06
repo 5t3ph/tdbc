@@ -110,15 +110,27 @@
     ]
   },
   {
-    "talkTitle": "Revealing soon...",
-    "eventTitle": "TBA",
+    "talkTitle": "Creating 11ty Collections",
+    "eventTitle": "11ties Meetup",
     "dateString": "November 11, 2021",
-    "date": "2021-11-11"
+    "date": "2021-11-11",
+    "links": [
+      {
+        "text": "Meetup RSVP",
+        "url": "https://www.meetup.com/JAMstack-Toronto/events/281278073/"
+      }
+    ]
   },
   {
-    "talkTitle": "Stay tuned!",
-    "eventTitle": "TBA",
-    "dateString": "November 15, 2021",
-    "date": "2021-11-15"
+    "talkTitle": "The Modern CSS Toolkit",
+    "eventTitle": "Stay Curious (BT)",
+    "dateString": "November 30, 2021",
+    "date": "2021-11-30",
+    "links": [
+      {
+        "text": "Reserve Your Spot",
+        "url": "https://beyondtellerrand.com/stay-curious/toolkits"
+      }
+    ]
   }
 ]
