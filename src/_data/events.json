@@ -124,12 +124,24 @@
   {
     "talkTitle": "The Modern CSS Toolkit",
     "eventTitle": "Stay Curious (BT)",
-    "dateString": "November 30, 2021",
-    "date": "2021-11-30",
+    "dateString": "January 18, 2022",
+    "date": "2022-01-18",
     "links": [
       {
         "text": "Reserve Your Spot",
         "url": "https://beyondtellerrand.com/stay-curious/toolkits"
+      }
+    ]
+  },
+  {
+    "talkTitle": "Modern CSS Upgrades to Improve Accessibility",
+    "eventTitle": "axe-con 2022",
+    "dateString": "March 16, 2021",
+    "date": "2022-03-16",
+    "links": [
+      {
+        "text": "Session details",
+        "url": "https://www.deque.com/axe-con/sessions/modern-css-upgrades-to-improve-accessibility/"
       }
     ]
   }

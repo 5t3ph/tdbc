@@ -30,16 +30,22 @@
     ]
   },
   {
+    "title": "12 Days of Web",
+    "description": "A series promoting fundamental web technologies: HTML, CSS, and JavaScript. Learn about 12 native web features that can lessen your framework reliance.",
+    "links": [
+      {
+        "text": "Read the Series",
+        "url": "https://12daysofweb.dev"
+      }
+    ]
+  },
+  {
     "title": "Streaming Front-End Topics on Twitch",
-    "description": "Join me on Twitch to explore topics across the front-end including CSS, HTML, and accessibility, as well as Eleventy. Also featuring the Dev Roulette LIVE show",
+    "description": "Join me on Twitch to explore topics across the front-end including CSS, HTML, and accessibility, as well as Eleventy.",
     "links": [
       {
         "text": "Follow on Twitch",
         "url": "https://twitch.tv/5t3phDev"
-      },
-      {
-        "text": "Dev Roulette Schedule",
-        "url": "https://devroulette.live"
       }
     ]
   },
