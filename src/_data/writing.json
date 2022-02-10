@@ -1,5 +1,11 @@
 [
   {
+    "title": "Getting Started With CSS Cascade Layers",
+    "url": "https://www.smashingmagazine.com/2022/01/introduction-css-cascade-layers/",
+    "source": "smashingmag",
+    "description": "Within 2021, a new spec to orchestrate the “C” in CSS was drafted and is now an official candidate recommendation: cascade layers. Learn more about layers and how to use them."
+  },
+  {
     "title": "A Guide to CSS Debugging",
     "url": "https://www.smashingmagazine.com/2021/10/guide-debugging-css/",
     "source": "smashingmag",
@@ -18,10 +24,10 @@
     "description": "This guide will cover CSS Level 4 pseudo-class selectors that currently have the best support along with examples to demonstrate how you can start using them today."
   },
   {
-    "title": "Create Responsive Image Effects With CSS Gradients And aspect-ratio",
-    "url": "https://www.smashingmagazine.com/2021/02/responsive-image-effects-css-gradients-aspect-ratio/",
-    "source": "smashingmag",
-    "description": "A classic problem in CSS is maintaining the aspect ratio of images across related components, such as cards. Learn how to solve this with modern CSS!"
+    "title": "CSS Scroll Snap Slide Deck That Supports Live Coding",
+    "url": "https://css-tricks.com/css-scroll-snap-slide-deck/",
+    "source": "csstricks",
+    "description": "With a bit of creativity using native web functionality and modern CSS, like CSS scroll snap, we’ll be building a no-JavaScript slide deck that allows live editing of CSS demos."
   },
   {
     "title": "A Community-Driven Site with Eleventy: Building the Site",

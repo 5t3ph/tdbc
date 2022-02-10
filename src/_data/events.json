@@ -129,13 +129,7 @@
     "talkTitle": "The Modern CSS Toolkit",
     "eventTitle": "Stay Curious (BT)",
     "dateString": "January 18, 2022",
-    "date": "2022-01-18",
-    "links": [
-      {
-        "text": "Reserve Your Spot",
-        "url": "https://beyondtellerrand.com/stay-curious/toolkits"
-      }
-    ]
+    "date": "2022-01-18"
   },
   {
     "talkTitle": "Modern CSS Upgrades to Improve Accessibility",
@@ -145,7 +139,8 @@
     "links": [
       {
         "text": "Session details",
-        "url": "https://www.deque.com/axe-con/sessions/modern-css-upgrades-to-improve-accessibility/"
+        "url": "https://www.deque.com/axe-con/sessions/modern-css-upgrades-to-improve-accessibility/",
+        "removePast": true
       }
     ]
   },
@@ -157,7 +152,21 @@
     "links": [
       {
         "text": "Get tickets",
-        "url": "https://beyondtellerrand.com/events/dusseldorf-2022"
+        "url": "https://beyondtellerrand.com/events/dusseldorf-2022",
+        "removePast": true
+      }
+    ]
+  },
+  {
+    "talkTitle": "Practical Uses For Container Queries",
+    "eventTitle": "Web Directions: Hover",
+    "dateString": "April 1 & 8, 2022",
+    "date": "2022-04-08",
+    "links": [
+      {
+        "text": "Register now",
+        "url": "https://webdirections.org/hover/",
+        "removePast": true
       }
     ]
   }

@@ -1,5 +1,12 @@
 [
   {
+    "show": "FSJam",
+    "hosts": "Anthony Campolo and Christopher Burns",
+    "dateString": "January 24, 2022",
+    "date": "2022-01-24",
+    "link": "https://fsjam.org/episodes/episode-63-modern-css-with-stephanie-eckles"
+  },
+  {
     "show": "Codepen Radio on TV",
     "hosts": "Chris Coyier",
     "dateString": "May 26, 2021",
