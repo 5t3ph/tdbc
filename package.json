@@ -39,7 +39,6 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.6",
     "postcss-cli": "^9.1.0",
-    "rss-parser": "^3.12.0",
     "sass": "^1.49.8",
     "stylelint": "^14.5.1",
     "stylelint-config-prettier": "^9.0.3",
@@ -50,5 +49,8 @@
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
 }
