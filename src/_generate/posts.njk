@@ -1,0 +1,16 @@
+---
+layout: post
+pagination:
+  data: prismic.post
+  size: 1
+  alias: post
+  addAllPagesToCollections: true
+permalink:
+  build: /{{post.uid}}/
+  preview: /preview/:uid/
+eleventyComputed:
+  title: "{% asText post.data.title %}"
+  postdate: "{{ post.data.publish_date }}"
+---
+
+{% asHTML post.data.content %}

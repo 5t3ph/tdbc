@@ -1,3 +1,5 @@
+@use "color-tokens" as *;
+
 :is(h1, h2, h3) {
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -113,5 +115,14 @@ blockquote {
 }
 
 code {
-  font-size: 2.45ex;
+  font-size: 0.85em;
+  background-color: rgba($color-secondary, 0.3);
+  padding: 0.15em;
+  border-radius: 0.25em;
+  font-weight: 600;
+}
+
+hr {
+  border-color: var(--color-primary);
+  margin: 5vh 0;
 }

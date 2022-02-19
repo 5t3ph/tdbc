@@ -6,6 +6,7 @@ title: Color Token Contrast
 
 ## color-surface
   - `color-on-surface`
+  - `color-surface-alt`
   - `color-primary`
   - `color-on-secondary`
 
@@ -13,6 +14,18 @@ title: Color Token Contrast
   - `color-surface`
   - `color-on-primary`
   - `color-secondary`
+  - `color-yellow`
+
+## color-surface-alt
+  - `color-surface`
+  - `color-on-surface-alt`
+  - `color-on-primary`
+  - `color-secondary`
+  - `color-yellow`
+  - `color-pink`
+
+## color-on-surface-alt
+  - `color-surface-alt`
 
 ## color-primary
   - `color-surface`
@@ -20,14 +33,25 @@ title: Color Token Contrast
 
 ## color-on-primary
   - `color-on-surface`
+  - `color-surface-alt`
   - `color-primary`
   - `color-on-secondary`
 
 ## color-secondary
   - `color-on-surface`
+  - `color-surface-alt`
   - `color-on-secondary`
 
 ## color-on-secondary
   - `color-surface`
   - `color-on-primary`
   - `color-secondary`
+  - `color-yellow`
+
+## color-yellow
+  - `color-on-surface`
+  - `color-surface-alt`
+  - `color-on-secondary`
+
+## color-pink
+  - `color-surface-alt`

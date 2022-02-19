@@ -5,27 +5,39 @@
 
 $color-surface: #faf0ff !default;
 $color-on-surface: #563566 !default;
+$color-surface-alt: #1b0824 !default;
+$color-on-surface-alt: #8E729B !default;
 $color-primary: #7d4ce0 !default;
 $color-on-primary: #F2EAFF !default;
 $color-secondary: #65dce1 !default;
 $color-on-secondary: #185F62 !default;
+$color-yellow: #dedf40 !default;
+$color-pink: #f95fe3 !default;
 
-$base-color-tokens: ("surface", "primary", "secondary");
+$base-color-tokens: ("surface", "surface-alt", "primary", "secondary", "yellow", "pink");
 
 $color-tokens: (
   "color-surface": $color-surface,
   "color-on-surface": $color-on-surface,
+  "color-surface-alt": $color-surface-alt,
+  "color-on-surface-alt": $color-on-surface-alt,
   "color-primary": $color-primary,
   "color-on-primary": $color-on-primary,
   "color-secondary": $color-secondary,
-  "color-on-secondary": $color-on-secondary
+  "color-on-secondary": $color-on-secondary,
+  "color-yellow": $color-yellow,
+  "color-pink": $color-pink
 ) !default;
 
 @mixin color-tokens() {
   --color-surface: #{$color-surface};
   --color-on-surface: #{$color-on-surface};
+  --color-surface-alt: #{$color-surface-alt};
+  --color-on-surface-alt: #{$color-on-surface-alt};
   --color-primary: #{$color-primary};
   --color-on-primary: #{$color-on-primary};
   --color-secondary: #{$color-secondary};
   --color-on-secondary: #{$color-on-secondary};
+  --color-yellow: #{$color-yellow};
+  --color-pink: #{$color-pink};
 }

@@ -1,0 +1,14 @@
+---
+layout: base
+---
+
+<header>
+  <h1>{{ title }}</h1>
+  <p>Published on: {{ postdate | formatDate | safe }}</p>
+</header>
+
+<main id="main" tabindex="-1" class="container">
+  <article>
+    {{ content | safe }}
+  </article>
+</main>
