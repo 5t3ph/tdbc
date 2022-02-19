@@ -1,3 +1,4 @@
+require("dotenv").config();
 const Cache = require("@11ty/eleventy-cache-assets");
 
 module.exports = async function () {
@@ -15,16 +16,18 @@ module.exports = async function () {
     "objectfit-focalpoint",
   ];
 
-  await Promise.all(
-    repos.map(async (repo) => {
-      const json = await Cache(`https://api.github.com/repos/5t3ph/${repo}`, {
-        duration: "12h",
-        type: "json",
-      });
+  if (process.env.CONTEXT === "production" || process.env.CONTEXT === "branch-deploy") {
+    await Promise.all(
+      repos.map(async (repo) => {
+        const json = await Cache(`https://api.github.com/repos/5t3ph/${repo}`, {
+          duration: "12h",
+          type: "json",
+        });
 
-      stars = { ...stars, [repo]: json.stargazers_count };
-    })
-  );
+        stars = { ...stars, [repo]: json.stargazers_count };
+      })
+    );
+  }
 
   return stars;
 };

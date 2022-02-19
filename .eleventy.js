@@ -1,3 +1,23 @@
+require("dotenv").config();
+const filters = require("./src/_includes/_11ty/filters");
+const prismicHtmlSerializer = require("./src/_includes/_11ty/prismicHtmlSerializer");
+
+const { pluginPrismic, definePrismicPluginOptions } = require("eleventy-plugin-prismic");
+const prismicPluginOptions = definePrismicPluginOptions({
+  endpoint: process.env.PRISMIC_ID,
+  clientConfig: {
+    accessToken: process.env.PRISMIC_TOKEN,
+  },
+  preview: {
+    name: "preview",
+    functionsDir: "./netlify/functions/",
+  },
+  htmlSerializer: prismicHtmlSerializer,
+  linkResolver: (doc) => {
+    return `/${doc.uid}/`;
+  },
+});
+
 const Terser = require("terser");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -5,7 +25,7 @@ const socialImages = require("@11tyrocks/eleventy-plugin-social-images");
 const markdownIt = require("markdown-it");
 const { DateTime } = require("luxon");
 
-module.exports = function (eleventyConfig) {
+const config = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(socialImages);
@@ -16,6 +36,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
   eleventyConfig.addPassthroughCopy("./src/_headers");
+  eleventyConfig.addPlugin(pluginPrismic, prismicPluginOptions);
 
   const md = new markdownIt({
     html: true,
@@ -25,10 +46,9 @@ module.exports = function (eleventyConfig) {
     return md.render(content);
   });
 
-  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-
-  eleventyConfig.addFilter("source", function (arr, source) {
-    return arr.filter((item) => item.source === source);
+  // Filters: /src/_11ty/filters.js
+  Object.keys(filters).forEach((filterName) => {
+    eleventyConfig.addFilter(filterName, filters[filterName]);
   });
 
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {
@@ -39,6 +59,14 @@ module.exports = function (eleventyConfig) {
       console.error("Error during terser minify:", err);
       return callback(err, code);
     }
+  });
+
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  eleventyConfig.addCollection("posts", (collections) => {
+    return collections
+      .getFilteredByTag("prismic")
+      .sort((a, b) => DateTime.fromISO(b.data.postdate) - DateTime.fromISO(a.data.postdate));
   });
 
   eleventyConfig.addCollection("upcomingEvents", (collections) => {
@@ -88,3 +116,7 @@ module.exports = function (eleventyConfig) {
     },
   };
 };
+
+config.prismicPluginOptions = prismicPluginOptions;
+
+module.exports = config;

@@ -1,0 +1,16 @@
+---
+layout: base
+---
+
+<header>
+  <div class="header__content">
+    <h1>{{ title }}</h1>
+    <p class="lead">{{ postdate | formatDate | safe }}</p>
+  </div>
+</header>
+
+<main id="main" tabindex="-1" class="container">
+  <article class="post">
+    {{ content | safe }}
+  </article>
+</main>
