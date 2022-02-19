@@ -5,12 +5,14 @@ pagination:
   size: 1
   alias: post
   addAllPagesToCollections: true
+tags: prismic
 permalink:
-  build: /{{post.uid}}/
-  preview: /preview/:uid/
+  build: /posts/{{post.uid}}/
+  preview: /preview/posts/:uid/
 eleventyComputed:
   title: "{% asText post.data.title %}"
   postdate: "{{ post.data.publish_date }}"
+  description: "{% asText post.data.summary %}"
 ---
 
 {% asHTML post.data.content %}

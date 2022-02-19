@@ -3,8 +3,10 @@ layout: base
 ---
 
 <header>
-  <h1>{{ title }}</h1>
-  <p>Published on: {{ postdate | formatDate | safe }}</p>
+  <div class="header__content">
+    <h1>{{ title }}</h1>
+    <p><strong>Published on</strong>: {{ postdate | formatDate | safe }}</p>
+  </div>
 </header>
 
 <main id="main" tabindex="-1" class="container">

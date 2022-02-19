@@ -120,7 +120,7 @@ layout: home.njk
     {% for item in collections.appearances %}
     <li class="sidebar">
       <div>
-        <h4><a href="{{ link }}">{{ item.show }}</a></h4>
+        <h4><a href="{{ item.link }}">{{ item.show }}</a></h4>
         <small><strong>Hosted by:</strong> {{ item.hosts }}</small>
         <p>{{ item.dateString }}</p>
       </div>

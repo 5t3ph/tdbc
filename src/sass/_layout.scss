@@ -38,6 +38,12 @@ header {
   min-height: 60vh;
 }
 
+.header__content {
+  display: grid;
+  gap: 2rem;
+  width: min(50ch, 100vw - 2rem);
+}
+
 body > footer {
   margin-top: auto;
   padding-top: 1rem;
@@ -58,7 +64,7 @@ header + *:not(section) {
 }
 
 article {
-  max-width: calc(100vw - 2rem);
+  width: min(70ch, 100vw - 2rem);
 }
 
 main {
@@ -72,7 +78,6 @@ main {
   }
 
   > article:only-child {
-    max-width: 70ch;
     margin-right: auto;
     margin-left: auto;
   }

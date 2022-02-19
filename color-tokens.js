@@ -6,7 +6,7 @@ module.exports = [
   },
   {
     name: "surface-alt",
-    color: "#1b0824",
+    color: "#2d1139",
   },
   {
     name: "primary",

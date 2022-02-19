@@ -63,6 +63,12 @@ const config = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+  eleventyConfig.addCollection("posts", (collections) => {
+    return collections
+      .getFilteredByTag("prismic")
+      .sort((a, b) => DateTime.fromISO(b.data.postdate) - DateTime.fromISO(a.data.postdate));
+  });
+
   eleventyConfig.addCollection("upcomingEvents", (collections) => {
     const allEvents = collections.getAll()[0].data.events;
 

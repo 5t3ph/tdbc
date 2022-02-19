@@ -10,7 +10,7 @@
     "build:eleventy": "eleventy",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
     "start": "npm-run-all color-tokens build:sass --parallel watch:*",
-    "build": "npm-run-all color-tokens build:sass build:eleventy",
+    "build": "npm-run-all color-tokens build:sass build:eleventy social-images",
     "lint": "stylelint 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
     "lint:fix": "stylelint --fix 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
     "social-images": "eleventy-social-images --siteName 'ThinkDoBeCreate' --outputDir public --dataFile pages.json --theme pop --stylesPath social.css",
