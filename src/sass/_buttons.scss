@@ -26,6 +26,12 @@
     --outline-offset: -6px;
     --outline-style: dashed;
   }
+
+  &--outlined {
+    --background: transparent;
+    --color: var(--color-primary);
+    border: 2px solid;
+  }
 }
 
 .icon-button {

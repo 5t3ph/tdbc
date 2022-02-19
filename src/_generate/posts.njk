@@ -7,8 +7,8 @@ pagination:
   addAllPagesToCollections: true
 tags: prismic
 permalink:
-  build: /posts/{{post.uid}}/
-  preview: /preview/posts/:uid/
+  build: /articles/{{post.uid}}/
+  preview: /preview/articles/:uid/
 eleventyComputed:
   title: "{% asText post.data.title %}"
   postdate: "{{ post.data.publish_date }}"

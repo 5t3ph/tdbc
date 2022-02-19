@@ -16,7 +16,7 @@ module.exports = async function () {
     "objectfit-focalpoint",
   ];
 
-  if (process.env.CONTEXT === "production") {
+  if (process.env.CONTEXT === "production" || process.env.CONTEXT === "branch-deploy") {
     await Promise.all(
       repos.map(async (repo) => {
         const json = await Cache(`https://api.github.com/repos/5t3ph/${repo}`, {

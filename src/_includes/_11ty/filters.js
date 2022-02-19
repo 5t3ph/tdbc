@@ -30,10 +30,13 @@ const source = (arr, source) => {
   return arr.filter((item) => item.source === source);
 };
 
+const limit = (arr, limit) => arr.slice(0, limit);
+
 module.exports = {
   slug,
   formatDate,
   postdateToRfc3339,
   getPostDate,
   source,
+  limit,
 };

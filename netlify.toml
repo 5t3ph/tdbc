@@ -15,7 +15,7 @@ external_node_modules = [
 ]
 
 [[redirects]]
-from = "/preview/posts/:uid/"
+from = "/preview/articles/:uid/"
 to = "/.netlify/functions/preview"
 status = 200
 force = true

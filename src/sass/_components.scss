@@ -123,6 +123,16 @@
   background-image: linear-gradient(var(--color-primary), #461c9c);
   color: #fff;
 
+  a:not([class]) {
+    color: inherit;
+  }
+
+  h3 small {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+  }
+
   &--wide .container {
     display: grid;
     justify-content: center;

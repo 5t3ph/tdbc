@@ -26,7 +26,7 @@ article :is(h2, .h2) {
   font-size: 2rem;
 }
 
-article:not(.excerpt) :not(.heading-wrapper) h2 {
+article:not(.excerpt, .post) h2 {
   display: grid;
   width: fit-content;
 
