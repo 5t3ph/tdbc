@@ -16,18 +16,18 @@ module.exports = async function () {
     "objectfit-focalpoint",
   ];
 
-  if (process.env.CONTEXT === "production") {
-    await Promise.all(
-      repos.map(async (repo) => {
-        const json = await Cache(`https://api.github.com/repos/5t3ph/${repo}`, {
-          duration: "12h",
-          type: "json",
-        });
+  // if (process.env.CONTEXT === "production") {
+  //   await Promise.all(
+  //     repos.map(async (repo) => {
+  //       const json = await Cache(`https://api.github.com/repos/5t3ph/${repo}`, {
+  //         duration: "12h",
+  //         type: "json",
+  //       });
 
-        stars = { ...stars, [repo]: json.stargazers_count };
-      })
-    );
-  }
+  //       stars = { ...stars, [repo]: json.stargazers_count };
+  //     })
+  //   );
+  // }
 
   return stars;
 };
