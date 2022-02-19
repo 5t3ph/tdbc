@@ -3,6 +3,9 @@ base = ""
 publish = "public"
 command = "AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer npm run build"
 
+[functions]
+node_bundler = "esbuild"
+
 [[redirects]]
 from = "/preview/:uid/"
 to = "/.netlify/functions/preview"

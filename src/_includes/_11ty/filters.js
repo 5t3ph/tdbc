@@ -1,6 +1,5 @@
 const slugify = require("slugify");
 const { DateTime } = require("luxon");
-const HighlightPairedShortcode = require("@11ty/eleventy-plugin-syntaxhighlight/src/HighlightPairedShortcode");
 
 const slug = (str) => {
   return slugify(str, {
