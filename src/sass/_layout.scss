@@ -41,7 +41,7 @@ header {
 .header__content {
   display: grid;
   gap: 2rem;
-  width: min(50ch, 100vw - 2rem);
+  width: min(60ch, 100vw - 2rem);
 }
 
 body > footer {
@@ -145,4 +145,8 @@ header + section {
 
 #articles {
   margin-top: min(10vh, 8rem);
+}
+
+.cp_embed_wrapper iframe {
+  height: max(40vh, 400px);
 }

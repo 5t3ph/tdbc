@@ -14,7 +14,7 @@ const prismicPluginOptions = definePrismicPluginOptions({
   },
   htmlSerializer: prismicHtmlSerializer,
   linkResolver: (doc) => {
-    return `/${doc.uid}/`;
+    return `/articles/${doc.uid}/`;
   },
 });
 

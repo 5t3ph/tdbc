@@ -28,6 +28,15 @@ module.exports = (_type, element, content, children) => {
       return "<hr>";
     }
 
+    if (children.startsWith("[codepen")) {
+      const cpsrcRE = /pen=(.+?)]/g;
+      const cpSrc = [...content.matchAll(cpsrcRE)];
+      if (cpSrc[0]) {
+        return `<p class="codepen" data-default-tab="css,result" data-slug-hash="${cpSrc[0][1]}" data-preview="true" data-user="5t3ph"></p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>`;
+      }
+    }
+
     if (children.startsWith("[note]")) {
       return `<aside role="note"><p>${children.replace("[note]", "")}</p></aside>`;
     }
