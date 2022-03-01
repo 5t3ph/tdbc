@@ -26,5 +26,11 @@ from = "/learnwebdev/"
 to = "https://learnfromsteph.dev"
 status = 301
 
+[[redirects]]
+from = "/feed/"
+to = "/feed/feed.xml"
+status = 200
+force = true
+
 [dev]
 command = "npm start"
