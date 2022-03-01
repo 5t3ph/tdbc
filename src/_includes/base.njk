@@ -83,7 +83,7 @@
     {% endif %}
 
     {% if page.fileSlug and page.fileSlug != 'success' and page.fileSlug != 'confirmation' and page.fileSlug != 'newsletter' %}
-    <aside class="callout callout--wide">
+    <aside id="newsletter" class="callout callout--wide">
       <div class="container">
       {% include "newsletter.njk" %}
       </div>
