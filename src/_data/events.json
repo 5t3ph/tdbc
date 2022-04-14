@@ -158,6 +158,19 @@
     ]
   },
   {
+    "talkTitle": "User Zoom and Reflow",
+    "eventTitle": "Accessibility Club",
+    "dateString": "May 4, 2022",
+    "date": "2022-05-04",
+    "links": [
+      {
+        "text": "Sign up",
+        "url": "https://accessibility-club.org/event/accessibility-club-meetup-11-13",
+        "removePast": true
+      }
+    ]
+  },
+  {
     "talkTitle": "Practical Uses For Container Queries",
     "eventTitle": "Web Directions: Hover",
     "dateString": "April 22 & 29, 2022",

@@ -46,7 +46,6 @@
   {
     "title": "11ty Rocks!",
     "description": "A collection of tutorials, tips, videos, starters, projects, plugins, and resources for the static site generator Eleventy (11ty).",
-    "repo": "11ty-rocks",
     "links": [
       {
         "text": "Visit 11ty.Rocks",
