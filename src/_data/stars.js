@@ -1,5 +1,5 @@
 require("dotenv").config();
-const Cache = require("@11ty/eleventy-cache-assets");
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
   let stars = {};
@@ -18,12 +18,16 @@ module.exports = async function () {
   if (process.env.CONTEXT === "production" || process.env.CONTEXT === "branch-deploy") {
     await Promise.all(
       repos.map(async (repo) => {
-        const json = await Cache(`https://api.github.com/repos/5t3ph/${repo}`, {
-          duration: "12h",
-          type: "json",
-        });
+        try {
+          const json = await EleventyFetch(`https://api.github.com/repos/5t3ph/${repo}`, {
+            duration: "12h",
+            type: "json",
+          });
 
-        stars = { ...stars, [repo]: json.stargazers_count };
+          stars = { ...stars, [repo]: json.stargazers_count };
+        } catch (e) {
+          console.log(`Failed getting GitHub stargazers count for ${repo}`);
+        }
       })
     );
   }
