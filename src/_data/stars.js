@@ -7,7 +7,6 @@ module.exports = async function () {
     "stylestage",
     "smolcss",
     "htmlrecipes",
-    "11ty-rocks",
     "11ty-netlify-jumpstart",
     "11ty-sass-skeleton",
     "a11y-color-tokens",
