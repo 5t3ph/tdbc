@@ -43,7 +43,9 @@ layout: home.njk
       {% for link in item.links %}
       <a href="{{ link.url }}">{{ link.text }}</a>
       {% endfor %}
+      {% if item.repo and stars[item.repo] %}
       <a class="github-stars" href="https://github.com/5t3ph/{{ item.repo }}" aria-label="{{ item.repo }} has {{ stars[item.repo] }} stars on GitHub">{{ stars[item.repo] }} stars on Github</a>
+      {% endif %}
     </li>
     {% endfor %}
   </ul>
