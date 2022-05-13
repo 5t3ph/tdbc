@@ -36,6 +36,12 @@
     "description": "Develop an Eleventy setup that you can use as a starting point for your own community (or personal) site."
   },
   {
+    "title": "Contextual Spacing For Intrinsic Web Design",
+    "url": "https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/",
+    "source": "moderncss",
+    "description": "Learn how to coexist with the unpredictability of the browser by using adaptive, contextual spacing techniques. We'll construct a starter set of custom properties for gap, margin, and padding."
+  },
+  {
     "title": "Guide to Advanced CSS Selectors - Part One",
     "url": "https://moderncss.dev/guide-to-advanced-css-selectors-part-one/",
     "source": "moderncss",

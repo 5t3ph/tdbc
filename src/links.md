@@ -3,6 +3,10 @@ title: "Links"
 layout: quicklinks.njk
 ---
 
+## Coming July 11: CSS Workshop
+
+> [Register for my July workshop "Level-Up with Modern CSS"](https://5t3ph.dev/workshop) in partnership with Smashing Conferences.
+
 ## Popular Resource
 
 > [Accessible Cross-Browser CSS Form Styling](https://5t3ph.dev/a11y-forms) - my egghead video course

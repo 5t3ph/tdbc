@@ -84,14 +84,15 @@
   {
     "talkTitle": "Level-Up With Modern CSS",
     "eventTitle": "Smashing Conference Workshop",
-    "dateString": "July 8-22, 2021",
-    "date": "2021-07-08"
-  },
-  {
-    "talkTitle": "Level-Up With Modern CSS",
-    "eventTitle": "Smashing Conference Workshop",
-    "dateString": "October 5-20, 2021",
-    "date": "2021-10-05"
+    "dateString": "July 11-25, 2021",
+    "date": "2022-07-25",
+    "links": [
+      {
+        "text": "Workshop Registration",
+        "url": "https://5t3ph.dev/workshop",
+        "removePast": true
+      }
+    ]
   },
   {
     "talkTitle": "CSS Grid, Container Queries, and Aspect-Ratio",
@@ -151,9 +152,12 @@
     "date": "2022-05-03",
     "links": [
       {
-        "text": "Get tickets",
-        "url": "https://beyondtellerrand.com/events/dusseldorf-2022",
-        "removePast": true
+        "text": "Watch the talk",
+        "url": "https://www.youtube.com/watch?v=8slZJrTK3nE"
+      },
+      {
+        "text": "bt Slides",
+        "url": "https://noti.st/st3ph/YWbRfR/scaling-css-layout-beyond-pixels"
       }
     ]
   },
