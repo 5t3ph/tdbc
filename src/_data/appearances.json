@@ -1,5 +1,19 @@
 [
   {
+    "show": "Smashing Podcast",
+    "hosts": "Vitaly Friedman",
+    "dateString": "June 28, 2022",
+    "date": "2022-06-28",
+    "link": "https://www.smashingmagazine.com/2022/06/smashing-podcast-episode-48/"
+  },
+  {
+    "show": "PodRocket",
+    "hosts": "Noel Minchow",
+    "dateString": "June 21, 2022",
+    "date": "2022-06-21",
+    "link": "https://podrocket.logrocket.com/scaling-css"
+  },
+  {
     "show": "FSJam",
     "hosts": "Anthony Campolo and Christopher Burns",
     "dateString": "January 24, 2022",
