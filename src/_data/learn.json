@@ -15,6 +15,16 @@
     ]
   },
   {
+    "title": "Modern CSS Challenges",
+    "description": "Guided practice for leveling up with modern CSS. Learn by doing through building components and layouts.",
+    "links": [
+      {
+        "text": "Sign-up for launch notifications",
+        "url": "https://challenges.moderncss.dev"
+      }
+    ]
+  },
+  {
     "title": "Style Stage",
     "description": "A modern CSS showcase styled by community contributions. This CSS playground is open to CSS practitioners of all skill levels!",
     "repo": "stylestage",

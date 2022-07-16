@@ -3,9 +3,9 @@ title: "Links"
 layout: quicklinks.njk
 ---
 
-## Coming July 11: CSS Workshop
+## Guided Practice Learning CSS
 
-> [Register for my July workshop "Level-Up with Modern CSS"](https://5t3ph.dev/workshop) in partnership with Smashing Conferences.
+> [Modern CSS Challenges](https://challenges.moderncss.dev) - sign up for launch notifications!
 
 ## Popular Resource
 
