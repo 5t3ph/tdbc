@@ -3,17 +3,6 @@ base = ""
 publish = "public"
 command = "AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer npm run build"
 
-[functions]
-node_bundler = "esbuild"
-external_node_modules = [
-  "prismjs",
-  "@11ty/eleventy-cache-assets",
-  "@11ty/eleventy",
-  "@11ty/dependency-tree",
-  "any-promise",
-  "pug-filters"
-]
-
 [[redirects]]
 from = "/preview/articles/:uid/"
 to = "/.netlify/functions/preview"

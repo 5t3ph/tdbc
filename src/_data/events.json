@@ -186,5 +186,30 @@
         "removePast": true
       }
     ]
+  },
+  {
+    "talkTitle": "TBA",
+    "eventTitle": "TBA",
+    "dateString": "June 2023",
+    "date": "2023-06-09"
+  },
+  {
+    "talkTitle": "TBA",
+    "eventTitle": "TBA",
+    "dateString": "Aug/Sept 2023",
+    "date": "2023-09-01"
+  },
+  {
+    "talkTitle": "TBA",
+    "eventTitle": "TheJam.dev 2023",
+    "dateString": "January 25-26 2023",
+    "date": "2023-01-26",
+    "links": [
+      {
+        "text": "Free virtual event!",
+        "url": "https://cfe.dev/events/the-jam-2023/",
+        "removePast": true
+      }
+    ]
   }
 ]
