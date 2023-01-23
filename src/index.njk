@@ -62,7 +62,7 @@ layout: home.njk
         <p>{{ post.data.description }}</p>
       {% endfor %}
     </li>
-    {% for item in writing  | limit(3) %}
+    {% for item in writing  | limit(5) %}
     <li>
       <div class="sidebar">
         <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>

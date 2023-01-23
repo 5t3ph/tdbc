@@ -139,9 +139,8 @@
     "date": "2022-03-16",
     "links": [
       {
-        "text": "Session details",
-        "url": "https://www.deque.com/axe-con/sessions/modern-css-upgrades-to-improve-accessibility/",
-        "removePast": true
+        "text": "Talk recording",
+        "url": "https://www.deque.com/axe-con/sessions/modern-css-upgrades-to-improve-accessibility/"
       }
     ]
   },
@@ -189,18 +188,32 @@
   },
   {
     "talkTitle": "TBA",
-    "eventTitle": "TBA",
-    "dateString": "June 2023",
-    "date": "2023-06-09"
+    "eventTitle": "CSS Day, Amsterdam",
+    "dateString": "June 8 & 9, 2023",
+    "date": "2023-06-09",
+    "links": [
+      {
+        "text": "Register now",
+        "url": "https://cssday.nl/2023",
+        "removePast": true
+      }
+    ]
   },
   {
     "talkTitle": "TBA",
-    "eventTitle": "TBA",
-    "dateString": "Aug/Sept 2023",
-    "date": "2023-09-01"
+    "eventTitle": "Front Conference, Zurich",
+    "dateString": "Aug 31 - Sept 1, 2023",
+    "date": "2023-09-01",
+    "links": [
+      {
+        "text": "Get tickets",
+        "url": "https://frontconference.com/",
+        "removePast": true
+      }
+    ]
   },
   {
-    "talkTitle": "TBA",
+    "talkTitle": "Building a Membership Site with 11ty",
     "eventTitle": "TheJam.dev 2023",
     "dateString": "January 25-26 2023",
     "date": "2023-01-26",
