@@ -20,7 +20,11 @@ module.exports = (_type, element, content, children) => {
   }
 
   if (element.type === "em") {
-    return `<code>${children}</code>`;
+    if (children.startsWith("[em]")) {
+      return `<em>${children.replace("[em]", "")}</em>`;
+    } else {
+      return `<code>${children}</code>`;
+    }
   }
 
   if (element.type === "paragraph") {
