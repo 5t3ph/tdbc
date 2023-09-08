@@ -187,28 +187,26 @@
     ]
   },
   {
-    "talkTitle": "TBA",
+    "talkTitle": "Modern CSS For Dynamic Component-Based Architecture",
     "eventTitle": "CSS Day, Amsterdam",
     "dateString": "June 8 & 9, 2023",
     "date": "2023-06-09",
     "links": [
       {
-        "text": "Register now",
-        "url": "https://cssday.nl/2023",
-        "removePast": true
+        "text": "Article & Demos",
+        "url": "https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/"
       }
     ]
   },
   {
-    "talkTitle": "TBA",
+    "talkTitle": "Weird Things You Missed About CSS",
     "eventTitle": "Front Conference, Zurich",
     "dateString": "Aug 31 - Sept 1, 2023",
     "date": "2023-09-01",
     "links": [
       {
-        "text": "Get tickets",
-        "url": "https://frontconference.com/",
-        "removePast": true
+        "text": "Talk Slides",
+        "url": "https://noti.st/st3ph/FrXJhw"
       }
     ]
   },
@@ -219,10 +217,15 @@
     "date": "2023-01-26",
     "links": [
       {
-        "text": "Free virtual event!",
-        "url": "https://cfe.dev/events/the-jam-2023/",
-        "removePast": true
+        "text": "Watch on YouTube",
+        "url": "https://youtu.be/omVlZlhSioU?si=RK5yTnPKdnZ7tMe1"
       }
     ]
+  },
+  {
+    "talkTitle": "TBD",
+    "eventTitle": "TBA",
+    "dateString": "March 25-26, 2024",
+    "date": "2024-03-26"
   }
 ]

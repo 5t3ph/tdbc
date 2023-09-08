@@ -14,11 +14,18 @@
     "link": "https://www.smashingmagazine.com/2022/06/smashing-podcast-episode-48/"
   },
   {
-    "show": "PodRocket",
+    "show": "PodRocket: Scaling CSS with Stephanie Eckles",
     "hosts": "Noel Minchow",
     "dateString": "June 21, 2022",
     "date": "2022-06-21",
     "link": "https://podrocket.logrocket.com/scaling-css"
+  },
+  {
+    "show": "PodRocket: Your UI/UX questions answered",
+    "hosts": "Emily Kochanek Ketner",
+    "dateString": "March 31, 2023",
+    "date": "2023-03-31",
+    "link": "https://podrocket.logrocket.com/mailbag-3"
   },
   {
     "show": "FSJam",

@@ -1,5 +1,11 @@
 [
   {
+    "title": "Unleashing the Power of CSS",
+    "url": "https://www.smashingmagazine.com/2023/01/level-up-css-skills-has-selector/",
+    "source": "sitepoint",
+    "description": "In this premium SitePoint series, we'll review CSS enhancements to layout, responsive design, element styling, properties, and selectors, and also peek at upcoming features; deep-dive into using the CSS :has() selector for scaling reusable components; discover the practical uses of container queries; and learn how to create responsive CSS layouts without using media queries."
+  },
+  {
     "title": "Level Up Your CSS Skills With The :has() Selector",
     "url": "https://www.smashingmagazine.com/2023/01/level-up-css-skills-has-selector/",
     "source": "smashingmag",
