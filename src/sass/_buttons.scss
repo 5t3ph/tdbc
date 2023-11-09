@@ -3,7 +3,7 @@
   display: inline-grid;
   line-height: 1.1;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none !important;
   place-content: center;
 }
 
@@ -31,6 +31,10 @@
     --background: transparent;
     --color: var(--color-primary);
     border: 2px solid;
+  }
+
+  &--inverse {
+    --color: var(--color-inverse);
   }
 }
 
