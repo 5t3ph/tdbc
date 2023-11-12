@@ -36,6 +36,7 @@ const config = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
   eleventyConfig.addPassthroughCopy("./src/_headers");
+  eleventyConfig.addPassthroughCopy("./src/_redirects");
   eleventyConfig.addPlugin(pluginPrismic, prismicPluginOptions);
 
   const md = new markdownIt({
