@@ -13,6 +13,8 @@ module.exports = async function () {
     "buttonbuddy",
     "moderncss-dot-dev",
     "objectfit-focalpoint",
+    "css-browser-support",
+    "SupportsCSS",
   ];
 
   if (process.env.CONTEXT === "production" || process.env.CONTEXT === "branch-deploy") {
