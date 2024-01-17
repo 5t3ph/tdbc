@@ -224,9 +224,15 @@
   },
   {
     "talkTitle": "Modern CSS For Dynamic Component-Based Architecture",
-    "eventTitle": "TBA",
+    "eventTitle": "Front-end Design Conference",
     "dateString": "April 25-26, 2024",
-    "date": "2024-04-26"
+    "date": "2024-04-26",
+    "links": [
+      {
+        "text": "Register now",
+        "url": "https://frontenddesignconference.com/"
+      }
+    ]
   },
   {
     "talkTitle": "TBD",
