@@ -237,7 +237,31 @@
   {
     "talkTitle": "TBD",
     "eventTitle": "TBA",
-    "dateString": "November 18-19, 2024",
-    "date": "2024-11-19"
+    "dateString": "March 6-7, 2025",
+    "date": "2025-03-07"
+  },
+  {
+    "talkTitle": "Modern CSS Feature Collisions and Pitfalls",
+    "eventTitle": "Web Unleashed",
+    "dateString": "October 10-11, 2024",
+    "date": "2024-10-11",
+    "links": [
+      {
+        "text": "Register Now",
+        "url": "https://checkout.eventcreate.com/webu24-in-person/select-buy"
+      }
+    ]
+  },
+  {
+    "talkTitle": "Workshop: Building Interactive, Accessible Components with Modern CSS & JS",
+    "eventTitle": "Web Unleashed",
+    "dateString": "October 9, 2024",
+    "date": "2024-10-09",
+    "links": [
+      {
+        "text": "Workshop Registration",
+        "url": "https://fitc.ca/presentation/building-interactive-accessible-components-with-modern-css-js-workshop/"
+      }
+    ]
   }
 ]
