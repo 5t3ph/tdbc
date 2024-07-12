@@ -263,5 +263,17 @@
         "url": "https://fitc.ca/presentation/building-interactive-accessible-components-with-modern-css-js-workshop/"
       }
     ]
+  },
+  {
+    "talkTitle": "Learn CSS Grid First",
+    "eventTitle": "Winging It LIVE",
+    "dateString": "July 23, 2024 at 12 PM Central",
+    "date": "2024-07-23",
+    "links": [
+      {
+        "text": "Join Live Stream",
+        "url": "https://www.youtube.com/watch?v=aDMWD_CYpEI"
+      }
+    ]
   }
 ]
