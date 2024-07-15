@@ -195,6 +195,10 @@
       {
         "text": "Article & Demos",
         "url": "https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/"
+      },
+      {
+        "text": "Watch Recording",
+        "url": "https://youtu.be/Y50iqMlrqU8"
       }
     ]
   },
@@ -226,13 +230,7 @@
     "talkTitle": "Modern CSS For Dynamic Component-Based Architecture",
     "eventTitle": "Front-end Design Conference",
     "dateString": "April 25-26, 2024",
-    "date": "2024-04-26",
-    "links": [
-      {
-        "text": "Register now",
-        "url": "https://frontenddesignconference.com/"
-      }
-    ]
+    "date": "2024-04-26"
   },
   {
     "talkTitle": "TBD",
@@ -248,7 +246,8 @@
     "links": [
       {
         "text": "Register Now",
-        "url": "https://checkout.eventcreate.com/webu24-in-person/select-buy"
+        "url": "https://checkout.eventcreate.com/webu24-in-person/select-buy",
+        "removePast": true
       }
     ]
   },
@@ -260,7 +259,8 @@
     "links": [
       {
         "text": "Workshop Registration",
-        "url": "https://fitc.ca/presentation/building-interactive-accessible-components-with-modern-css-js-workshop/"
+        "url": "https://fitc.ca/presentation/building-interactive-accessible-components-with-modern-css-js-workshop/",
+        "removePast": true
       }
     ]
   },
@@ -272,7 +272,8 @@
     "links": [
       {
         "text": "Join Live Stream",
-        "url": "https://www.youtube.com/watch?v=aDMWD_CYpEI"
+        "url": "https://www.youtube.com/watch?v=aDMWD_CYpEI",
+        "removePast": true
       }
     ]
   }
