@@ -239,9 +239,8 @@
     "date": "2024-10-11",
     "links": [
       {
-        "text": "Register Now",
-        "url": "https://checkout.eventcreate.com/webu24-in-person/select-buy",
-        "removePast": true
+        "text": "Talk recording",
+        "url": "https://youtu.be/LnjmoiIjJis?si=7wqK6O3Q5xahlGJz"
       }
     ]
   },
@@ -254,6 +253,58 @@
       {
         "text": "Join Live Stream",
         "url": "https://www.youtube.com/watch?v=aDMWD_CYpEI",
+        "removePast": true
+      }
+    ]
+  },
+  {
+    "talkTitle": "Modern CSS For Web Apps and UIs",
+    "eventTitle": "Web Directions Code Leaders",
+    "dateString": "June 11, 2025",
+    "date": "2025-06-11",
+    "links": [
+      {
+        "text": "Register Now",
+        "url": "https://webdirections.org/leaders/",
+        "removePast": true
+      }
+    ]
+  },
+  {
+    "talkTitle": "Modern CSS vs. Shadow DOM",
+    "eventTitle": "Web Directions Code",
+    "dateString": "June 12-13, 2025",
+    "date": "2025-06-13",
+    "links": [
+      {
+        "text": "Register Now",
+        "url": "https://webdirections.org/code/",
+        "removePast": true
+      }
+    ]
+  },
+  {
+    "talkTitle": "Building Interactive, Accessible Components with Modern CSS & JS",
+    "eventTitle": "Online Smashing Workshop",
+    "dateString": "Mon & Wed, August 18-27, 2025",
+    "date": "2025-08-27",
+    "links": [
+      {
+        "text": "Online Workshop Registration",
+        "url": "https://smashingconf.com/online-workshops/workshops/stephanie-eckles-interactive-components/",
+        "removePast": true
+      }
+    ]
+  },
+  {
+    "talkTitle": "Building Interactive, Accessible Components",
+    "eventTitle": "In-Person Smashing Conference Workshop",
+    "dateString": "Monday, October 6, 2025",
+    "date": "2025-10-06",
+    "links": [
+      {
+        "text": "1-Day Workshop Registration",
+        "url": "https://smashingconf.com/ny-2025/workshops/stephanie-eckles-accessible-components",
         "removePast": true
       }
     ]
